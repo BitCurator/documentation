@@ -53,13 +53,13 @@
           {% if suffix == '-index' %}
             {% if is_in_dir %}
               {% assign is_in_subdir = true %}
-              {% assign sub_dir = item.dir | append: item.name | remove: ".md" | append: "/" %}
+              {% assign sub_dir = item.dir | append: item.name | remove: ".md" | append: "/" | url_encode %}
             {% else %}
               {% assign is_in_dir = true %}
             {% endif %}
             <li><b>{{ item_anchor }}</b><ul style="margin-bottom:0px">
             <li>{{ sub_dir }}</li>
-            <li>{{ sub_dir | urlencode }}</li>
+            <li>{{ sub_dir | url_encode }}</li>
             <li>{{ item.dir }}</li>
           {% elsif item.path != 'index.md' %}
             <li>{{ item_anchor }}</li>
