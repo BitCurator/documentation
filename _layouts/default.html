@@ -41,14 +41,22 @@
           {% assign suffix = item.name | slice: -9, 6 %}
           {% capture item_anchor %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endcapture %}
 
-          {% if is_in_dir and item.dir == '/BitCurator%20Environment/' or item.dir == sub_dir %}
+          {% if is_in_subdir and item.dir != sub_dir %}
+            {% assign is_in_subdir = false %}
+            </ul></li>
+          {% endif %}
+          {% if is_in_dir and item.dir == '/BitCurator%20Environment/' %}
             {% assign is_in_dir = false %}
             </ul></li>
           {% endif %}
 
           {% if suffix == '-index' %}
-            {% assign is_in_dir = true %}
-            {% assign sub_dir = item.dir %}
+            {% if is_in_dir %}
+              {% assign is_in_subdir = true %}
+              {% assign sub_dir = item.dir | append: item.stem | append: "/" %}
+            {% else %}
+              {% assign is_in_dir = true %}
+            {% endif %}
             <li><b>{{ item_anchor }}</b><ul style="margin-bottom:0px">
           {% elsif item.path != 'index.md' %}
             <li>{{ item_anchor }}</li>
