@@ -12,9 +12,9 @@ Guide for preparing and packaging born-digital materials for transfer to preserv
 
 ### Guide
 
-[Package files and metadata with Bagger](/documentation/BitCurator Environment/All Step-by-Step Guides/Packaging and Transfer Guides/Package files and metadata with Bagger)
+[Package files and metadata with Bagger](Package files and metadata with Bagger)
 
-[Share files to and from the BitCurator Environment](/documentation/BitCurator Environment/All Step-by-Step Guides/Packaging and Transfer Guides/Share files to and from the BitCurator Environment)
+[Share files to and from the BitCurator Environment](Share files to and from the BitCurator Environment)
 
   
 

@@ -1,0 +1,37 @@
+site_name: BitCurator Docs
+site_url: 
+nav:
+  - Home:
+    - 'Tools.md'
+    - 'Resources.md'
+    - 'Troubleshooting and FAQ.md'
+  - Installation:
+    - 'Installing BitCurator/Configuring BitCurator to enable users to authenticate with Active Directory accounts.md'
+    - 'Installing BitCurator/Installation via Live ISO.md'
+    - 'Installing BitCurator/Installation via Virtual Machine.md'
+    - 'Installing BitCurator/Installing BitCurator.md'
+    - 'Installing BitCurator/Internationalization and Ubuntu.md'
+    - 'Installing BitCurator/Migrating BitCurator VirtualBox VM to Hyper-V.md'
+  - Guides: 
+    - Overview : 'All Step-by-Step Guides/Step-by-Step-Guides.md'
+    - 'All Step-by-Step Guides/Forensics and Reporting Guides.md'
+    - 'All Step-by-Step Guides/Imaging and Recovery Guides.md'
+    - 'All Step-by-Step Guides/Packaging and Transfer Guides.md'
+  - Walkthrough: 
+    - Overview: 'BitCurator Walkthrough/BitCurator Walkthrough.md'
+    - 'BitCurator Walkthrough/BitCurator Workflow Diagrams.md'
+    - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Data Triage.md'
+    - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Forensic Disk Imaging.md'
+    - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Forensic Processing and Identification of Potentially Sensitive Information.md'
+    - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Metadata Export.md'
+  - Development:
+    - Overview: 'Development/Development.md'
+    - 'Development/Onboarding.md'
+    - 'Development/Release Process and Schedule.md'
+    - 'Development/Roadmap.md'
+  - About:    
+    - 'About/Original Project Diagrams.md'
+    - 'About/Support and Past Funding.md'
+
+
+theme: readthedocs

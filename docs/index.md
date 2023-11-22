@@ -85,7 +85,7 @@ In the BitCurator Environment you can: 
 
 
 
-[GitHub-Mark-120px-plus.png BitCurator on GitHub](https://bitcurator.github.io/)
+![](attachments/GitHub-Mark-120px-plus.png) [BitCurator on GitHub](https://bitcurator.github.io/)
 --------------------------------------------------------------------------------
 
 The BitCurator group on GitHub provides all source code and development documentation for the BitCurator NLP (2016-2018), BitCurator Access (2014-2016), and BitCurator (2011-2014) projects.    
@@ -95,7 +95,7 @@ The BitCurator group on GitHub provides all source code and development documen
 
 
 
-[PDF_32.png Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide)
+![](attachments/PDF_32.png) [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide)
 --------------------------------------------------------------------------------------------------------------
 
 The Quick Start Guide provides instructions on installation and an initial walkthrough of the BitCurator Environment. 
@@ -107,7 +107,7 @@ The Quick Start Guide provides instructions on installation and an initial wal
 
 
 
-[iconfinder_community-social-group-society-public_3790082.png BitCurator Google Group](https://groups.google.com/forum/#!forum/bitcurator-users)
+![](attachments/iconfinder_community-social-group-society-public_3790082.png) [BitCurator Google Group](https://groups.google.com/forum/#!forum/bitcurator-users)
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 The BitCurator Google Group is the place to post questions, discuss issues with the project and development staff, and request features and updates.
