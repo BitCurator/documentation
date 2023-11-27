@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Understanding Bulk Extractor Scanners - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Understanding Bulk Extractor Scanners";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Forensics and Reporting Guides/Understanding Bulk Extractor Scanners.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Understanding Bulk Extractor Scanners</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="understanding-bulk-extractor-scanners">Understanding Bulk Extractor Scanners</h1>
+<p>For help using the Bulk Extractor Viewer, please see the <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer">Bulk Extractor Viewer tutorial</a>.### Overview</p>
+<p>BitCurator can help you locate and explore specific types of information in your disk image; this feature both allows you to</p>
+<ol>
+<li>protect the materials' donor by discovering potentially sensitive information before making a disk public (e.g. social security numbers), and</li>
+<li>explore materials by finding specific types of information (e.g. search for email addresses in order to locate correspondence between an author and her editors)</li>
+</ol>
+<h3 id="step-by-step-guide">Step-by-Step Guide</h3>
+<p>Before pressing the "Start bulk_extractor" button in the Bulk Extractor Viewer, you have the option of including or excluding a variety of scanners in the Bulk Extractor reports, via the checkboxes on the right side of the page (i.e. after completing Step 6 of the <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer">Bulk Extractor tutorial</a>). Note that there is not necessarily a one-to-one relationship between scanners (toggled on or off) and the produced reports. For example, the pii.txt report, although it is currently only written to by the "Accounts" scanner, will not necessarily only contain PII from credit cards and SSNs. Multiple scanners might write to the same feature file: the "exif" scanner searches the file formats used by digital cameras, finds GPS coordinates in images, and writes those findings to the output file gps.txt; a separate scanner, the gps scanner, searches Garmin Trackpoint data and also finds GPS coordinates and writes them to gps.txt[1]. Additionally, many of the scanners produce a histogram file an addition to the main output file; for example, the email scanner generates "email_histogram.txt" in addition to "email.txt".</p>
+<p><img alt="Scanners_large.jpg" src="../attachments/Scanners_large.jpg" /></p>
+<p>Reports may contain false positives; the "accounts" scanner may produce credit-card-number-like strings in its ccn.txt output file that are not, in fact, credit card numbers.</p>
+<p>Below are the possible scanner options and what each scanner locates on your disk image.</p>
+<h3 id="bulk-extractor-scanners-where-they-output-and-what-they-do">Bulk Extractor Scanners: Where They Output and What They Do</h3>
+<table class="wrapped confluenceTable">
+ <colgroup>
+  <col/>
+  <col/>
+  <col/>
+ </colgroup>
+ <thead>
+  <tr>
+   <th style="text-align: center;">
+    <p>
+     Scanner name
+    </p>
+   </th>
+   <th style="text-align: center;">
+    <p>
+     Output feature file
+    </p>
+   </th>
+   <th style="text-align: center;">
+    <p>
+     Recovery description / archival usefulness
+    </p>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    bulk
+   </td>
+   <td>
+    bulk.txt
+   </td>
+   <td>
+    Performs a bulk data scan.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    wordlist
+   </td>
+   <td>
+    wordlist.txt, wordlist_*.txt
+   </td>
+   <td>
+    A list of all “words” extracted from the disk, useful for password cracking or to discover if an author ever used a specific term (including in deleted/hidden files). Note that the words this scanner can access depend on which other scanners are on; to include words in .zip files, for example, you'd need to have the "zip" scanner enabled.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    xor
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    XOR is a technique for obfuscating data, often used to conceal sensitive data and code within malicious files and programs
+    <sup>
+     [4]
+    </sup>
+    ; this scanner searches for data hidden by XOR.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    accounts
+   </td>
+   <td>
+    telephone.txt, ccn.txt, ccn_track2.txt, pii.txt
+   </td>
+   <td>
+    Credit card numbers, credit card track 2 information (the magnetic stripe data track read by ATMs and credit card checkers
+    <sup>
+     [5]
+    </sup>
+    ), phone numbers, and other formatted numbers. Useful for tracking how a device's user(s) conducted business.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    aes
+   </td>
+   <td>
+    aes_keys.txt
+   </td>
+   <td>
+    AES key schedules in memory (AES key schedules expand a short key into a number of separate round keys
+    <sup>
+     [6]
+    </sup>
+    ).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    base16
+   </td>
+   <td>
+    hex.txt
+   </td>
+   <td>
+    BASE16 coding, aka hexadecimal or hex code (includes MD5 codes embedded in the data). The primary use of hexadecimal notation is a human-friendly representation of binary-coded values in computing and digital electronics. Hexadecimal is also commonly used to represent computer memory addresses.
+    <sup>
+     [7]
+    </sup>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    base64
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    BASE64 coding. Base64 is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation
+    <sup>
+     [8]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    elf
+   </td>
+   <td>
+    elf.txt
+   </td>
+   <td>
+    Linux Executable and Linkable Format (formerly called Extensible Linking Format). A common standard file format for executables, object code, shared libraries, and core dumps
+    <sup>
+     [9]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    email
+   </td>
+   <td>
+    email.txt, rfc822.txt, domain.txt, ether.txt, url.txt
+   </td>
+   <td>
+    Discovers RFC822 email headers, HTTP cookies, hostnames, IP addresses, email addresses, and URLs. Useful for recreating email correspondence on a device.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    exif
+   </td>
+   <td>
+    exif.txt, gps.txt, jpeg_carved.txt
+   </td>
+   <td>
+    Exifs, or exchangeable image file format, is a standard that specifies the formats for images, sound, and ancillary tags used by digital cameras (including smartphones), scanners and other systems handling image and sound files recorded by digital cameras; it includes .JPG, .TIFF, and .WAV
+    <sup>
+     [10]
+    </sup>
+    . This scan finds EXIFs from JPEGs and video segments (and carving of JPEG files); this feature file contains all of the EXIF fields, expanded as XML records.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    find
+   </td>
+   <td>
+    find.txt
+   </td>
+   <td>
+    Returns the results of specific regular expression search requests. A regular expression is a way of searching for patterns in strings of characters;
+    <a href="https://regexone.com/" rel="nofollow">
+     RegexOne.com
+    </a>
+    offers a good basic tutorial on writing regular expressions to create extremely specific searches.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    GPS
+   </td>
+   <td>
+    gps.txt
+   </td>
+   <td>
+    Garmin-formatted XML containing GPS (global positioning system, i.e. location mapping) coordinates.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    gzip
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    Files compressed with the gzip algorithm (such as browser cache entries, HTTP streams) and ZLIB-compressed gzip streams.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    hiber
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    Windows Hibernation file fragments. Windows "hibernate mode" saves a copy of everything in your PC’s memory (RAM) onto your hard disk before it shuts down
+    <sup>
+     [11]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    json
+   </td>
+   <td>
+    json.txt
+   </td>
+   <td>
+    Javascript Object Notation (JSON), a text-based open standard designed for human-readable data interchange
+    <sup>
+     [12]
+    </sup>
+    , objects downloaded from web servers, and well as JSON-like objects found in source code.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    kml
+   </td>
+   <td>
+    kml.txt
+   </td>
+   <td>
+    KML files (carved). KML is Keyhole Markup Language (KML), an XML notation for expressing geographic annotation and visualization within Internet-based, two-dimensional maps and three-dimensional Earth browsers
+    <sup>
+     [13]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    net
+   </td>
+   <td>
+    ip.txt, ether.txt
+   </td>
+   <td>
+    IP and TCP packets (types of network packets, formatted units of data carried by a packet-switched network
+    <sup>
+     [14]
+    </sup>
+    ) in virtual memory, and creates libpcap files (the libpcap file format is the main capture file format used in TcpDump/WinDump, Wireshark/TShark, snort, and many other networking tools
+    <sup>
+     [15]
+    </sup>
+    ).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    pdf
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    Text from PDF files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    rar
+   </td>
+   <td>
+    rar.txt, unrar_carved.txt
+   </td>
+   <td>
+    RAR components in unencrypted archives are decrypted and processed. Encrypted RAR file are carved. RAR is a proprietary archive file format that supports data compression, error recovery and file spanning
+    <sup>
+     [16]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    vCard
+   </td>
+   <td>
+    vcard.txt
+   </td>
+   <td>
+    vCard recovery. vCard is a file format standard for electronic business cards
+    <sup>
+     [17]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    windrs
+   </td>
+   <td>
+    windrs.txt
+   </td>
+   <td>
+    Windows FAT32 and NTFS directory entries.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    winpe
+   </td>
+   <td>
+    winpe.txt
+   </td>
+   <td>
+    Windows Preinstallation Environment (PE) executables (.exe and .dll files notated with an MD5 hash of the first 4k). PE is a minimal Win32 operating system with limited services, built on the Windows Vista kernel. It is used to prepare a computer for Windows installation, to copy disk images from a network file server, and to initiate Windows Setup
+    <sup>
+     [18]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    winprefetch
+   </td>
+   <td>
+    winprefetch.txt
+   </td>
+   <td>
+    Windows prefetch files and file fragments. Each time you turn on your computer, Windows keeps track of the way your computer starts and which programs you commonly open; Windows saves this information as a number of small files in the prefetch folder
+    <sup>
+     [19]
+    </sup>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    zip
+   </td>
+   <td>
+    zip.txt, unzip_carved.txt
+   </td>
+   <td>
+    A file containing information regarding every ZIP file component found on the media. This is exceptionally useful as ZIP files contain internal structure and ZIP is increasingly the compound file format of choice for a variety of products such as Microsoft Office. Will find zlib-compressed regions.
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="notes">Notes:</h3>
+<ol>
+<li><a href="http://digitalcorpora.org/downloads/bulk_extractor/BEUsersManual.pdf">http://digitalcorpora.org/downloads/bulk_extractor/BEUsersManual.pdf</a></li>
+<li>//<a href="https://forensicswiki.xyz/wiki/index.php?title=Bulk_extractor">https://forensicswiki.xyz/wiki/index.php?title=Bulk_extractor</a></li>
+<li>//<a href="http://digitalcorpora.org/downloads/bulk_extractor/doc/2013.COSE.bulk_extractor.pdf">digitalcorpora.org/downloads/bulk_extractor/doc/2013.COSE.bulk_extractor.pdf</a></li>
+<li><a href="https://raw.github.com/simsong/bulk_extractor/master/doc/programmer_manual/BEProgrammersManual.tex">https://raw.github.com/simsong/bulk_extractor/master/doc/programmer_manual/BEProgrammersManual.tex</a></li>
+<li><a href="https://web.archive.org/web/20170705220707/http://www.acmetech.com/documentation/credit_cards/magstripe_track_format.html">https://web.archive.org/web/20170705220707/http://www.acmetech.com/documentation/credit_cards/magstripe_track_format.html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rijndael_key_schedule">https://en.wikipedia.org/wiki/Rijndael_key_schedule</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Base16">https://en.wikipedia.org/wiki/Base16</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Base64">https://en.wikipedia.org/wiki/Base64</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">https://en.wikipedia.org/wiki/Executable_and_Linkable_Format</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Exchangeable_image_file_format">http://en.wikipedia.org/wiki/Exchangeable_image_file_format</a></li>
+<li><a href="http://helpdeskgeek.com/windows-vista-tips/delete-remove-hiberfil-sys/">http://helpdeskgeek.com/windows-vista-tips/delete-remove-hiberfil-sys/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSON">https://en.wikipedia.org/wiki/JSON</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kml">https://en.wikipedia.org/wiki/Kml</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_packet">https://en.wikipedia.org/wiki/Network_packet</a></li>
+<li><a href="http://wiki.wireshark.org/Development/LibpcapFileFormat">http://wiki.wireshark.org/Development/LibpcapFileFormat</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rar">https://en.wikipedia.org/wiki/Rar</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vcard">https://en.wikipedia.org/wiki/Vcard</a></li>
+<li><a href="http://technet.microsoft.com/en-us/library/cc766093%28v=ws.10%29.aspx">http://technet.microsoft.com/en-us/library/cc766093%28v=ws.10%29.aspx</a></li>
+<li><a href="http://windows.microsoft.com/en-us/windows-vista/what-is-the-prefetch-folder">http://windows.microsoft.com/en-us/windows-vista/what-is-the-prefetch-folder</a></li>
+</ol>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator All Step-by-Step Guides section.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

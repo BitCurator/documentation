@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Configuring BitCurator to enable users to authenticate with Active Directory accounts - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuring BitCurator to enable users to authenticate with Active Directory accounts";
+        var mkdocs_page_input_path = "Installing BitCurator/Configuring BitCurator to enable users to authenticate with Active Directory accounts.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-by-step-guide">Step-by-step guide</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Installation</li>
+      <li class="breadcrumb-item active">Configuring BitCurator to enable users to authenticate with Active Directory accounts</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configuring-bitcurator-to-enable-users-to-authenticate-with-active-directory-accounts">Configuring BitCurator to enable users to authenticate with Active Directory accounts</h1>
+<p><strong>Overview:</strong></p>
+<p>Active Directory is a service used by many institutions to provide authentication and authorization of users in a Windows Domain type network.  The below instructions describe how to configure BitCurator installations to enable multiple user accounts and to enable users to authenticate with accounts that are managed by Active Directory.  The result will allow users to login to the BitCurator environment using their centrally managed password.</p>
+<h2 id="step-by-step-guide">Step-by-step guide</h2>
+<p><strong>Step 1</strong>:  Active Directory services are an implementation of the open source Kerberos 5 protocol. Installation of Kerberos client software enables the use of Active Directory for BitCurator. </p>
+<p>From within BitCurator open the terminal by pressing <code>CTRL + ALT + t</code> and enter the following command to install the needed software:</p>
+<p><code>sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config</code></p>
+<p>Enter your user password when prompted.</p>
+<p><img alt="Screenshot from 2020-04-24 12-07-02.png" src="../attachments/Screenshot%20from%202020-04-24%2012-07-02.png" /></p>
+<p><strong>Step 2:</strong></p>
+<p>When prompted, enter the URI of the Active Directory server that you will be connecting to.  Example: <code>AD.TEST.ORG</code></p>
+<p>The Active Directory server used in your institution can be found from a currently logged in Windows system:</p>
+<ul>
+<li>From the Windows desktop, right click on the <strong>Computer</strong>icon</li>
+<li>Select <strong>Properties</strong></li>
+<li>Look under the <strong>Computer name, domain, and workgroup settings</strong> for an entry that look similar to:<ul>
+<li>Domain: ad.yourinstitution.edu</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Screenshot from 2020-04-24 12-07-23.png" src="../attachments/Screenshot%20from%202020-04-24%2012-07-23.png" /></p>
+<p><strong>Step 3:</strong></p>
+<p>After installing the Kerberos software, we will use the Users and Groups application add the users that will be using Active Directory for authentication.  Press the SUPER key and start typing "Users and Groups", select the icon once it appears.</p>
+<p>Click the button for 'Add' to add a new user to the installation.  When prompted, enter the Active Directory username in both the Name and Username boxes (username and name must be the same).  When prompted to set a password, click cancel.  The password for the account will be managed by the Active Directory service.</p>
+<p><img alt="image2020-4-27_10-50-28.png" src="../attachments/image2020-4-27_10-50-28.png" /></p>
+<p><img alt="image2020-4-27_10-51-55.png" src="../attachments/image2020-4-27_10-51-55.png" /></p>
+<p><strong>Step 4:</strong></p>
+<p>The newly created user will need to be added sudo group.  With the user highlighted in the left column, click the Manage Groups button, check the necessary groups, and click Ok.</p>
+<p><img alt="image2020-4-27_13-22-50.png" src="../attachments/image2020-4-27_13-22-50.png" /></p>
+<p><strong>Step 5</strong>:</p>
+<p>Install BitCurator tools for newly created user following using the <a href="https://github.com/bitcurator/bitcurator-distro-installer">bitcurator-distro-installer</a>.  If not already installed, follow the <a href="https://github.com/bitcurator/bitcurator-distro-installer#simple-install">linked instructions</a> for cloning the installation files.</p>
+<p>For each new user enter the following command in the Terminal:</p>
+<pre><code>sudo ./install.sh -u username  
+
+
+</code></pre>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW9_Ri9tzXzisgBzQ26o4Ea4moDYmcKZ_f1qd9s4Ju17Yf_w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the Installing BitCurator section.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../Troubleshooting%20and%20FAQ/" class="btn btn-neutral float-left" title="Troubleshooting and FAQ"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Installation%20via%20Live%20ISO/" class="btn btn-neutral float-right" title="Installation via Live ISO">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../Troubleshooting%20and%20FAQ/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Installation%20via%20Live%20ISO/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

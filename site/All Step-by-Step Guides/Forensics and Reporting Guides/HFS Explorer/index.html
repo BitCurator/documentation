@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>HFS Explorer - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HFS Explorer";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Forensics and Reporting Guides/HFS Explorer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">HFS Explorer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="hfs-explorer">HFS Explorer</h1>
+<h3 id="overview">Overview</h3>
+<p>This utility allows you to view the contents of and detailed information on HFS-formatted disk image files, as well as extract files from those images to the BitCurator environment. HFS is a proprietary file system developed by Apple Inc. for use in computer systems running Mac OS. The HFS Explorer is included in the BitCurator environment because many of BitCurator's features (such as Sleuth Kit tools like <a href="https://forensicswiki.xyz/wiki/index.php?title=Fiwalk">fiwalk</a>, which is used to generate DFXML output) cannot currently read HFS-formatted disks.<br />
+To use HFS Explorer, first <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">image the disk using Guymager</a>.</p>
+<h3 id="step-by-step-guide">Step-by-Step Guide</h3>
+<ol>
+<li>Open the tool by double clicking on the "Additional Tools" folder on the BitCurator desktop and then double clicking on the "HFS Explorer" icon (see Figure 1).</li>
+</ol>
+<p><strong>Figure 1</strong>: Opening HFS Explorer.</p>
+<p><img alt="HFS1.png" src="../attachments/HFS1.png" />
+2. The HFS Explorer window will open. Click on the "File" menu item in the top left corner of the window, and then select "Load file system from file" (see Figure 2).  </p>
+<p><strong>Figure 2</strong>: Navigating to the HFS-formatted file.<br />
+<img alt="HFS2.png" src="../attachments/HFS2.png" />
+3. Choose the file you wish to explore, and click "OK" (see Figure 3).  </p>
+<p><em>Note:</em> If the file you chose isn't one of the supported file types (HFS, HFS+, HFSX), you'll receive an error message (see Figure 4).</p>
+<p><img alt="HFS3.png" src="../attachments/HFS3.png" /></p>
+<p><strong>Figure 4</strong>: This error message occurs if your file is not HFS-formatted.</p>
+<p><img alt="HFS4.png" src="../attachments/HFS4.png" />
+4. Select a file from the list and click the "Info" button for more information on a file (see Figure 5).  </p>
+<p><strong>Figure 5</strong>: Files are viewable.</p>
+<p><img alt="HFS5.png" src="../attachments/HFS5.png" />
+5. You can now view a summary of basic information about the file, such as when the file was last modified (see Figure 6). To view more detailed information about the file, choose the "Detailed" tab from the top of the window (see Figure 7).</p>
+<p><strong>Figure 6</strong>: View basic information about your file.<br />
+<img alt="HFS6.png" src="../attachments/HFS6.png" /></p>
+<p><strong>Figure 7</strong>: View advanced information about your file.</p>
+<p><img alt="HFS7.png" src="../attachments/HFS7.png" />
+6. To extract files from the HFS-formatted disk to the BitCurator environment, from the main HFS Explorer screen, select the files you wish to extract and then click the "Extract" button from the top left of the window (see Figure 8).</p>
+<p><strong>Figure 8</strong>: Extracting files from the HFS-formatted disk.</p>
+<p><img alt="HFS8.png" src="../attachments/HFS8.png" />
+7. Navigate to the directory to which you wish to extract the file(s) and click on the "Extract here" button on the lower left (see Figure 9).</p>
+<p><strong>Figure 9</strong>: Navigating to the folder to which to export the file(s).</p>
+<p><img alt="HFS9.png" src="../attachments/HFS9.png" />
+8. A pop-up will appear asking whether you wish to follow symbolic links when extracting; click the "Yes" button (see Figure 10).</p>
+<p><strong>Figure 10</strong>: Tell HFS Explorer you wish to follow symbolic links.</p>
+<p><img alt="HFS10.png" src="../attachments/HFS10.png" />
+9. A pop-up will inform you when the extraction is finished (see Figure 11). You can navigate to the extraction directory you specified in Step 7 to view your extracted files (in this example, we extracted a number of files to our desktop; see Figure 12).</p>
+<p><strong>Figure 11</strong>: The extraction is complete.</p>
+<p><img alt="HFS11.png" src="../attachments/HFS11.png" />  </p>
+<p><strong>Figure 12</strong>: Viewing the extracted files on the desktop.</p>
+<p><img alt="HFS12.png" src="../attachments/HFS12.png" /></p>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator All Step-by-Step Guides section.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

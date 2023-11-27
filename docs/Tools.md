@@ -19,13 +19,13 @@ Because BitCurator is an Ubuntu environment, users are able to download and inst
 
 In addition, much functionality is found in the file navigation system, Nautilus, through contextual menus. Listed are guides for many of these scripts.
 
-* [Data Triage](/documentation/BitCurator Environment New/All Step-by-Step Guides New/Forensics and Reporting Guides/Data Triage (Nautilus))
-* [Create MD5 Sums](/documentation/BitCurator Environment New/All Step-by-Step Guides New/Forensics and Reporting Guides/Create MD5 Sums (Nautilus))
-* [Display a file in Hex editor](/documentation/BitCurator Environment New/All Step-by-Step Guides New/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus))
-* [Disk Image Metadata](/documentation/BitCurator Environment New/All Step-by-Step Guides New/Forensics and Reporting Guides/Disk Image Metadata (Nautilus))
-* [Extract Compressed Files](/documentation/BitCurator Environment New/All Step-by-Step Guides New/Forensics and Reporting Guides/Extract Compressed Files (Nautilus))
-* [Live Search for Files](/documentation/BitCurator Environment New/All Step-by-Step Guides New/Forensics and Reporting Guides/Live Search for Files (Nautilus))
-* [Safely Mount Device](https://confluence.educopia.org/display/BC/Safely+Mount+Devices)
+* [Data Triage](/All Step-by-Step Guides/Forensics and Reporting Guides/Data Triage (Nautilus))
+* [Create MD5 Sums](/All Step-by-Step Guides/Forensics and Reporting Guides/Create MD5 Sums (Nautilus))
+* [Display a file in Hex editor](/All Step-by-Step Guides/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus))
+* [Disk Image Metadata](/All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus))
+* [Extract Compressed Files](/All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus))
+* [Live Search for Files](/All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus))
+* [Safely Mount Device](/All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices)
 
 
 
@@ -37,7 +37,7 @@ Imaging and Recovery
 
 **[Guymager](https://guymager.sourceforge.io)**: Open-source forensic disk imaging tool
 
-* See the [Creating a Disk Image Using Guymager](https://confluence.educopia.org/display/BC/Creating+a+Disk+Image+Using+Guymager) **Step-by-Step Guide**.
+* See the [Creating a Disk Image Using Guymager](/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager) **Step-by-Step Guide**.
 
 [**cdrdao**](http://cdrdao.sourceforge.net): CD imaging tool (primarily for audio CDs)
 
@@ -66,7 +66,7 @@ Forensic analysis tools
 
 **BitCurator Reporting Tool**: A GUI-driven (and optionally command-line) tool for running forensics tools in sequence to produce human- and machine-readable reports in [DFXML](https://www.github.com/simsong/dfxml).
 
-* Find instructions at the [Creating Disk Image Reports using the BitCurator Reporting Tool](/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool) **Step-by-Step Guide**.
+* Find instructions at the [Creating Disk Image Reports using the BitCurator Reporting Tool](/All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool) **Step-by-Step Guide**.
 * Use of the Reporting Tool is also covered in the [Quickstart Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide).
 
 **[Brunnhilde](https://github.com/tw4l/brunnhilde)**: Generates aggregate reports of files in a directory or disk image based on input from Richard Lehane's [Siegfried](http://www.itforarchivists.com/siegfried).

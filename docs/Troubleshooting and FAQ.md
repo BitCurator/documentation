@@ -6,7 +6,7 @@ Troubleshooting and FAQ
 
 
 
-* [Troubleshooting](#TroubleshootingandFAQ-Troubleshooting)
+* [Troubleshooting](#troubleshooting)
 	+ [Where can I go to get help?](#TroubleshootingandFAQ-WherecanIgotogethelp?)
 	+ [I'm having trouble reading a specific legacy floppy disk.](#TroubleshootingandFAQ-I'mhavingtroublereadingaspecificlegacyfloppydisk.)
 	+ [I've added the BitCurator VM using VirtualBox, but the virtual machine won't start (or crashes when it tries to boot)](#TroubleshootingandFAQ-I'veaddedtheBitCuratorVMusingVirtualBox,butthevirtualmachinewon'tstart(orcrasheswhenittriestoboot))
@@ -14,7 +14,7 @@ Troubleshooting and FAQ
 	+ [I mounted a USB drive and lost control of my mouse cursor](#TroubleshootingandFAQ-ImountedaUSBdriveandlostcontrolofmymousecursor)
 	+ [Why isn’t Bulk Extractor finding SSNs that I know are there?](#TroubleshootingandFAQ-Whyisn’tBulkExtractorfindingSSNsthatIknowarethere?)
 	+ [Using an FC5025 with the BitCurator VM](#TroubleshootingandFAQ-UsinganFC5025withtheBitCuratorVM)
-* [FAQ](#TroubleshootingandFAQ-FAQ)
+* [FAQ](#faq)
 	+ [Is BitCurator intended to be a data preservation environment?](#TroubleshootingandFAQ-IsBitCuratorintendedtobeadatapreservationenvironment?)
 	+ [I work at a small institution with limited resources. Am I going to need an expensive new dedicated workstation just to do digital forensics work?](#TroubleshootingandFAQ-Iworkatasmallinstitutionwithlimitedresources.AmIgoingtoneedanexpensivenewdedicatedworkstationjusttododigitalforensicswork?)
 	+ [The BitCurator virtual machine is built for VirtualBox. Can I use VMWare instead?](#TroubleshootingandFAQ-TheBitCuratorvirtualmachineisbuiltforVirtualBox.CanIuseVMWareinstead?)
@@ -26,8 +26,8 @@ Troubleshooting and FAQ
 
 
 
-**Troubleshooting**
-===================
+## Troubleshooting
+
 
 **Where can I go to get help?**
 -------------------------------
@@ -153,8 +153,7 @@ See this post: <http://www.wcsarchivesblog.org/getting-data-out-of-its-floppy-c
   
 
 
-**FAQ**
-=======
+## FAQ
 
 **Is BitCurator intended to be a data preservation environment?**
 -----------------------------------------------------------------
