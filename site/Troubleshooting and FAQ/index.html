@@ -47,6 +47,116 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Troubleshooting and FAQ</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#where-can-i-go-to-get-help">Where can I go to get help?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#im-having-trouble-reading-a-specific-legacy-floppy-disk">I'm having trouble reading a specific legacy floppy disk.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ive-added-the-bitcurator-vm-using-virtualbox-but-the-virtual-machine-wont-start-or-crashes-when-it-tries-to-boot">I've added the BitCurator VM using VirtualBox, but the virtual machine won't start (or crashes when it tries to boot)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_1">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_1">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ive-downloaded-the-bitcurator-virtual-machine-what-do-i-do-with-this-targz-file">I've downloaded the BitCurator virtual machine. What do I do with this .tar.gz file?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_2">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_2">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#i-mounted-a-usb-drive-and-lost-control-of-my-mouse-cursor">I mounted a USB drive and lost control of my mouse cursor</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_3">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_3">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-isnt-bulk-extractor-finding-ssns-that-i-know-are-there">Why isn’t Bulk Extractor finding SSNs that I know are there?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_4">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_4">Solution</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#command-line">Command line</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bulk-extractor-viewer-gui">Bulk Extractor Viewer (GUI)</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-an-fc5025-with-the-bitcurator-vm">Using an FC5025 with the BitCurator VM</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#is-bitcurator-intended-to-be-a-data-preservation-environment">Is BitCurator intended to be a data preservation environment?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_5">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_5">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#i-work-at-a-small-institution-with-limited-resources-am-i-going-to-need-an-expensive-new-dedicated-workstation-just-to-do-digital-forensics-work">I work at a small institution with limited resources. Am I going to need an expensive new dedicated workstation just to do digital forensics work?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_6">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_6">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-bitcurator-virtual-machine-is-built-for-virtualbox-can-i-use-vmware-instead">The BitCurator virtual machine is built for VirtualBox. Can I use VMWare instead?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_7">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_7">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#whats-a-hardware-write-blocker-do-i-really-need-one">What's a hardware write-blocker? Do I really need one?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_8">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_8">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#whats-the-advantage-of-saving-my-disk-images-as-aff-or-e01-rather-than-raw">What's the advantage of saving my disk images as AFF or E01 rather than raw?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_9">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_9">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-file-systems-does-bitcurator-support">What file systems does BitCurator support?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_10">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_10">Solution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#will-bitcurator-help-me-crack-passwords-on-encrypted-files-in-my-collection">Will BitCurator help me crack passwords on encrypted files in my collection?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#problem_11">Problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#solution_11">Solution</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -135,7 +245,7 @@
               
                 <h1 id="troubleshooting-and-faq">Troubleshooting and FAQ</h1>
 <ul>
-<li><a href="#TroubleshootingandFAQ-Troubleshooting">Troubleshooting</a><ul>
+<li><a href="#troubleshooting">Troubleshooting</a><ul>
 <li><a href="#TroubleshootingandFAQ-WherecanIgotogethelp?">Where can I go to get help?</a></li>
 <li><a href="#TroubleshootingandFAQ-I'mhavingtroublereadingaspecificlegacyfloppydisk.">I'm having trouble reading a specific legacy floppy disk.</a></li>
 <li><a href="#TroubleshootingandFAQ-I'veaddedtheBitCuratorVMusingVirtualBox,butthevirtualmachinewon'tstart(orcrasheswhenittriestoboot">I've added the BitCurator VM using VirtualBox, but the virtual machine won't start (or crashes when it tries to boot)</a>)</li>
@@ -145,7 +255,7 @@
 <li><a href="#TroubleshootingandFAQ-UsinganFC5025withtheBitCuratorVM">Using an FC5025 with the BitCurator VM</a></li>
 </ul>
 </li>
-<li><a href="#TroubleshootingandFAQ-FAQ">FAQ</a><ul>
+<li><a href="#faq">FAQ</a><ul>
 <li><a href="#TroubleshootingandFAQ-IsBitCuratorintendedtobeadatapreservationenvironment?">Is BitCurator intended to be a data preservation environment?</a></li>
 <li><a href="#TroubleshootingandFAQ-Iworkatasmallinstitutionwithlimitedresources.AmIgoingtoneedanexpensivenewdedicatedworkstationjusttododigitalforensicswork?">I work at a small institution with limited resources. Am I going to need an expensive new dedicated workstation just to do digital forensics work?</a></li>
 <li><a href="#TroubleshootingandFAQ-TheBitCuratorvirtualmachineisbuiltforVirtualBox.CanIuseVMWareinstead?">The BitCurator virtual machine is built for VirtualBox. Can I use VMWare instead?</a></li>
@@ -156,7 +266,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="troubleshooting"><strong>Troubleshooting</strong></h1>
+<h2 id="troubleshooting">Troubleshooting</h2>
 <h2 id="where-can-i-go-to-get-help"><strong>Where can I go to get help?</strong></h2>
 <p>The <a href="https://groups.google.com/g/bitcurator-users">BitCurator Google Group</a> is the place to post questions and discuss issues. There, an active BitCurator community of practitioners ask for and offer help.</p>
 <h2 id="im-having-trouble-reading-a-specific-legacy-floppy-disk"><strong>I'm having trouble reading a specific legacy floppy disk.</strong></h2>
@@ -213,7 +323,7 @@
 </code></pre>
 <h2 id="using-an-fc5025-with-the-bitcurator-vm"><strong>Using an FC5025 with the BitCurator VM</strong></h2>
 <p>See this post: <a href="http://www.wcsarchivesblog.org/getting-data-out-of-its-floppy-cage/">http://www.wcsarchivesblog.org/getting-data-out-of-its-floppy-cage/</a> for additional guidance.</p>
-<h1 id="faq"><strong>FAQ</strong></h1>
+<h2 id="faq">FAQ</h2>
 <h2 id="is-bitcurator-intended-to-be-a-data-preservation-environment"><strong>Is BitCurator intended to be a data preservation environment?</strong></h2>
 <h3 id="problem_5">Problem</h3>
 <p>I'm trying to determine if BitCurator can be used as a discrete data preservation environment.</p>
