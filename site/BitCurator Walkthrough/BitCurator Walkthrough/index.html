@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Overview - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "BitCurator Walkthrough/BitCurator Walkthrough.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#imaging-and-recovery">Imaging and Recovery</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#safely-mount-devices">Safely Mount Devices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-disk-images">Create Disk Images</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#forensics-and-reporting">Forensics and Reporting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#extract-metadata-from-disk-images-and-files">Extract metadata from disk images and files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#identify-potentially-private-and-sensitive-information">Identify potentially private and sensitive information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-forensic-reports">Generate Forensic Reports</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deduplicate-files">Deduplicate Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-export">File Export</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#forensics-and-reporting-nautilus-scripts">Forensics and Reporting Nautilus Scripts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#package-and-export">Package and Export</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#package-files-and-metadata-with-bagit-python">Package files and metadata with BagIt Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transfer-files-and-metadata-with-grsync">Transfer files and metadata with grsync</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Walkthrough</li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bitcurator-walkthrough">BitCurator Walkthrough</h1>
+<p>See below for a high-level workflow users can follow when in the BitCurator Environment. </p>
+<ul>
+<li>1 <a href="#BitCuratorWalkthrough-ImagingandRecovery">Imaging and Recovery</a><ul>
+<li>1.1 <a href="#BitCuratorWalkthrough-SafelyMountDevices">Safely Mount Devices</a></li>
+<li>1.2 <a href="#BitCuratorWalkthrough-CreateDiskImages">Create Disk Images</a></li>
+</ul>
+</li>
+<li>2 <a href="#BitCuratorWalkthrough-ForensicsandReporting">Forensics and Reporting</a><ul>
+<li>2.1 <a href="#BitCuratorWalkthrough-Extractmetadatafromdiskimagesandfiles">Extract metadata from disk images and files</a></li>
+<li>2.2 <a href="#BitCuratorWalkthrough-Identifypotentiallyprivateandsensitiveinformation">Identify potentially private and sensitive information</a></li>
+<li>2.3 <a href="#BitCuratorWalkthrough-GenerateForensicReports">Generate Forensic Reports</a></li>
+<li>2.4 <a href="#BitCuratorWalkthrough-DeduplicateFiles">Deduplicate Files</a></li>
+<li>2.5 <a href="#BitCuratorWalkthrough-FileExport">File Export</a></li>
+<li>2.6 <a href="#BitCuratorWalkthrough-ForensicsandReportingNautilusScripts">Forensics and Reporting Nautilus Scripts</a></li>
+</ul>
+</li>
+<li>3 <a href="#BitCuratorWalkthrough-PackageandExport">Package and Export</a><ul>
+<li>3.1 <a href="#BitCuratorWalkthrough-PackagefilesandmetadatawithBagItPython">Package files and metadata with BagIt Python</a></li>
+<li>3.2 <a href="#BitCuratorWalkthrough-Transferfilesandmetadatawithgrsync">Transfer files and metadata with grsync</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="imaging-and-recovery">Imaging and Recovery</h2>
+<p><strong>BitCurator supports multiple acquisition scenarios: attaching physical media to inspect and analyze digital materials, creating forensic disk images, or transferring files into the environment.</strong></p>
+<h3 id="safely-mount-devices">Safely Mount Devices</h3>
+<p>If you have devices (e.g. USB drives, CD-ROMs) that you'd like to image or explore with BitCurator, you can connect them so that BitCurator can see them, but safely: no worries about writing any data back to the device. For example, last modified dates assigned by the target media's file system won't be overwritten with the current date.</p>
+<p>The <strong>safe mount script</strong> provides write-blocked access to removable media. <strong>Mounting</strong> is a technical term for registering a storage device with the host system so it can be browsed or used, and you will need to mount any external device attached to the BitCurator system, whether that occurs automatically or by invoking the safe mount script. Images of devices, (e.g. forensic images of floppies, CDs or drives) need to be mounted as well for most uses.</p>
+<ul>
+<li><strong><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices">Safely Mount Devices</a> (Step-by-Step Guide)</strong></li>
+</ul>
+<h3 id="create-disk-images">Create Disk Images</h3>
+<p>BitCurator uses open source disk imaging tools, such as <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">Guymager</a> and <a href="https://forensicswiki.xyz/wiki/index.php?title=Dcfldd">dcfldd</a>, to capture bit-identical images from magnetic, optical, solid-state, and hybrid media. Disk images can be captured in various formats, including raw (just the bitstream), E01 (Expert Witness Format, which we support using the open source <a href="https://forensicswiki.xyz/wiki/index.php?title=Libewf">libewf</a> library), and AFF (Advanced Forensic Format).</p>
+<p>Capturing disk images in forensic formats such as E01 and AFF provides many advantages. The images can be stored compressed or uncompressed, can be split into multiple storage containers, can be parsed at the file system level without explicitly extracting the raw image, and can be embedded with provenance and capture metadata. <strong>Forensic images ensure that no inadvertent changes are made during pre-ingest chain-of-custody</strong>, and provide a consistent baseline for generating different types of access materials.</p>
+<p>In the BitCurator Environment, forensically-packaged disk images can be mounted by right-clicking on them and selecting "Mount Disk Image". This allows you to browse the source in a safe, read-only environment.</p>
+<ul>
+<li>Image with <strong>Guymager:</strong> Create a perfect capture of your device's file structure and all contents (including hidden files and fragments) PLUS package this image with information about the disk imaging process. When anyone accesses the disk image later on, they'll have information about who imaged the device, when the device was imaged, etc. as well as be able to explore the exact state of the device as it was when you imaged it.</li>
+<li><strong><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">Imaging with Guymager</a> (Step-by-Step Guide)</strong></li>
+<li>Image with <strong>dcfldd:</strong> This command line program is an enhance version of the <strong>dd</strong> program. If you are having trouble with Guymager, or if you are comfortable with command line use, <strong>dcfldd</strong> can be very useful and scriptable. Please see the <a href="https://forensicswiki.xyz/wiki/index.php?title=Dcfldd">dcfldd entry on the Forensics Wiki</a> for general use.</li>
+</ul>
+<p>Along with <strong>dcfldd</strong>, there are a host of command line tools in the <em>Imaging and Recovery</em> folder on the BitCurator Environment desktop, all listed on the <strong><a href="/documentation/BitCurator Environment/Tools">Tools</a></strong> page.</p>
+<h2 id="forensics-and-reporting">Forensics and Reporting</h2>
+<p><strong>BitCurator includes multiple software tools that assist users with identifying and prioritizing important information in raw and forensically packaged disk images. This includes files format identification, location of deleted files and files fragments, cryptographic hashing, and reporting on potentially private and personally identifying information.</strong></p>
+<p>BitCurator generates technical metadata in the form of Digital Forensics XML (DFXML). DFXML has been developed around a set of digital forensics tools that can both consume and produce a common set of tags; DFXML has an evolving schema and tag library, and is <a href="https://forensicswiki.xyz/wiki/index.php?title=Category:Digital_Forensics_XML">well documented</a>. BitCurator also generates PREMIS metadata for each data forensics tool that is applied to a disk image, providing an accurate record of provenance for each stage of processing.</p>
+<h3 id="extract-metadata-from-disk-images-and-files">Extract metadata from disk images and files</h3>
+<p>BitCurator incorporates file system analytics and stream-based forensics technologies to identify and assist with redaction of potentially private and sensitive information (including personally identifiable information). In particular, BitCurator incorporates <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk">fiwalk</a>, a tool originally developed by Simson Garfinkel (and later incorporated into <a href="https://www.sleuthkit.org/">The Sleuth Kit</a>), to export an XML file detailing file system hierarchy within a disk image, including files and folders, deleted materials, and information in slack space.</p>
+<p>Please see the following <strong>Step-by-Step Guides</strong>: </p>
+<ul>
+<li>Generate file system metadata as DFXML: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk"><strong>Fiwalk</strong></a></li>
+<li>View, edit, and export metadata from image files: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/pyExifToolGUI"><strong>pyExifToolGUI</strong></a></li>
+<li>View and export information from HFS-formatted disk images: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/HFS Explorer"><strong>HFS Explorer</strong></a></li>
+</ul>
+<h3 id="identify-potentially-private-and-sensitive-information">Identify potentially private and sensitive information</h3>
+<p>BitCurator includes bulk_extractor (and the bulk_extractor GUI, BEViewer) to assist users in finding potentially private and sensitive information. The bulk_extractor tool employs stream-based forensics (analyzing the disk image at the block level) to identify features such as email addresses, geolocation metadata, and credit card numbers. </p>
+<p>Please see the following <strong>Step-by-Step Guides</strong>: </p>
+<ul>
+<li>Find potentially sensitive information: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer"><strong>Bulk Extractor Viewer</strong></a></li>
+<li>Guide to regular expressions in Bulk Extractor: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Regular Expressions in Bulk Extractor"><strong>Regular Expressions in Bulk Extractor</strong></a></li>
+<li>Guide to Bulk Extractor scanners and what they do: <strong><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Understanding Bulk Extractor Scanners">Understanding Bulk Extractor Scanners</a></strong></li>
+</ul>
+<h3 id="generate-forensic-reports">Generate Forensic Reports</h3>
+<p>Users can generate human-friendly BitCurator Forensic Reports using the data produced by Guymager, the Bulk Extractor Viewer, fiwalk, and Annotated Features report to explore born-digital materials completely (including hidden or partially deleted files and file fragments) with visualizations, XLSX transcriptions of file system metadata, high-level reports on file types, and overviews of features identified by bulk_extractor.</p>
+<p>There are two ways to generate BitCurator Forensic Reports, please reference the following <strong>Step-by-Step Guides</strong>:</p>
+<p><strong><em>Option A:</em></strong> Use "Run All" feature to generate all reports in one step: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool"><strong>Creating Disk Image Reports using the BitCurator Reporting Tool</strong></a><strong><em>Option B:</em></strong> Run each step individually for additional control and customization:</p>
+<ol>
+<li>Find potentially sensitive information: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer"><strong>Bulk Extractor Viewer</strong></a></li>
+<li>Generate filesystem metadata as DFXML: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk"><strong>Fiwalk</strong></a></li>
+<li>Generate Annotated Features Reports: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Annotated Features Report"><strong>Annotated Features Report</strong></a></li>
+<li>Generate Forensic Reports: <strong><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Forensic Reports"><strong>Forensic Reports</strong></a></strong></li>
+</ol>
+<h3 id="deduplicate-files">Deduplicate Files</h3>
+<ul>
+<li>Identify and delete duplicate files: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/FSlint"><strong>FSlint</strong></a> <strong>(Step-by-Step Guide)</strong></li>
+</ul>
+<h3 id="file-export">File Export</h3>
+<ul>
+<li>Access and export files from disk images: <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Access and Export Files from Disk Images"><strong>Access and Export Files from Disk Images</strong></a> <strong>(Step-by-Step Guide)</strong></li>
+</ul>
+<h3 id="forensics-and-reporting-nautilus-scripts">Forensics and Reporting Nautilus Scripts</h3>
+<p>Nautilus is a popular GUI file manager for Linux and it functions similarly to Windows Explorer on Windows systems and Finder on Macs. One key feature of Nautilus is the ability to add custom functionality by incorporating user-created back-end scripts. These scripts work much like plug-ins for a web browser and extend Nautilus's basic functionality. A number of custom Nautilus scripts are included in the BitCurator Environment specifically geared to assist the digital archivist in pre-ingest data analysis. </p>
+<p>See below for <strong>Step-by-Step Guides</strong> on how to use Nautilus to perform a number of critical data analysis tasks:</p>
+<ul>
+<li><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Create MD5 Sums (Nautilus)"><strong>Create MD5 Sums (Nautilus)</strong></a></li>
+<li><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus)"><strong>Extract Compressed Files (Nautilus)</strong></a></li>
+<li><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Review File Info and Details (Nautilus)"><strong>Review File Info and Details (Nautilus)</strong></a></li>
+<li><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus)"><strong>Disk Image Metadata (Nautilus)</strong></a></li>
+<li><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus)"><strong>Display a file in Hex editor (Nautilus)</strong></a></li>
+<li><a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus)"><strong>Live Search for Files (Nautilus)</strong></a></li>
+</ul>
+<p>BitCurator includes a number of other tools to assist users with data triage; identifying and prioritizing important information in raw and forensically packaged disk images. This includes files format identification, location of deleted files and file fragments, cryptographic hashing, and reporting on potentially private and personally identifying information. BitCurator includes Vassil Roussev's <strong>sdhash</strong> to report on file similarity, <strong>regripper</strong> for Windows registry analysis, and <strong>ClamAV</strong> for virus and malware detection. These are listed on the <a href="/documentation/BitCurator Environment/Tools">Tools</a> page.</p>
+<h2 id="package-and-export">Package and Export</h2>
+<p><strong>The BitCurator environment also includes tools to assist in preparing and packaging born-digital materials for transfer to preservation storage and access platforms.</strong></p>
+<h3 id="package-files-and-metadata-with-bagit-python"><strong>Package files and metadata with BagIt Python</strong></h3>
+<p><a href="https://github.com/LibraryOfCongress/bagit-python">Bagit Python</a> is a library and command line utility for working with <a href="http://purl.org/net/bagit">BagIt</a> style packages. Documentation on using Bagit Python utility can be found <a href="https://github.com/LibraryOfCongress/bagit-python">here</a>.</p>
+<p>Bags are useful for transferring packages of data from one location to another location across a network. This might be a local area network or somewhere across the internet. You can then verify the receipt of the bags and ensure that the data has not changed during transfer. </p>
+<p>An example use would be to create a bag of the data that you have processed in BitCurator. This bag could include the disk images, report outputs, extracted files, and any other metadata generated. </p>
+<h3 id="transfer-files-and-metadata-with-grsync"><strong>Transfer files and metadata with grsync</strong></h3>
+<p>Grsync is a rsync GUI (Graphical User Interface). Rsync is a well-known and powerful command line directory and file synchronization tool that can be used to synchronize files, folders, and make backups. Documentation and more information on Grsync <a href="http://www.opbyte.it/grsync/">here</a>.</p>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbGxcijN4d7OXzhZrKUoKBYrP3UV4X7XfVBf2DxHn-LBF8kQ/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator Walkthrough section.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/" class="btn btn-neutral float-left" title="Packaging and Transfer Guides"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../BitCurator%20Workflow%20Diagrams/" class="btn btn-neutral float-right" title="BitCurator Workflow Diagrams">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../BitCurator%20Workflow%20Diagrams/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

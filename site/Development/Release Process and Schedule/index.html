@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Release Process and Schedule - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Release Process and Schedule";
+        var mkdocs_page_input_path = "Development/Release Process and Schedule.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Release Process and Schedule</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#bitcurator-consortium-software-development-committee">BitCurator Consortium Software Development Committee</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#current-identification-of-software-issues-and-features">Current Identification of Software Issues and Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#proposed-software-release-process">Proposed Software Release Process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-release-schedule">Software Release Schedule</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#roles-and-responsibilities">Roles and Responsibilities</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Development</li>
+      <li class="breadcrumb-item active">Release Process and Schedule</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="release-process-and-schedule">Release Process and Schedule</h1>
+<h2 id="bitcurator-consortium-software-development-committee"><strong><em>BitCurator Consortium Software Development Committee</em></strong></h2>
+<p><em>This page outlines a process by which issues identified in the public <a href="https://groups.google.com/forum/#!forum/bitcurator-users">BitCurator User Forum</a> can be raised to the attention of BitCurator Consortium members for possible action or resolution. A proposed software release schedule is also outlined.</em></p>
+<h2 id="current-identification-of-software-issues-and-features"><strong>Current Identification of Software Issues and Features</strong></h2>
+<ul>
+<li>Non-member users identify issues and post them to public BitCurator User Forum.</li>
+<li>Member users identify issues and post in the BitCurator User Forum.</li>
+<li>Members can also create new feature requests</li>
+</ul>
+<h2 id="proposed-software-release-process"><strong>Proposed Software Release Process</strong></h2>
+<ol>
+<li>
+<p>MONTHLY A designated site monitor reviews all posts on public BitCurator User Forum and generates a list to the BCC Software Development Committee, containing:  </p>
+<ul>
+<li>Frequently mentioned issues (those receiving a high number of views/responses)</li>
+<li>High-priority issues that may document major bugs or other software issues</li>
+<li>Feature requests that may be outcomes of ongoing user group communication</li>
+<li>MONTHLY Designated site monitor creates tickets for any User Forum issues that will be included for voting. The Software Development Committee briefly reviews and discusses these tickets during that group’s monthly meeting.</li>
+<li>QUARTERLY A reminder to BCC members is put out for votes on issue list (votes and feedback are always available to members however).</li>
+<li>
+<p>QUARTERLY The Software Development Committee reviews issue list and recommends features and fixes to be prioritized for Executive Council action. SDC recommendation can be either green/red/yellow, where:  </p>
+</li>
+<li>
+<p>RED is for fixes/features that are not recommended for the current or upcoming release cycle, or for features which are being removed from the suite due to incompatibilities or discontinuation of a tool, etc.</p>
+</li>
+<li>YELLOW is for fixes/features that are not recommended for the current release cycle but may be recommended for subsequent releases (with reasons for why not - could be dependencies, lack of funding, etc.)</li>
+<li>GREEN is for fixes/features that are recommended for current release cycle, with reasons why, plus any additional information (i.e., should be included as a bounty, or requires external funding partnership for inclusion)</li>
+<li><em>NOTE: Prioritization should be as transparent as possible, with notes on justifications for recommendations provided for Executive Council and available to all BCC members.</em></li>
+<li>The BCC Executive Council approves the SDC recommendation or discusses and proceeds to adjustments of the recommended plan.</li>
+<li>Development targets are announced for next quarterly release and linked to specific threads in the BitCurator user mailing list as warranted</li>
+<li>Post is made to BitCurator User Forum</li>
+<li>Email is sent to all BCC members</li>
+<li>Announced and discussed at BCC monthly call</li>
+<li>Release notes from BitCurator User Forum also posted to Confluence wiki site</li>
+<li>Added to public <a href="/documentation/BitCurator Environment/Development/Roadmap">Road Map</a> on Confluence site</li>
+</ul>
+</li>
+</ol>
+<h2 id="software-release-schedule"><strong>Software Release Schedule</strong></h2>
+<table class="wrapped confluenceTable" style="margin-left: auto;">
+ <colgroup>
+  <col/>
+  <col/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Major issues and new features
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Every 12 months
+     </span>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Maintenance (core OS, VirtualBox updates)
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Every 3 months
+     </span>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="roles-and-responsibilities"><strong>Roles and Responsibilities</strong></h2>
+<table class="wrapped confluenceTable">
+ <colgroup>
+  <col/>
+  <col/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Non-member Users
+     </span>
+    </p>
+   </td>
+   <td>
+    <ul>
+     <li>
+      <span style="color: rgb(0,0,0);">
+       Submit issues, bugs, feature requests to public BitCurator Users Forum
+      </span>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Member Users
+     </span>
+    </p>
+   </td>
+   <td>
+    <ul>
+     <li style="list-style-type: disc;">
+      Submit issues and bugs
+     </li>
+     <li style="list-style-type: disc;">
+      <p>
+       Create new feature requests
+      </p>
+     </li>
+     <li style="list-style-type: disc;">
+      <p>
+       Vote on open issues and feature requests
+      </p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      User Forum Site Monitor
+     </span>
+    </p>
+   </td>
+   <td>
+    <ul>
+     <li style="list-style-type: disc;">
+      <p>
+       Review issues on public BitCurator Users Forum
+      </p>
+     </li>
+     <li style="list-style-type: disc;">
+      <p>
+       Compiles report for SDC
+      </p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Software Development Committee
+     </span>
+    </p>
+   </td>
+   <td>
+    <ul>
+     <li style="list-style-type: disc;">
+      <p>
+       Reviews report of BC user forum
+      </p>
+     </li>
+     <li style="list-style-type: disc;">
+      <p>
+       Decides which fixes/features will go to Executive Council
+      </p>
+     </li>
+     <li style="list-style-type: disc;">
+      <p>
+       Documents recommendations in report for Executive Council
+      </p>
+     </li>
+     <li style="list-style-type: disc;">
+      <p>
+       Committee Chair sends out announcements about new software releases
+      </p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Executive Council
+     </span>
+    </p>
+   </td>
+   <td>
+    <ul>
+     <li style="list-style-type: disc;">
+      <p>
+       Confirms/counters recommendations from SDC
+      </p>
+     </li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLScRk8obKFl7tDb1NqdxlNfY9doy7r_WIkCTAiB2nE-r0D5b2Q/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the Development section.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Onboarding/" class="btn btn-neutral float-left" title="Onboarding"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Roadmap/" class="btn btn-neutral float-right" title="Roadmap">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Onboarding/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Roadmap/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
