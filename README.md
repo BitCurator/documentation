@@ -1,8 +1,7 @@
 # documentation
 
-This site uses mkdocs.
+This site uses [mkdocs](https://mkdocs.readthedocs.io).
 
-New pages may be added by creating new markdown files in the appropriate folder.
+New pages may be added by creating new markdown files`.md` in the [docs](./docs) folder and/or section subfolders.
 
-New folders may be added by creating a folder (e.g. `new_folder`) and an accompanying Markdown page suffixed with `-index` (e.g. `new_folder-index.md`)
 Pages in subfolders will be grouped alongside the rest of the folder content.
