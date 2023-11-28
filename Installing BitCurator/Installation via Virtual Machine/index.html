@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Installation via Virtual Machine - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation via Virtual Machine";
+        var mkdocs_page_input_path = "Installing BitCurator/Installation via Virtual Machine.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation via Virtual Machine</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-instructions">Installation Instructions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#virtual-machine-login">Virtual Machine Login</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Installation</li>
+      <li class="breadcrumb-item active">Installation via Virtual Machine</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation-via-virtual-machine">Installation via Virtual Machine</h1>
+<h3 id="overview">Overview</h3>
+<p>Using the BitCurator Environment through a virtual machine allows you to install the software as another program on an existing computer. This can be very useful for both testing the software and instruction. It is also helpful if you do not have access or the ability to install directly on a drive. However, if you anticipate using the software regularly or routinely, it is best to arrange for a dedicated install. </p>
+<p>Hardware Requirements</p>
+<ul>
+<li>Desktop or laptop with an Intel Core i7 (or similar) processor running 64-bit Windows 7/8/8.1/10, macOS 10.10 (or newer), or a 64-bit Linux variant</li>
+<li>8 GB RAM or more</li>
+<li>12 GB free hard disk space minimum. The virtual machine is approximately 9 GB. It will expand to 256 GB as needed</li>
+</ul>
+<h3 id="installation-instructions">Installation Instructions</h3>
+<p>Step 1: Download Software<em> BitCurator Virtual Machine or Live CD: <a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases">https://github.com/BitCurator/bitcurator-distro/wiki/Releases</a>
+* Current release of VirtualBox: <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>
+* The VirtualBox Extension Pack </em><em>must</em><em> be installed on the host for shared folder support, USB 2.0/3.0 support, and support for some NVMe SSDs. Once you’ve installed VirtualBox, use the link below the main download on VirtualBox download site to install the Extension Pack on your host.
+Step 2: Unpack the BitCurator Virtual MachineThe BitCurator Virtual Machine is packaged as a tar archive and compressed with gzip. The file will look something like: </em><em>“BitCurator-X.X.X.tar.gz”</em>*</p>
+<p>On a Mac (OS X 10.10 or later) or Linux host machine, you can simply double-click on the file to unpack the contents.</p>
+<p>On a Windows machine, you may need a 3rd party utility such as 7-zip: <a href="https://www.7-zip.org/download.html">https://www.7-zip.org/download.html</a></p>
+<p>When using 7-zip, you’ll need to unpack the .tar.gz file. Right click on the .tar.gz file and select “Extract here…” to extract the .tar file. Then right click on the .tar file and select “Extract here…” again. This will extract a directory containing the BitCurator virtual machine disk image (.vbox) and configuration (.vdi) files.</p>
+<p>Once you’ve unpacked the archive, you’ll find a directory containing two files (where X.X.X is your downloaded version):</p>
+<ul>
+<li>BitCurator-X.X.X.vbox (the VirtualBox configuration file)</li>
+<li>BitCurator-X.X.X.vdi (the VirtualBox disk image)</li>
+</ul>
+<p>Copy this directory to a location of your choosing (inside the “VirtualBox VMs” directory in your home directory is a good place), and start up VirtualBox.</p>
+<p>If you’ve never created or used a VM in VirtualBox before, you won’t have a “VirtualBox VMs” directory. Don’t worry – just remember where you extracted the BitCurator directory.</p>
+<p>Step 3: Open Oracle VM VirtualBox ManagerOnce you’ve installed VirtualBox and the VirtualBox extension pack, start up VirtualBox. If you’ve never used VirtualBox before, your list of machines (on the left) will be blank.</p>
+<p>You may need to right-click on the VirtualBox icon and select “Run as Administrator”. Windows machines with certain administrative controls may prevent you from accessing USB devices (or lock out control of the mouse and keyboard) otherwise.</p>
+<p><em>VirtualBox Manager in Windows:</em></p>
+<p><em>VirtualBox Manager in macOS:</em></p>
+<p>Step 4: Add a Virtual MachineFrom the menu bar, select the menu item “Machine -&gt; Add…”</p>
+<p>Navigate to the folder containing .vbox file that you extracted.</p>
+<p>Choose that file, and the Virtual Machine should appear in the list within the manager.</p>
+<p><em>Adding a machine (VirtualBox in Windows):</em></p>
+<p><em>Adding a machine (VirtualBox in macOS):</em></p>
+<p>Step 5: Configure RAM and ProcessorsClick on the Settings icon, and select the system tab.</p>
+<p><strong>We recommend a minimum of 4096 MB RAM and 2 processors assigned to the VM.</strong></p>
+<p>You may wish to change the RAM and number of processors depending on the hardware that you’re running on. For best results, select the largest number in the “green” areas for each.</p>
+<p>Two or more processors assigned for VirtualBox are need to support drag-and-drop functionality.</p>
+<p><em>Configuring the VM (VirtualBox in Windows):</em></p>
+<p><em>Configuring the VM (VirtualBox in macOS):</em></p>
+<p>Step 6: Enable USB Device CaptureBitCurator depends on a VirtualBox device filter to capture USB devices. In macOS, you’ll find this filter under the USB tab of the “Ports” icon under “Settings”.</p>
+<p>In Windows, you’ll find it in the “USB” tab in settings. You don’t need to do anything here, unless you don’t see an entry under “USB Device Filters”.</p>
+<p><strong>If you don’t see an entry, select the USB 3.0 radio button, and then create a new filter by clicking on the blue icon to the right of the list.</strong></p>
+<p>If you don’t need access to USB devices (for example, if you plan to do analysis of existing born-digital data but no disk imaging), you can delete this filter.</p>
+<p><em>USB Filters (VirtualBox in Windows):</em></p>
+<p><em>USB Filters (VirtualBox in macOS):</em></p>
+<p>Step 7: Setup Shared FoldersIf you wish to move processed materials <strong>back to your host machine</strong> from the BitCurator VM, you can set up a shared folder that both the host and the VM can write to.</p>
+<p>In the Shared Folders tab, click the folder with the green “plus” on it to choose a folder on your host machine to share.</p>
+<p>Select “Automount” but not “Read Only”. When the machine is booted, the folder will appear in the “Shared Folders and Media” folder on the desktop in the VM.</p>
+<p><em>Shared Folders (VirtualBox in Windows):</em></p>
+<p><em>Shared Folders (VirtualBox in macOS):</em></p>
+<p>Step 8: Starting the BitCurator Environment (VM)Click on the green “Start” arrow in the Oracle VM VirtualBox Manager screen to start the BitCurator environment.</p>
+<p>You will see a startup screen, and then the BitCurator environment will boot and automatically log in.</p>
+<p>If you encounter a menu screen on boot, simply hit the Return key to continue.</p>
+<p>If you see an error message mentioning virtualization extensions, or “Intel VT-x”, your host machine’s BIOS does not have the VT-x extensions enabled. You’ll need to reboot your computer, holding down “Del” (or “Esc”, or the “ThinkPad” button, depending on your machine). Once you’re in the BIOS, locate the correct menu entry and enable the “Intel Virtualization Extensions”.</p>
+<p>If BitCurator fails to boot for other reasons, it may be due to a “non-optimal setting” detected for your particular hardware. Try powering off the virtual machine, checking your settings, and starting again. If you’re still having a problem, let us know on the <a href="https://groups.google.com/forum/#!forum/bitcurator-users">BitCurator users group</a>.</p>
+<p>The BitCurator virtual machine should log in automatically.</p>
+<p>If you log out or the machine goes to sleep, the password to log back in is “<strong>bcadmin</strong>”.</p>
+<p>You can also use this password to update installed software, if prompted.</p>
+<h3 id="virtual-machine-login">Virtual Machine Login</h3>
+<p>BitCurator includes a default user. You are strongly encouraged to change the default password following the first login.</p>
+<p>username: <strong>bcadmin</strong></p>
+<p>password: <strong>bcadmin</strong></p>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW9_Ri9tzXzisgBzQ26o4Ea4moDYmcKZ_f1qd9s4Ju17Yf_w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the Installing BitCurator section.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Installation%20via%20Live%20ISO/" class="btn btn-neutral float-left" title="Installation via Live ISO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Installing%20BitCurator/" class="btn btn-neutral float-right" title="Installing BitCurator">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Installation%20via%20Live%20ISO/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Installing%20BitCurator/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

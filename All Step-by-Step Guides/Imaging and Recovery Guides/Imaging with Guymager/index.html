@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Imaging with Guymager - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Imaging with Guymager";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Imaging with Guymager</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="imaging-with-guymager">Imaging with Guymager</h1>
+<h3 id="overview"><strong>Overview</strong></h3>
+<p>The BitCurator environment includes <a href="https://guymager.sourceforge.io">Guymager</a>, an open-source, graphic application for creating disk images. Guymager supports the creation of raw (.dd) or Expert Witness Format (.E01) disk images. The Expert Witness Format is commonly used in the digital forensics community because it incorporates metadata about the original media into the disk image itself.</p>
+<p><strong>Step-by-Step Guide</strong></p>
+<p><strong>Step 1:</strong>Create a directory to store your disk image by opening Nautilus (the "Home" folder on the top left-hand side of the screen) and right-clicking anywhere on the white background. Select "New Folder" from the drop-down menu. Name the folder as you see fit – we will use the folder name "diskimages" in this example.</p>
+<p><strong>Step 2:</strong>Connect the device you wish to image to your computer (USB flash drive, CD-ROM, hard drive, or floppy disk drive).</p>
+<p>A device does not need to be mounted in order to be imaged by Guymager, and BitCurator will not mount devices automatically (the icon that appears in the Unity bar on the left indicates that the device is <strong>attached</strong>, rather than <strong>mounted</strong>). If you need to examine the contents of the disk before creating the disk image, you can <a href="https://confluence.educopia.org/display/BC/Safely+Mount+Devices">safely mount the device</a>.</p>
+<p><strong>Step 3:</strong> Open Guymager by right-clicking the icon in the "Imaging and Recovery" folder on the desktop. In the contextual menu, select "Open" (<em>Figure 1</em>).</p>
+<p>Guymager will ask to be run with root user rights. When prompted, enter the password associated with the BitCurator user account. This is usually 'bcadmin', or it is blank if you did not enter a password during installation and setup (<em>Figure</em> <em>2</em>).</p>
+<p><img alt="Screenshot from 2019-11-18 12-45-50.png" src="../attachments/Screenshot%20from%202019-11-18%2012-45-50.png" /></p>
+<p><em>Figure 1</em>: The contextual menu for opening Guymager.</p>
+<p><img alt="Screenshot from 2019-11-18 12-46-15.png" src="../attachments/Screenshot%20from%202019-11-18%2012-46-15.png" /></p>
+<p><em>Figure 2</em>: Guymager prompts for authentication to allow the program root-level rights. </p>
+<p><strong>Step 4:</strong> When Guymager launches, it will display a list of all mounted disks on the system. Select and right-click on the disk you wish to image, and select "Acquire image" (<em>Figure 3</em>).</p>
+<p><img alt="guymager1.png" src="../attachments/guymager1.png" /></p>
+<p><em>Figure 3:</em> Click on "Acquire image" to begin the imaging process.  </p>
+<p><strong>Step 5:</strong> Clicking on "Acquire Image" will open the Acquire Image window. In this window you will first select the disk image format you would like to use. The options include raw Linux dd and Expert Witness (.E01) formats. An Expert Witness image will store user-added metadata within the forensically-packaged image. </p>
+<ul>
+<li>Guymager provides the option to split the image into multiple files, thus making it more easily transferable. So, for example, a 4 GB image could be split into four 1 GB files, or two 2 GB files, etc.</li>
+</ul>
+<p><strong>Step 6:</strong>After selecting the image format type, fill out the metadata as needed. </p>
+<ul>
+<li>The Expert Witness format was designed for the digital forensics community, so metadata fields are labeled for criminal investigation. However, these fields can easily be repurposed for the needs of archivists and curators. For example, an archivist might use the "Case number" field to record an accession number.</li>
+</ul>
+<p><strong>Step 7:</strong> Next choose the image directory, which in this example would be "/home/bcadmin/diskimages". </p>
+<p>Don't create new directories from within Guymager. Instead, create new directories before launching Guymager (as described in <strong>Step 1</strong>). This is because Guymager runs as the root user and so any directories that it creates will require administrator permissions. </p>
+<p><strong>Step 8:</strong>Name your disk image and choose which verification options you would like Guymager to perform. Click "OK" to begin the imaging process.</p>
+<p><strong>Step 9:</strong> Once the the imaging process begins you will see a progress bar on the main Guymager screen.</p>
+<p><strong>Step 10:</strong>After Guymager has finished creating the disk image, close Guymager and verify the image by navigating to the directory you created in Step 1. Notice that there are two files, the image itself and an info file <em>(Figure 4).</em> The info file includes the metadata we input in step 7 along with additional metadata collected during the acquisition process. The imaging process is now complete.</p>
+<p><img alt="Guymager3.png" src="../attachments/Guymager3.png" /></p>
+<p><em>Figure 4</em><em>:</em>Verify the disk image and metadata.  </p>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator All Step-by-Step Guides section.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

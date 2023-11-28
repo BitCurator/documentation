@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Bulk Extractor Viewer - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bulk Extractor Viewer";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Resources/">Resources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Installing%20BitCurator/">Installing BitCurator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Installing%20BitCurator/Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Development/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Onboarding/">Onboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Roadmap/">Roadmap</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Bulk Extractor Viewer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bulk-extractor-viewer">Bulk Extractor Viewer</h1>
+<h3 id="overview">Overview</h3>
+<p>The Bulk Extractor Viewer (BEviewer) is a graphical interface for <a href="https://forensicswiki.xyz/wiki/index.php?title=Bulk_extractor">bulk_extractor</a>, "a C++ program that scans a disk image, a file, or a directory of files and extracts useful information without parsing the file system or file system structures. The results can be easily inspected, parsed, or processed with automated tools. bulk_extractor also creates a histogram of features that it finds, as features that are more common tend to be more important."</p>
+<p>While originally intended for law enforcement, bulk_extractor can be used by digital archivists to quickly and thoroughly examine a disk image for a wide variety of information. The most common use for such analysis is locating personally identifiable information (PII) that a donor may want redacted before his or her materials are made publicly available, but bulk_extractor can locate other types of potentially sensitive information as well.</p>
+<p>The instructions below take you through the process of running bulk_extractor via the Bulk Extractor Viewer utility, a GUI interface for running bulk_extractor and viewing the results. Archivists can view the results through the GUI and also further process them using the digital forensics tools in the BitCurator environment.</p>
+<h3 id="step-by-step-guide">Step-by-step Guide</h3>
+<h3 id="using-bulk_extractor-to-find-potentially-sensitive-information-on-a-disk-image">Using bulk_extractor to Find Potentially Sensitive Information on a Disk Image</h3>
+<ol>
+<li>The first step is to create a working directory to hold the bulk_extractor data. To do this, open Nautilus by double clicking on the "Home" folder on your desktop. Then right click anywhere on the white background (i.e., not on an existing folder), and click "Create New Folder" from the pull-down menu. You can name the directory as you see fit, but for this example we'll name the directory "test_data".</li>
+<li>Next open the Bulk Extractor Viewer utility by double clicking on the "Forensics Tools" folder on your desktop, and then double clicking on "Bulk Extractor Viewer".</li>
+<li>After Bulk Extractor Viewer opens, click on the gear icon with the down arrow to begin generating a report using bulk_extractor (see Figure 1).  </li>
+</ol>
+<p><strong>Figure 1</strong>: Click the gear icon to begin the bulk_extractor process.<br />
+<img alt="bulk1.png" src="../attachments/bulk1.png" />
+4. Clicking on the Generate a Report icon will open the "Run bulk_extractor" window. From this window you can specify the image you would like to analyze, the location of the output directory, and further refine the types of data objects bulk_extractor will search for.To begin your analysis, first select the type of media you want to scan, which in our case is a disk image, so we'll select the "image file" radial button (see Figure 2)
+5. Next, type or navigate to the location of the disk image in the "Image file" field (see Figure 2).  </p>
+<p><strong>Figure 2</strong>: The "Run bulk_extractor" window.<br />
+<img alt="bulk2.jpg" src="../attachments/bulk2.jpg" />
+6. Enter the name of the directory you wish to create for holding the Bulk Extractor output; Bulk Extractor Viewer will create this directory for you. For example, if you wanted to save the bulk_extractor output to a directory named "be_reports" in your working directory, you would enter "/home/bcadmin/[name of working directory]/be_reports" in the Output Feature Directory field. If the directory be_reports doesn't already exist, BE Viewer will create it for you.
+7. Optional: If desired, you may check or uncheck the <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Understanding Bulk Extractor Scanners">scanner options</a> from the list on the right (see Figure 3). You can refine your analysis of the disk image by choosing which "scanners" bulk_extractor employs. "Scanners" in bulk_extractor are modular sets of rules that allow bulk_extractor to find specific types of information on a disk image. For example, if you have the "accts" scanner selected, bulk_extractor will find objects (which it calls "features") such as credit card numbers, social security numbers, phone numbers, etc. A chart defining the various scanners, how they may be useful to you, and where they output their results can be found <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Understanding Bulk Extractor Scanners">here</a>.  </p>
+<p><strong>Figure 3</strong>: Scanner options in the Bulk Extractor Viewer.<br />
+<img alt="bulk3.jpg" src="../attachments/bulk3.jpg" /></p>
+<p><em>Note:</em> Because bulk_extractor generates a large number of files, it requires a new directory for the output. <strong>Bulk_extractor will create the new directory.</strong> If you navigate to the output directory instead of type it in, a window will open asking you for the path to the new directory along with its name. In our example, the output directory would be "/home/bcadmin/test_data/" and the new directory to be created by bulk_extractor would be called "be_data" (see Figure 4).</p>
+<p><strong>Figure 4</strong>: The "Name the output folder for bulk_extractor.<br />
+<img alt="bulk4.jpg" src="../attachments/bulk4.jpg" />
+8. Finally, click the "Start bulk_extractor" button at the bottom of the screen to begin the scan.
+9. Once bulk_extractor has finished analyzing the disk image, you can view the output by selecting the new report in the "Reports" window of Bulk Extractor Viewer. The report will be named after the Features Output Directory you created in step 6, so in our example we will see "be_report" (see Figure 5). Once you select the report, you will see a listing of each scanner for which a feature was found by bulk_extractor. Selecting a specific scanner or its histogram will cause the features to be listed in the window to the right. Selecting a specific feature will show the file in which it is located to be displayed in the "Image" window.  </p>
+<p><strong>Figure 5</strong>: View the bulk_extractor report.<br />
+<img alt="bulk5.jpg" src="../attachments/bulk5.jpg" /></p>
+<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator All Step-by-Step Guides section.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
