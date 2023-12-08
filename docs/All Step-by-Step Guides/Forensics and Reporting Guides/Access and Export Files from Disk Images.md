@@ -5,11 +5,11 @@ Access and Export Files from Disk Images
 
 
 
-### Overview
+Overview
 
 The "File Access" tab in the BitCurator Reporting tool allows you to access files on a disk image (including partial, hidden, and deleted files). For example, you can use this tool to open and read a Word Document on a disk image.
 
-### Step-by-Step Guide
+Step-by-Step Guide
 
 1. Open the BitCurator Reporting Tool by double clicking on the "Forensics Tools" folder on the BitCurator desktop and then double clicking on the "BitCurator Reporting Tool" icon.
 2. Once the BitCurator Reporting Tool finishes opening, select the "File Access" tab from the options along the top (see Figure 1).  
