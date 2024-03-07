@@ -17,7 +17,9 @@ Hardware Requirements
 
 ### Installation Instructions
 
-Step 1: Download Software* BitCurator Virtual Machine or Live CD: <https://github.com/BitCurator/bitcurator-distro/wiki/Releases>
+## Step 1: Download Software
+
+* BitCurator Virtual Machine or Live CD: <https://github.com/BitCurator/bitcurator-distro/wiki/Releases>
 * Current release of VirtualBox: <https://www.virtualbox.org/wiki/Downloads>
 * The VirtualBox Extension Pack **must** be installed on the host for shared folder support, USB 2.0/3.0 support, and support for some NVMe SSDs. Once you’ve installed VirtualBox, use the link below the main download on VirtualBox download site to install the Extension Pack on your host.
 
