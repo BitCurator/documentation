@@ -20,6 +20,7 @@ Hardware Requirements
 Step 1: Download Software* BitCurator Virtual Machine or Live CD: <https://github.com/BitCurator/bitcurator-distro/wiki/Releases>
 * Current release of VirtualBox: <https://www.virtualbox.org/wiki/Downloads>
 * The VirtualBox Extension Pack **must** be installed on the host for shared folder support, USB 2.0/3.0 support, and support for some NVMe SSDs. Once you’ve installed VirtualBox, use the link below the main download on VirtualBox download site to install the Extension Pack on your host.
+
 Step 2: Unpack the BitCurator Virtual MachineThe BitCurator Virtual Machine is packaged as a tar archive and compressed with gzip. The file will look something like: **“BitCurator-X.X.X.tar.gz”**
 
 On a Mac (OS X 10.10 or later) or Linux host machine, you can simply double-click on the file to unpack the contents.
