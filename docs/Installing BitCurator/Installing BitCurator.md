@@ -32,7 +32,7 @@ Installation Instructions
 
 This is the preferred method for running the BitCurator Environment.
 
-[Install the BitCurator toolset in an **existing Ubuntu environment**](https://github.com/bitcurator/bitcurator-distro-salt)
+[Install the BitCurator toolset in an **existing Ubuntu environment**](https://github.com/bitcurator/bitcurator-salt)
 
 If you have an existing Ubuntu compatible environment on either a direct partition or in a virtual machine, you can build the BitCurator stack in it.
 
