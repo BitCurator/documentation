@@ -7,7 +7,7 @@ Imaging and Recovery Guides
 
 ### Overview
 
-Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through nine open-source disk imaging tools.
+Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools.
 
 * **Brasero**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
 * **cdrdao**: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents ( [toc-file](https://cdrdao.sourceforge.net/example.html#toc-file-example) )
