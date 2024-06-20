@@ -15,7 +15,7 @@ Whether you are creating forensic disk images, mounting physical media to inspec
 * **ddrescue**: A data recovery tool with advanced features to assist in rescue of good data from devices with read errors.
 * **dumpfloppy**: A tool to read floppy disks in arbitrary formats supported by the PC floppy controller, and work with the resulting image files.
 * **ewfacquire**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
-* **Guymager**: A GUI tool to create raw and EWF-packaged images from devices."
+* **Guymager**: A GUI tool to create raw and EWF-packaged images from devices.
 
 
 ### Guides
