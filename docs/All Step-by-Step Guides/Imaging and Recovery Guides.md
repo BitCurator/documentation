@@ -7,13 +7,16 @@ Imaging and Recovery Guides
 
 ### Overview
 
-**Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios.**
+Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools.
 
-BitCurator uses open source disk imaging tools, such as [Guymager](Imaging with Guymager) and [dcfldd](https://forensicswiki.xyz/wiki/index.php?title=Dcfldd), to capture bit-identical images from magnetic, optical, solid-state, and hybrid media. Disk images can be captured in various formats, including raw (just the bitstream), E01 (Expert Witness Format, which we support using the open source [libewf](https://forensicswiki.xyz/wiki/index.php?title=Libewf) library), and AFF (Advanced Forensic Format).
+* **Brasero**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
+* **cdrdao**: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents ( [toc-file](https://cdrdao.sourceforge.net/example.html#toc-file-example) )
+* **dcfldd**: An enhanced version of GNU dd with features useful for forensics and security, including hashing on-the-fly and split outputs.
+* **ddrescue**: A data recovery tool with advanced features to assist in rescue of good data from devices with read errors.
+* **dumpfloppy**: A tool to read floppy disks in arbitrary formats supported by the PC floppy controller, and work with the resulting image files.
+* **ewfacquire**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
+* **Guymager**: A GUI tool to create raw and EWF-packaged images from devices.
 
-Capturing disk images in forensic formats such as E01 and AFF provides many advantages. The images can be stored compressed or uncompressed, can be split into multiple storage containers, can be parsed at the file system level without explicitly extracting the raw image, and can be embedded with provenance and capture metadata. **Forensic images ensure that no inadvertent changes are made during pre-ingest chain-of-custody**, and provide a consistent baseline for generating different types of access materials.
-
-In the BitCurator Environment, forensically-packaged disk images can be mounted by right-clicking on them and selecting "Mount Disk Image". This allows you to browse the source in a safe, read-only environment.
 
 ### Guides
 
