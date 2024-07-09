@@ -11,6 +11,8 @@ Guides for file format identification, location of deleted files and files fragm
 
 ### Guides
 
+[Analyzing a Disk Image with Brunnhilde](Analyzing a Disk Image with Brunnhilde)
+
 [Fiwalk](Fiwalk)
 
 [pyExifToolGUI](pyExifToolGUI)
@@ -22,6 +24,8 @@ Guides for file format identification, location of deleted files and files fragm
 [Regular Expressions in Bulk Extractor](Regular Expressions in Bulk Extractor)
 
 [Understanding Bulk Extractor Scanners](Understanding Bulk Extractor Scanners)
+
+[Scanning Disk Images and Directories with Bulk Reviewer](Scanning Disk Images and Directories with Bulk Reviewer)
 
 [Disk Image Reports](Creating Disk Image Reports using the BitCurator Reporting Tool)
 
