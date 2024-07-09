@@ -7,7 +7,7 @@ Bulk Extractor Viewer
 
 ### Overview
 
-The Bulk Extractor Viewer (BEviewer) is a graphical interface for [bulk\_extractor](https://forensicswiki.xyz/wiki/index.php?title=Bulk_extractor), "a C++ program that scans a disk image, a file, or a directory of files and extracts useful information without parsing the file system or file system structures. The results can be easily inspected, parsed, or processed with automated tools. bulk\_extractor also creates a histogram of features that it finds, as features that are more common tend to be more important."
+The Bulk Extractor Viewer (BEviewer) is a graphical interface for [bulk\_extractor](https://forensics.wiki/bulk_extractor/), "a C++ program that scans a disk image, a file, or a directory of files and extracts useful information without parsing the file system or file system structures. The results can be easily inspected, parsed, or processed with automated tools. bulk\_extractor also creates a histogram of features that it finds, as features that are more common tend to be more important."
 
 While originally intended for law enforcement, bulk\_extractor can be used by digital archivists to quickly and thoroughly examine a disk image for a wide variety of information. The most common use for such analysis is locating personally identifiable information (PII) that a donor may want redacted before his or her materials are made publicly available, but bulk\_extractor can locate other types of potentially sensitive information as well.
 

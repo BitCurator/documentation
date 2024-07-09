@@ -139,10 +139,16 @@
               
                 <h1 id="imaging-and-recovery-guides">Imaging and Recovery Guides</h1>
 <h3 id="overview">Overview</h3>
-<p><strong>Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios.</strong></p>
-<p>BitCurator uses open source disk imaging tools, such as <a href="Imaging with Guymager">Guymager</a> and <a href="https://forensicswiki.xyz/wiki/index.php?title=Dcfldd">dcfldd</a>, to capture bit-identical images from magnetic, optical, solid-state, and hybrid media. Disk images can be captured in various formats, including raw (just the bitstream), E01 (Expert Witness Format, which we support using the open source <a href="https://forensicswiki.xyz/wiki/index.php?title=Libewf">libewf</a> library), and AFF (Advanced Forensic Format).</p>
-<p>Capturing disk images in forensic formats such as E01 and AFF provides many advantages. The images can be stored compressed or uncompressed, can be split into multiple storage containers, can be parsed at the file system level without explicitly extracting the raw image, and can be embedded with provenance and capture metadata. <strong>Forensic images ensure that no inadvertent changes are made during pre-ingest chain-of-custody</strong>, and provide a consistent baseline for generating different types of access materials.</p>
-<p>In the BitCurator Environment, forensically-packaged disk images can be mounted by right-clicking on them and selecting "Mount Disk Image". This allows you to browse the source in a safe, read-only environment.</p>
+<p>Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools.</p>
+<ul>
+<li><strong>Brasero</strong>: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.</li>
+<li><strong>cdrdao</strong>: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents ( <a href="https://cdrdao.sourceforge.net/example.html#toc-file-example">toc-file</a> )</li>
+<li><strong>dcfldd</strong>: An enhanced version of GNU dd with features useful for forensics and security, including hashing on-the-fly and split outputs.</li>
+<li><strong>ddrescue</strong>: A data recovery tool with advanced features to assist in rescue of good data from devices with read errors.</li>
+<li><strong>dumpfloppy</strong>: A tool to read floppy disks in arbitrary formats supported by the PC floppy controller, and work with the resulting image files.</li>
+<li><strong>ewfacquire</strong>: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).</li>
+<li><strong>Guymager</strong>: A GUI tool to create raw and EWF-packaged images from devices.</li>
+</ul>
 <h3 id="guides">Guides</h3>
 <ul>
 <li><a href="Safely Mount Devices">Safely Mount Devices</a></li>

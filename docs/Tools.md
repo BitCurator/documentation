@@ -5,7 +5,7 @@ Tools
 
 
 
-### Overview
+## Overview
 
 The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator **Step-by-Step Guides**are listed as well.
 
@@ -19,25 +19,24 @@ Because BitCurator is an Ubuntu environment, users are able to download and inst
 
 In addition, much functionality is found in the file navigation system, Nautilus, through contextual menus. Listed are guides for many of these scripts.
 
-* [Data Triage](/All Step-by-Step Guides/Forensics and Reporting Guides/Data Triage (Nautilus))
-* [Create MD5 Sums](/All Step-by-Step Guides/Forensics and Reporting Guides/Create MD5 Sums (Nautilus))
-* [Display a file in Hex editor](/All Step-by-Step Guides/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus))
-* [Disk Image Metadata](/All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus))
-* [Extract Compressed Files](/All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus))
-* [Live Search for Files](/All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus))
-* [Safely Mount Device](/All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices)
+* [Data Triage](../All Step-by-Step Guides/Forensics and Reporting Guides/Data Triage (Nautilus))
+* [Create MD5 Sums](../All Step-by-Step Guides/Forensics and Reporting Guides/Create MD5 Sums (Nautilus))
+* [Display a file in Hex editor](../All Step-by-Step Guides/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus))
+* [Disk Image Metadata](../All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus))
+* [Extract Compressed Files](../All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus))
+* [Live Search for Files](../All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus))
+* [Safely Mount Device](../All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices)
 
 
 
 
+### Imaging and Recovery  
 
-
-Imaging and Recovery  
 **[Brasero](https://wiki.gnome.org/Apps/Brasero)**: GUI application to copy data and audio CD and DVDs
 
 **[Guymager](https://guymager.sourceforge.io)**: Open-source forensic disk imaging tool
 
-* See the [Creating a Disk Image Using Guymager](/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager) **Step-by-Step Guide**.
+* See the [Creating a Disk Image Using Guymager](../All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager) **Step-by-Step Guide**.
 
 [**cdrdao**](http://cdrdao.sourceforge.net): CD imaging tool (primarily for audio CDs)
 
@@ -58,7 +57,7 @@ Imaging and Recovery
   
 
 
-Forensic analysis tools
+### Forensic analysis tools
 
 **BitCurator Disk Image Access:** A GUI interface to browse raw and forensically-packaged disk images, export files and deleted items, and view disk image metadata.
 
@@ -66,22 +65,22 @@ Forensic analysis tools
 
 **BitCurator Reporting Tool**: A GUI-driven (and optionally command-line) tool for running forensics tools in sequence to produce human- and machine-readable reports in [DFXML](https://www.github.com/simsong/dfxml).
 
-* Find instructions at the [Creating Disk Image Reports using the BitCurator Reporting Tool](/All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool) **Step-by-Step Guide**.
+* Find instructions at the [Creating Disk Image Reports using the BitCurator Reporting Tool](../All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool) **Step-by-Step Guide**.
 * Use of the Reporting Tool is also covered in the [Quickstart Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide).
 
 **[Brunnhilde](https://github.com/tw4l/brunnhilde)**: Generates aggregate reports of files in a directory or disk image based on input from Richard Lehane's [Siegfried](http://www.itforarchivists.com/siegfried).
 
 [**bulk\_extractor Viewer (BEViewer)**](https://github.com/simsong/bulk_extractor/wiki/BEViewer): A GUI front-end for [bulk\_extractor](https://github.com/simsong/bulk_extractor)
 
-* See the [Bulk Extractor Viewer](https://confluence.educopia.org/display/~aberish/Bulk+Extractor+Viewer) **Step-by-Step Guide**.
-* See the [Regular Expressions in Bulk Extractor](https://confluence.educopia.org/display/~aberish/Regular+Expressions+in+Bulk+Extractor) **Step-by-Step Guide**.
-* bulk\_extractor is a critical component of the [Annotated Features Report](https://confluence.educopia.org/display/~aberish/Annotated+Features+Report) **Step-by-Step Guide**.
+* See the [Bulk Extractor Viewer](../All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer/) **Step-by-Step Guide**.
+* See the [Regular Expressions in Bulk Extractor](../All Step-by-Step Guides/Forensics and Reporting Guides/Regular Expressions in Bulk Extractor/) **Step-by-Step Guide**.
+* bulk\_extractor is a critical component of the [Annotated Features Report](../All Step-by-Step Guides/Forensics and Reporting Guides/Annotated Features Report/) **Step-by-Step Guide**.
 
 **[Disktype](http://disktype.sourceforge.net):** Detects the content format of a disk or disk image
 
 **[Fiwalk](https://forensicswiki.xyz/wiki/index.php?title=Fiwalk)**: Fiwalk is part of [The Sleuth Kit's](https://www.sleuthkit.org/sleuthkit/) collection of digital forensics tools and is used to produce a DFXML (Digital Forensics XML) report on the contents of a disk image within the **BitCurator Reporting Tool**.
 
-* See the [fiwalk](https://confluence.educopia.org/display/~aberish/Fiwalk) **Step-by-Step Guide**.
+* See the [fiwalk](../All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk/) **Step-by-Step Guide**.
 
 **[md5deep](http://md5deep.sourceforge.net)**: Set of programs to compute MD5, SHA-1, SHA-256, Tiger, or Whirlpool message digests on an arbitrary number of files
 
@@ -100,7 +99,7 @@ Forensic analysis tools
   
 
 
-Packaging and Transfer
+### Packaging and Transfer
 
 **[BagIt Python Library](https://github.com/LibraryOfCongress/bagit-python)**: Command line implementation of the BagIt specification
 
