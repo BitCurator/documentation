@@ -5,7 +5,7 @@ Imaging and Recovery Guides
 
 
 
-### Overview
+### Overviews
 
 Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools.
 
