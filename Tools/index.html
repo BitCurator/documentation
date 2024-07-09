@@ -44,8 +44,16 @@
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Tools</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#imaging-and-recovery">Imaging and Recovery</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#additional-tools">Additional tools</a>
+    <li class="toctree-l3"><a class="reference internal" href="#forensic-analysis-tools">Forensic analysis tools</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#packaging-and-transfer">Packaging and Transfer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-tools">Additional tools</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -138,24 +146,24 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="tools">Tools</h1>
-<h3 id="overview">Overview</h3>
+<h2 id="overview">Overview</h2>
 <p>The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator <strong>Step-by-Step Guides</strong>are listed as well.</p>
 <p>Because BitCurator is an Ubuntu environment, users are able to download and install tools as in any other Ubuntu distribution or Linux OS.</p>
 <p>In addition, much functionality is found in the file navigation system, Nautilus, through contextual menus. Listed are guides for many of these scripts.</p>
 <ul>
-<li><a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Data Triage (Nautilus)">Data Triage</a></li>
-<li><a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Create MD5 Sums (Nautilus)">Create MD5 Sums</a></li>
-<li><a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus)">Display a file in Hex editor</a></li>
-<li><a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus)">Disk Image Metadata</a></li>
-<li><a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus)">Extract Compressed Files</a></li>
-<li><a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus)">Live Search for Files</a></li>
-<li><a href="/All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices">Safely Mount Device</a></li>
+<li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Data Triage (Nautilus)">Data Triage</a></li>
+<li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Create MD5 Sums (Nautilus)">Create MD5 Sums</a></li>
+<li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Display a file in Hex editor (Nautilus)">Display a file in Hex editor</a></li>
+<li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus)">Disk Image Metadata</a></li>
+<li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus)">Extract Compressed Files</a></li>
+<li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus)">Live Search for Files</a></li>
+<li><a href="../All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices">Safely Mount Device</a></li>
 </ul>
-<p>Imaging and Recovery<br />
-<strong><a href="https://wiki.gnome.org/Apps/Brasero">Brasero</a></strong>: GUI application to copy data and audio CD and DVDs</p>
+<h3 id="imaging-and-recovery">Imaging and Recovery</h3>
+<p><strong><a href="https://wiki.gnome.org/Apps/Brasero">Brasero</a></strong>: GUI application to copy data and audio CD and DVDs</p>
 <p><strong><a href="https://guymager.sourceforge.io">Guymager</a></strong>: Open-source forensic disk imaging tool</p>
 <ul>
-<li>See the <a href="/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">Creating a Disk Image Using Guymager</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>See the <a href="../All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">Creating a Disk Image Using Guymager</a> <strong>Step-by-Step Guide</strong>.</li>
 </ul>
 <p><a href="http://cdrdao.sourceforge.net"><strong>cdrdao</strong></a>: CD imaging tool (primarily for audio CDs)</p>
 <p><strong><a href="https://clonezilla.org">Clonezilla</a></strong>: A imaging and cloning program for partitions and disks</p>
@@ -167,25 +175,25 @@
 <ul>
 <li>More documentation at the <a href="https://forensicswiki.xyz/wiki/index.php?title=Libewf">Forensics wiki</a>.</li>
 </ul>
-<p>Forensic analysis tools</p>
+<h3 id="forensic-analysis-tools">Forensic analysis tools</h3>
 <p><strong>BitCurator Disk Image Access:</strong> A GUI interface to browse raw and forensically-packaged disk images, export files and deleted items, and view disk image metadata.</p>
 <p><strong>BitCurator Mounter</strong>: A GUI application to list currently attached devices along with technical details. Allows users to mount fixed and removable media according to the current mount policy.</p>
 <p><strong>BitCurator Reporting Tool</strong>: A GUI-driven (and optionally command-line) tool for running forensics tools in sequence to produce human- and machine-readable reports in <a href="https://www.github.com/simsong/dfxml">DFXML</a>.</p>
 <ul>
-<li>Find instructions at the <a href="/All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool">Creating Disk Image Reports using the BitCurator Reporting Tool</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>Find instructions at the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool">Creating Disk Image Reports using the BitCurator Reporting Tool</a> <strong>Step-by-Step Guide</strong>.</li>
 <li>Use of the Reporting Tool is also covered in the <a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide">Quickstart Guide</a>.</li>
 </ul>
 <p><strong><a href="https://github.com/tw4l/brunnhilde">Brunnhilde</a></strong>: Generates aggregate reports of files in a directory or disk image based on input from Richard Lehane's <a href="http://www.itforarchivists.com/siegfried">Siegfried</a>.</p>
 <p><a href="https://github.com/simsong/bulk_extractor/wiki/BEViewer"><strong>bulk_extractor Viewer (BEViewer)</strong></a>: A GUI front-end for <a href="https://github.com/simsong/bulk_extractor">bulk_extractor</a></p>
 <ul>
-<li>See the <a href="https://confluence.educopia.org/display/~aberish/Bulk+Extractor+Viewer">Bulk Extractor Viewer</a> <strong>Step-by-Step Guide</strong>.</li>
-<li>See the <a href="https://confluence.educopia.org/display/~aberish/Regular+Expressions+in+Bulk+Extractor">Regular Expressions in Bulk Extractor</a> <strong>Step-by-Step Guide</strong>.</li>
-<li>bulk_extractor is a critical component of the <a href="https://confluence.educopia.org/display/~aberish/Annotated+Features+Report">Annotated Features Report</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>See the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer/">Bulk Extractor Viewer</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>See the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Regular Expressions in Bulk Extractor/">Regular Expressions in Bulk Extractor</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>bulk_extractor is a critical component of the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Annotated Features Report/">Annotated Features Report</a> <strong>Step-by-Step Guide</strong>.</li>
 </ul>
 <p><strong><a href="http://disktype.sourceforge.net">Disktype</a>:</strong> Detects the content format of a disk or disk image</p>
 <p><strong><a href="https://forensicswiki.xyz/wiki/index.php?title=Fiwalk">Fiwalk</a></strong>: Fiwalk is part of <a href="https://www.sleuthkit.org/sleuthkit/">The Sleuth Kit's</a> collection of digital forensics tools and is used to produce a DFXML (Digital Forensics XML) report on the contents of a disk image within the <strong>BitCurator Reporting Tool</strong>.</p>
 <ul>
-<li>See the <a href="https://confluence.educopia.org/display/~aberish/Fiwalk">fiwalk</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>See the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk/">fiwalk</a> <strong>Step-by-Step Guide</strong>.</li>
 </ul>
 <p><strong><a href="http://md5deep.sourceforge.net">md5deep</a></strong>: Set of programs to compute MD5, SHA-1, SHA-256, Tiger, or Whirlpool message digests on an arbitrary number of files</p>
 <p><strong><a href="http://rjhansen.github.io/nsrllookup/">nsrllookup</a></strong>: Query tool to check for a matching MD5 hash in the National Software Reference Library Reference Data Set</p>
@@ -194,7 +202,7 @@
 <p><a href="http://roussev.net/sdhash/sdhash.html"><strong>SDHash</strong></a>: File similarity tool using similarity digests</p>
 <p><a href="https://ssdeep-project.github.io/ssdeep/index.html"><strong>ssdeep</strong></a>: Fast hash generation</p>
 <p><strong><a href="https://www.cgsecurity.org/wiki/TestDisk">TestDisk</a></strong>: Data recovery software with focus on recovering lost partitions, making non-booting disks bootable again/partition table recovery</p>
-<p>Packaging and Transfer</p>
+<h3 id="packaging-and-transfer">Packaging and Transfer</h3>
 <p><strong><a href="https://github.com/LibraryOfCongress/bagit-python">BagIt Python Library</a></strong>: Command line implementation of the BagIt specification</p>
 <p><strong><a href="https://sourceforge.net/projects/grsync/">Grsync</a></strong>: GUI fronted for the rysnc command line tool to synchronize or transfer data between locations</p>
 <h3 id="additional-tools">Additional tools</h3>
