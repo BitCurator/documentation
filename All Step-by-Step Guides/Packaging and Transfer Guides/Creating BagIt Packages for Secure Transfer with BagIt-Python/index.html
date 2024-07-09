@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Package files and metadata with Bagger - BitCurator Docs</title>
+    <title>Overview - BitCurator Docs</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Package files and metadata with Bagger";
-        var mkdocs_page_input_path = "All Step-by-Step Guides/Packaging and Transfer Guides/Package files and metadata with Bagger.md";
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Packaging and Transfer Guides/Creating BagIt Packages for Secure Transfer with BagIt-Python.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -121,7 +121,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Package files and metadata with Bagger</li>
+      <li class="breadcrumb-item active">Overview</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -130,26 +130,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="package-files-and-metadata-with-bagger">Package files and metadata with Bagger</h1>
-<p>Bagger is no longer included in the BitCurator Environment. It can still be installed in the environment - see the <a href="https://github.com/LibraryOfCongress/bagger">project website</a> for more details.</p>
-<p><strong>Overview:</strong></p>
-<p>The <a href="https://github.com/LibraryOfCongress/bagger">Bagger software</a> from the Library of Congress, provides a GUI application for creating and working with packages that conform to the <a href="https://tools.ietf.org/html/draft-kunze-bagit-17">BagIt specification</a>.  This application can be installed on BitCurator following instructions on the <a href="https://github.com/LibraryOfCongress/bagger">project's page</a>.  </p>
-<h2 id="step-by-step">Step By Step:</h2>
-<p><strong>Step 1:</strong> To begin creating a bag, click to 'Create a new bag' and select an existing profile to start with a set of predefined metadata fields or start with no profile to define your own.</p>
-<p><img alt="image2020-4-27_12-54-36.png" src="../attachments/image2020-4-27_12-54-36.png" /></p>
-<p><strong>Step 2:</strong>  If choosing no profile, add standard or custom fields in the 'Bag-info' section.</p>
-<p><img alt="image2020-4-27_13-3-52.png" src="../attachments/image2020-4-27_13-3-52.png" /></p>
-<p><strong>Step 3:</strong>  Add data to your bag by clicking the plus icon in the corner of the Payload section.  Select files or directories of files.</p>
-<p><img alt="image2020-4-27_13-8-23.png" src="../attachments/image2020-4-27_13-8-23.png" /></p>
-<p><strong>Step 4</strong>:  Click the 'Save Bag As' link, providing a name and location for the bag.  Select the algorithm used for generating hashes that will be used for fixity checking, and click ok.  You will receive an on-screen notification that the bag has been successfully created.</p>
-<p><img alt="image2020-4-27_13-11-58.png" src="../attachments/image2020-4-27_13-11-58.png" /></p>
-<p><strong>External links:</strong></p>
-<ul>
-<li><a href="https://github.com/LibraryOfCongress/bagger">Bagger - Github</a></li>
-<li><a href="https://tools.ietf.org/html/draft-kunze-bagit-17">BagIt Specification</a></li>
-<li><a href="https://blogs.loc.gov/thesignal/2016/04/baggers-enhancements-for-digital-accessions/">Bagger’s Enhancements for Digital Accessions</a></li>
-</ul>
-<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator All Step-by-Step Guides section.</p>
+                <h1 id="overview">Overview</h1>
+<p>BitCurator 4.x.x includes the latest release of bagit-python, a simple command line tool to create BagIt-style packages to facilitate data transfer.</p>
+<p>To see the help options for bagit-python, click the Applications menu in the top left, navigate to Packaging and Transfer, and click Bagit-Python Library (BIL). A new terminal window will open:</p>
+<p><img alt="BagitHelpOptions.png" src="../attachments/BagitHelpOptions.png" /></p>
+<p>The bagit.py command has many available options. Consult the <a href="https://github.com/LibraryOfCongress/bagit-python">README</a> for a detailed explanation. For this simple example, we will create a bag that includes a metadata identifier for the source organization, specifies that we will use the SHA256 hash algorithm, and that we are creating a bag of the TestAnalysis directory we created in the Brunnhilde exercise:</p>
+<p><code>bagit.py --source-organization “BitCurator” --sha256 /home/bcadmin/TestAnalysis</code></p>
+<p>Note: This will perform a “bag in place” operation, which rebuilds the original TestAnalysis directory, moving its content into a data subdirectory and writing out the relevant bagit metadata into a selection of new files:</p>
+<p><img alt="BagitOutput.png" src="../attachments/BagitOutput.png" /></p>
+<p>Navigating into the TestAnalysis directory on the command line, and listing the content, we can see the result of the bag creation operation.</p>
               
             </div>
           </div><footer>
