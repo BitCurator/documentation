@@ -8,7 +8,7 @@ In the Applications menu in the top left, navigate to the Forensics and Reportin
 
 Your terminal window may be too small to see all of the flags and options in the help output. Make the window larger, or scroll up if you’d like to see the full list of options.
 
-![BrunnhildeOptions.png](attachements/BrunnhildeOptions.png)
+![BrunnhildeOptions.png](attachments/BrunnhildeOptions.png)
 
 For this example, we’ll be instructing Brunnhilde to analyze an EWF disk image containing a FAT filesystem, carve out all of the files it can find, create a set of common reports, and run a Clam virus scan. The command we will issue is as follows:
 
@@ -20,7 +20,7 @@ Brunnhilde will carve files out of the image using `tsk_recover`, generate a DFX
 
 You can examine the output by navigating to the new `TestAnalysis` folder:
 
-![BrunnhildeOutput.png](attachements/BrunnhildeOutput.png)
+![BrunnhildeOutput.png](attachments/BrunnhildeOutput.png)
 
 Brunnhilde provides many other options, including scanning files with bulk_extractor. To enable bulk_extractor, simply add the `-b` flag to the previous command:
 
