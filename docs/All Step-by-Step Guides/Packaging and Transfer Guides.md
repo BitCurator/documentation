@@ -12,7 +12,7 @@ Guide for preparing and packaging born-digital materials for transfer to preserv
 
 ### Guide
 
-[Package files and metadata with Bagger](Package files and metadata with Bagger)
+[Creating BagIt Packages for Secure Transfer with BagIt-Python](Creating BagIt Packages for Secure Transfer with BagIt-Python)
 
 [Share files to and from the BitCurator Environment](Share files to and from the BitCurator Environment)
 
