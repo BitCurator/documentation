@@ -29,11 +29,11 @@ Guymager will ask to be run with root user rights. A box that says “Authentica
 
 
 
-![Screenshot from 2019-11-18 12-45-50.png](attachments/Screenshot from 2019-11-18 12-45-50.png)
+![guymager_figure1.png](attachments/guymager_figure1.png)
 
 *Figure 1*: The contextual menu for opening Guymager.
 
-![Screenshot from 2019-11-18 12-46-15.png](attachments/Screenshot from 2019-11-18 12-46-15.png)
+![guymager_figure2.png](attachments/guymager_figure2.png)
 
 *Figure 2*: Guymager prompts for authentication to allow the program root-level rights. 
 
