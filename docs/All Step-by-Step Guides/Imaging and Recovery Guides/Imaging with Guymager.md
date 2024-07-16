@@ -11,19 +11,19 @@ The BitCurator environment includes [Guymager](https://guymager.sourceforge.io)
 
 **Step-by-Step Guide**
 
-**Step 1:**Create a directory to store your disk image by opening Nautilus (the "Home" folder on the top left-hand side of the screen) and right-clicking anywhere on the white background. Select "New Folder" from the drop-down menu. Name the folder as you see fit – we will use the folder name "diskimages" in this example.
+**Step 1:**Create a directory to store your disk image. To do this, open Nautilus (double-click the "Home" folder on the top left-hand side of the screen), Then right-click anywhere on the white background; alternatively, you may click on the three vertical dots button to the right of the file path at the top of the Nautilus window. Select "New Folder" from the drop-down menu. In the window that appears, type the name of the folder as you see fit. This example uses the folder name "diskimages." 
 
 **Step 2:**Connect the device you wish to image to your computer (USB flash drive, CD-ROM, hard drive, or floppy disk drive).
 
-A device does not need to be mounted in order to be imaged by Guymager, and BitCurator will not mount devices automatically (the icon that appears in the Unity bar on the left indicates that the device is **attached**, rather than **mounted**). If you need to examine the contents of the disk before creating the disk image, you can [safely mount the device](https://confluence.educopia.org/display/BC/Safely+Mount+Devices).
+A device does not need to be mounted in order to be imaged by Guymager, and BitCurator will not mount devices automatically (the icon that appears in the Unity bar on the left indicates that the device is **attached**, rather than **mounted**). If you need to examine the contents of the disk before creating the disk image, you can [safely mount the device](https://bitcurator.github.io/documentation/All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/Safely%20Mount%20Devices/).
 
 
 
 
 
-**Step 3:** Open Guymager by right-clicking the icon in the "Imaging and Recovery" folder on the desktop. In the contextual menu, select "Open" (*Figure 1*).
+**Step 3:** Open Guymager. To do this, click “Applications” at the top left menu bar of the desktop. In the menu that opens, select  the "Imaging and Recovery" menu, and then click on “Guymager.”  (*Figure* *1*)
 
-Guymager will ask to be run with root user rights. When prompted, enter the password associated with the BitCurator user account. This is usually 'bcadmin', or it is blank if you did not enter a password during installation and setup (*Figure* *2*).
+Guymager will ask to be run with root user rights. A box that says “Authentication Required” will appear. There, enter the password associated with the BitCurator user account. This is usually 'bcadmin', or it is blank if you did not enter a password during installation and setup. (*Figure* *2*)
 
 
 
@@ -68,13 +68,13 @@ Guymager will ask to be run with root user rights. When prompted, enter the pass
 
 * The Expert Witness format was designed for the digital forensics community, so metadata fields are labeled for criminal investigation. However, these fields can easily be repurposed for the needs of archivists and curators. For example, an archivist might use the "Case number" field to record an accession number.
 
-**Step 7:** Next choose the image directory, which in this example would be "/home/bcadmin/diskimages". 
+**Step 7:** Next, in the “Image directory” field, choose the directory where the image will be created, which in this example would be "/home/bcadmin/diskimages".
 
-Don't create new directories from within Guymager. Instead, create new directories before launching Guymager (as described in **Step 1**). This is because Guymager runs as the root user and so any directories that it creates will require administrator permissions. 
+*Tip:* Don't create new directories from within Guymager. Instead, create new directories before using Nautilus launching Guymager (as described in **Step 1**). This is because Guymager runs as the root user and so any directories that it creates will require administrator permissions. 
 
 **Step 8:**Name your disk image and choose which verification options you would like Guymager to perform. Click "OK" to begin the imaging process.
 
-**Step 9:** Once the the imaging process begins you will see a progress bar on the main Guymager screen.
+**Step 9:** When the the imaging process begins you will see a progress bar on the main Guymager screen.
 
 
 
@@ -82,7 +82,7 @@ Don't create new directories from within Guymager. Instead, create new directori
 
 
 
-**Step 10:**After Guymager has finished creating the disk image, close Guymager and verify the image by navigating to the directory you created in Step 1. Notice that there are two files, the image itself and an info file *(Figure 4).* The info file includes the metadata we input in step 7 along with additional metadata collected during the acquisition process. The imaging process is now complete.
+**Step 10:**After Guymager has finished creating the disk image, close Guymager and verify the image by navigating to the directory you created in Step 1. Notice that there are two files, the image itself and an info file *(Figure 4).* The info file includes the metadata entered in step 7 along with additional metadata collected during the acquisition process. The imaging process is now complete.
 
 
 
@@ -99,6 +99,6 @@ Don't create new directories from within Guymager. Instead, create new directori
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link) for the BitCurator All Step-by-Step Guides section.
+
 
 
