@@ -52,17 +52,27 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Configuring BitCurator to enable users to authenticate with Active Directory accounts</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation%20via%20Live%20ISO/">Installation via Live ISO</a>
+                  <li class="toctree-l1"><a class="" href="../../Installing BitCurator/Installation via Live ISO.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Installing BitCurator</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Installing BitCurator</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quick-start-guide">Quick Start Guide</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#downloads">Downloads</a>
+        </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#language-support-and-ubuntu">Language Support and Ubuntu</a>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-instructions">Installation Instructions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-instructions_1">Installation Instructions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-option-1-deploy-on-a-clean-ubuntu-host-or-vm">Install Option 1: Deploy on a Clean Ubuntu Host or VM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#language-support-and-ubuntu">Language Support and Ubuntu</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -140,23 +150,25 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="installing-bitcurator">Installing BitCurator</h1>
-<h3 id="overview">Overview</h3>
-<ul>
-<li>The BitCurator Environment is distributed as a Live ISO (a CD disk image) that can be used to install the software on a dedicated machine. This is recommended for production installs.</li>
-<li>The BitCurator Environment is also distributed as a virtual machine that can be run in VirtualBox. This is recommended for testing the software.</li>
-</ul>
-<h3 id="downloads"><strong>Downloads</strong></h3>
-<p>Follow the link below to download current and past releases of the BitCurator Environment from the official GitHub repository. The current stable release is always at the top of the Releases page. Past and upcoming releases, along with select release notes, are in the <a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases#release-notes">Release Notes</a> (GitHub) section.</p>
-<p><strong><a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases">Get BitCurator</a></strong> (ISO or Virtual Machine) </p>
-<p>Quick Start Guide</p>
+<h2 id="overview">Overview</h2>
+<p>Use the links to the relevant sections below to begin installing BitCurator on a fresh host, or import a prebuilt Virtual Appliance. If you wish to see a list of the most recent releases (along with release notes), you can also visit <a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases">https://github.com/BitCurator/bitcurator-distro/wiki/Releases</a>.</p>
+<p><em>Note: BitCurator must be deployed on an x86/amd64 version of Ubuntu. Currently, it is not possible to use the Virtual Appliance or deploy it on systems with ARM processors (including Apple M1).</em></p>
+<p><strong>Installation Option 1:</strong> If you wish to build the environment from scratch on your own physical host or VM, follow the instructions for Installation Option 1 beginning in the section <a href="https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#install-ubuntu-2204lts">Install Ubuntu 22.04LTS</a>.</p>
+<p><em>Note: An internet connection is required during all stages of the installation.</em></p>
+<p><strong>Installation Option 2:</strong> Virtual Appliances may be available for one or more recent releases. If you have downloaded one of these preconfigured Virtual Appliance files, follow the instructions for Installation Option 2 in the section <a href="https://github.com/BitCurator/bitcurator-distro/wiki/BitCurator-Quick-Start-Guide#importing-the-bitcurator-virtual-appliance">Importing the BitCurator Virtual Appliance</a>.</p>
+<h3 id="quick-start-guide">Quick Start Guide</h3>
 <p>The <a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide">Quick Start Guide</a> provides in instructions on installation and an initial walkthrough of the BitCurator Environment. Recommended if you have not used BitCurator before! </p>
-<p>Installation Instructions</p>
-<p><a href="/documentation/BitCurator Environment/Installing BitCurator/Installation via Live ISO">Installation via<strong>Live ISO</strong></a></p>
+<h2 id="installation-instructions">Installation Instructions</h2>
+<p><strong>Quick Start Guide</strong></p>
+<p>The<a href="https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide"> Quick Start Guide</a> provides in instructions on installation and an initial walkthrough of the BitCurator Environment. Recommended if you have not used BitCurator before! </p>
+<h2 id="installation-instructions_1">Installation Instructions</h2>
+<h3 id="install-option-1-deploy-on-a-clean-ubuntu-host-or-vm">Install Option 1: Deploy on a Clean Ubuntu Host or VM</h3>
+<p>Installation via <strong>Live ISO</strong></p>
 <p>This is the preferred method for running the BitCurator Environment.</p>
-<p><a href="https://github.com/bitcurator/bitcurator-salt">Install the BitCurator toolset in an <strong>existing Ubuntu environment</strong></a></p>
+<p><a href="https://github.com/bitcurator/bitcurator-distro-salt">Install the BitCurator toolset in an existing Ubuntu environment</a></p>
 <p>If you have an existing Ubuntu compatible environment on either a direct partition or in a virtual machine, you can build the BitCurator stack in it.</p>
-<p><a href="/documentation/BitCurator Environment/Installing BitCurator/Installation via Virtual Machine">Installation via <strong>Virtual Machine</strong></a></p>
-<p>The virtual machine version of BitCurator is useful for testing and experimentation, but it is recommended that you run BitCurator on a dedicated machine in production environments by installing from the Live ISO image.</p>
+<p>Installation via <strong>Virtual Machine</strong></p>
+<p>The virtual machine version of BitCurator is useful for testing and experimentation, but it is recommended that you run BitCurator on a dedicated machine in production environments by installing from the Live ISO image.</p>
 <h3 id="language-support-and-ubuntu">Language Support and Ubuntu</h3>
 <p>The BitCurator Environment is built using Ubuntu, which has extensive support for a wide range of languages. However, language support packs are large. To keep the installation ISO and virtual environment small, we distribute BitCurator with only the English (US) language pack installed. Installing additional language packs is easy using the following steps. First, open the Ubuntu System Settings window by clicking on "System Settings" in the top right-hand icon in the menu bar at the top.</p>
 <p>See the guide: <strong><a href="/documentation/BitCurator Environment/Installing BitCurator/Internationalization and Ubuntu">Internationalization and Ubuntu</a></strong></p>
