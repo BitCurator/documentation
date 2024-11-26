@@ -213,6 +213,5 @@ The [OSSArcFlow](https://educopia.org/ossarcflow/) project (2017-2020) was suppo
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe5c48c_6LSiNxWYaOK3oTBe_LAutB5NXTrhIzK5TGX4wXQ_w/viewform?usp=sf_link) for the Resources section.
 
 
