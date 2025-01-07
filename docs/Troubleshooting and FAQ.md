@@ -253,6 +253,6 @@ BitCurator does not currently include password or encryption cracking tools. The
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfzp4g25UYdhLtk12YFB8fNQ-cVeAkoVRw0kxAwi1cO-u_Vuw/viewform?usp=sf_link) for the Troubleshooting and FAQ section.
+
 
 

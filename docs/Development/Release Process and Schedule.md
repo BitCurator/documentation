@@ -236,6 +236,6 @@ Release Process and Schedule
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLScRk8obKFl7tDb1NqdxlNfY9doy7r_WIkCTAiB2nE-r0D5b2Q/viewform?usp=sf_link) for the Development section.
+
 
 
