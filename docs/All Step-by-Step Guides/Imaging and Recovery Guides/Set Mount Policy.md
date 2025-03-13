@@ -5,7 +5,7 @@ Set Mount Policy
 
 BitCurator includes a convenience application indicator (small disk icon in the top right of the menu bar) that may be used to quickly set the current mount policy for USB Devices.
 
-![set mount policy](attactments/MountPolicy.jpg)
+![set mount policy](attatchments/MountPolicy.jpg)
 
 **When the disk icon is red, the mount policy is set writeable.** USB storage devices plugged into the system when this state is set can be read from, and written to.
 
