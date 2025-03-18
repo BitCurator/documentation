@@ -1,104 +1,97 @@
 Imaging with Guymager
 =====================
 
-
-
-
-
 ### **Overview**
 
 The BitCurator environment includes [Guymager](https://guymager.sourceforge.io), an open-source, graphic application for creating disk images. Guymager supports the creation of raw (.dd) or Expert Witness Format (.E01) disk images. The Expert Witness Format is commonly used in the digital forensics community because it incorporates metadata about the original media into the disk image itself.
 
-**Step-by-Step Guide**
+This Guide includes three sections: 
+- Imaging Physical Media
+- Changing Permissions for our Disk Image Files
+- Mounting and Examining a Disk Image
 
-**Step 1:** Create a directory to store your disk image. To do this, open Nautilus (double-click the "Home" folder on the top left-hand side of the screen), Then right-click anywhere on the white background; alternatively, you may click on the three vertical dots button to the right of the file path at the top of the Nautilus window. Select "New Folder" from the drop-down menu. In the window that appears, type the name of the folder as you see fit. This example uses the folder name "diskimages." 
 
-**Step 2:** Connect the device you wish to image to your computer (USB flash drive, CD-ROM, hard drive, or floppy disk drive).
+## Imaging Physical Media
 
-A device does not need to be mounted in order to be imaged by Guymager, and BitCurator will not mount devices automatically (the icon that appears in the Unity bar on the left indicates that the device is **attached**, rather than **mounted**). If you need to examine the contents of the disk before creating the disk image, you can [safely mount the device](https://bitcurator.github.io/documentation/All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/Safely%20Mount%20Devices/).
+In this example, we will acquire a USB flash drive connected to a laptop running the BitCurator environment in a VirtualBox VM. The process is similar for other devices.
 
+![imaging1](attachments/imaging1.png)
 
+When properly configured (with VirtualBox Guest Additions installed and a USB Device Filter enabled for all USB devices in the VirtualBox settings for that machine), the USB device should be automatically captured by the VM. **However, it will not be automatically mounted.**
 
+Mounting the device is not required to create an image of it. If you wish to mount the device, click on the **Files** icon in the dock, and select the name of the indicated volume on the device to mount. **If you are not using a hardware write blocker, or if the USB device read-only policy is not enabled, your device is now mounted and writable.** Read more about the BitCurator Environment mount policy here: [Set Mount Policy](docs/All Step-by-Step Guides/Imaging and Recovery Guides/Set Mount Policy.md)
 
+![imaging2](attachments/imaging2.png)
 
-**Step 3:** Open Guymager. To do this, click “Applications” at the top left menu bar of the desktop. In the menu that opens, select  the "Imaging and Recovery" menu, and then click on “Guymager.”  (*Figure* *1*)
+Click on the **Applications** menu in the top left of the screen, then navigate to the Imaging and Recovery submenu. Then click on `Guymager`. Guymager requires elevated privileges for access to physical devices; you will be prompted for your password to enable this. Once Guymager has loaded, the main interface appears as in the picture above. In this example, the USB flash drive is selected.
 
-Guymager will ask to be run with root user rights. A box that says “Authentication Required” will appear. There, enter the password associated with the BitCurator user account. This is usually 'bcadmin', or it is blank if you did not enter a password during installation and setup. (*Figure* *2*)
+![imaging3](attachments/imaging3.png)
 
+Next, right-click on the selected device (in this example, a 16GB SanDisk Extreme flash drive) and select **Acquire Image** from the context menu. A new dialog will appear:
 
+![imaging4](attachments/imaging4.png)
 
+This disk image will be acquired using the Expert Witness Format (the second option at the top). Guymager will split EWF images into 2048MiB segments by default. If you do not wish to split the image, set the **Split size** to something very large (2 EiB, for example).
 
+The five metadata fields starting with **Batch number** are optional. Don’t forget to select the directory you made on the desktop in the Image directory field. In this case, we have simply chosen to write the image to our home directory. Finally, provide a name for the image. Then click **Start**.
 
-![guymager_figure1.png](attachments/guymager_figure1.png)
+![imaging5](attachments/imaging5.png)
 
-*Figure 1*: The contextual menu for opening Guymager.
+You will see the main dialog state change to Running. When the acquisition finishes, you will see a **Finished - Verified & Ok** message in the State column.
 
-![guymager_figure2.png](attachments/guymager_figure2.png)
+*Tip: If you’re running the BitCurator environment in a VM, the default screen resolution may be small enough that you can’t see the whole dialog. Increase the size of your VM window by dragging a side or corner. The desktop should adjust automatically.*
 
-*Figure 2*: Guymager prompts for authentication to allow the program root-level rights. 
+Close Guymager, and double-click on the **Home** icon on the Desktop. If your physical device is mounted, it will appear in the window with an eject symbol next to it.
 
+![imaging6](attachments/imaging6.png)
 
+## Changing Permissions for our Disk Image Files
 
+Since Guymager runs with elevated permissions, the images it creates are **read-only** for users other than **root**. Double-click on the **Home** icon on the Desktop. You will see that the image file (and associated metadata file) we have created have small **“locked padlock” indicators** on them, indicating restricted permissions for our user.
 
+![permissions1](attachments/permissions1.png)
 
+If you’re unfamiliar with how Linux permissions work, now is a good time to read an introductory guide such as the one at [The Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners).
 
+There are multiple ways to update the permissions on these images so we have full read-write access, but the fastest is with some terminal commands. Right-click in the white space of the window we just opened, and select **Open in Terminal** from the context menu.
 
-**Step 4:** When Guymager launches, it will display a list of all mounted disks on the system. Select and right-click on the disk you wish to image, and select "Acquire image" (*Figure 3*).
+In the Terminal window that appears, type the following:
 
+`ls -l SampleData.*`
 
+This tells the system to list, using the long listing format (`-l`) files with the name SampleData and any extension.
 
+![permissions2](attachments/permissions2.png)
 
+We can see that these two files have read-write permissions for the file owner (root), read-only permissions for the group owner (anyone part of the root group) and read-only permissions for all other users. We could change these permissions so that everyone has read-write access, but instead for this example we will be changing the file owner and group owner to our user, bcadmin. To do this, enter the following commands:
 
-![guymager1.png](attachments/guymager1.png)
+```
+sudo chown bcadmin SampleData.*
+sudo chgrp bcadmin SampleData.*
+```
+If you run the previous ls command again, you’ll see that the file owner and group owner for both of the SampleData files is now bcadmin. The padlock icons are also now gone in the file manager window. Close the terminal window.
 
-*Figure 3:* Click on "Acquire image" to begin the imaging process.  
+## Mounting and Examining a Disk Image
 
+The BitCurator environment includes many different tools to interact with disk images. For raw (`.dd` or `.raw`) and Expert Witness Format (`.E01`) images that contain filesystems readable by the underlying Ubuntu OS, BitCurator includes some convenience scripts to automatically mount those filesystems.
 
+![mounting1](attachments/mounting1.png)
 
+In the file manager dialog, right click on the SampleData.E01 image we created, select Scripts, and then select Mount Disk Image (imount). This script serves as a wrapper for imagemounter, a tool that will attempt to automatically mount any identified file systems.
 
+![mounting2](attachments/mounting2.png)
 
+A pop-up window will appear showing the commands that imount has attempted to use to mount the image. If an exception occurs, no mount will occur. If such a filesystem is found, you will see it appear as a mountable device in the location bar of the window. Click **OK** to proceed.
 
+*Note: Previous versions of BitCurator used the fmount tool for the Disk Image Mount and Unmount menu items. These can still be found in the Legacy Mounter submenu under scripts when right-clicking on an image file.*
 
+![mounting3](attachments/mounting3.png)
 
-**Step 5:** Clicking on "Acquire Image" will open the Acquire Image window. In this window you will first select the disk image format you would like to use. The options include raw Linux dd and Expert Witness (.E01) formats. An Expert Witness image will store user-added metadata within the forensically-packaged image. 
+In this example, we have mounted the FAT32 filesystem contained within the image of the 16GB drive we imaged, and can now browse, open, and copy any files we require. In this example, we have opened a PPTX file in LibreOffice.
 
-* Guymager provides the option to split the image into multiple files, thus making it more easily transferable. So, for example, a 4 GB image could be split into four 1 GB files, or two 2 GB files, etc.
+Note: This mount is read-only. You cannot alter the content of a filesystem mounted from an E01 file (modifying, adding new files, or deleting) from this desktop interface.
 
-**Step 6:** After selecting the image format type, fill out the metadata as needed. 
+Once you have finished examining the content, click the eject indicator next to the filesystem name in the file dialog. You will get a prompt for your user password in order to complete this step.
 
-* The Expert Witness format was designed for the digital forensics community, so metadata fields are labeled for criminal investigation. However, these fields can easily be repurposed for the needs of archivists and curators. For example, an archivist might use the "Case number" field to record an accession number.
-
-**Step 7:** Next, in the “Image directory” field, choose the directory where the image will be created, which in this example would be "/home/bcadmin/diskimages".
-
-*Tip:* Don't create new directories from within Guymager. Instead, create new directories before using Nautilus launching Guymager (as described in **Step 1**). This is because Guymager runs as the root user and so any directories that it creates will require administrator permissions. 
-
-**Step 8:** Name your disk image and choose which verification options you would like Guymager to perform. Click "OK" to begin the imaging process.
-
-**Step 9:** When the the imaging process begins you will see a progress bar on the main Guymager screen.
-
-
-
-
-
-
-
-**Step 10:** After Guymager has finished creating the disk image, close Guymager and verify the image by navigating to the directory you created in Step 1. Notice that there are two files, the image itself and an info file *(Figure 4).* The info file includes the metadata entered in step 7 along with additional metadata collected during the acquisition process. The imaging process is now complete.
-
-
-
-
-
-![Guymager3.png](attachments/Guymager3.png)
-
-*Figure 4*: Verify the disk image and metadata.  
-
-
-
-
-
-
-
-
-
-
+Next: [Analyzing a Disk Image with Brunnhilde](docs/All Step-by-Step Guides/Forensics and Reporting Guides/Analyzing a Disk Image with Brunnhilde.md)
 
