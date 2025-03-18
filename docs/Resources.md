@@ -61,11 +61,7 @@ Links to BitCurator blog, forums and user groups, scripts library, and user and
 
 ### Datasets Library
 
-The [BitCuratorEdu](http://bitcuratoredu.web.unc.edu/) project team is building a library of datasets for educational, testing, and research purposes.
-
-This document summarizes known available sample data. If you know of other examples that are already publicly available or how your own examples that you would be willing to share, please let the [BitCuratorEdu](mailto:jess.farrell@educopia.org) [project team](mailto:jess.farrell@educopia.org) know.
-
-The team will continue to build this content as we gather it over the 2019-2021 project period.
+The [BitCuratorEdu](http://bitcuratoredu.web.unc.edu/) project team is building a library of datasets for educational, testing, and research purposes. This document summarizes known available sample data.
 
 #### General Resources about Digital Forensics Sample Data
 
@@ -217,6 +213,5 @@ The [OSSArcFlow](https://educopia.org/ossarcflow/) project (2017-2020) was suppo
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe5c48c_6LSiNxWYaOK3oTBe_LAutB5NXTrhIzK5TGX4wXQ_w/viewform?usp=sf_link) for the Resources section.
 
 
