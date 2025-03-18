@@ -8,7 +8,7 @@ Regular Expressions in Bulk Extractor
 Matching patterns with regular expressions in bulk\_extractor
 -------------------------------------------------------------
 
-The **bulk\_extractor** tool includes the option to find items that match a particular regular expression. (There are many good introductions to working with regular expressions online. If you're not sure where to start, try [here](http://www.joshondesign.com/2011/04/12/joshs-quick-intro-to-regex/)).
+The **bulk\_extractor** tool includes the option to find items that match a particular regular expression. (There are many good introductions to working with regular expressions online. If you're not sure where to start, try [Intro to Regex](http://www.joshondesign.com/2011/04/12/joshs-quick-intro-to-regex/) or the [Regular Expression Cheat Sheet](https://docs.exploratory.io/data-wrangling/regular_expression)).
 
 ![Re-bevselect.jpg](attachments/Re-bevselect.jpg)
 
@@ -38,6 +38,6 @@ As noted in the **bulk\_extractor** users manual, regular expression searches 
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link) for the BitCurator All Step-by-Step Guides section.
+
 
 

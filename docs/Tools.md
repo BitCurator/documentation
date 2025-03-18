@@ -150,6 +150,6 @@ In addition, much functionality is found in the file navigation system, Nautilus
 
 
 
- If you would like to provide feedback for this page, please follow this [link to the BitCurator Wiki Google Form](https://docs.google.com/forms/d/e/1FAIpQLScp7yt_CTLijHqSOzCtOy3gFJs0ZqJHBgBVO6SXadB-vsTA0A/viewform?usp=sf_link) for the Tools section.
+
 
 
