@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Safely Mount Devices - BitCurator Docs</title>
+    <title>Set Mount Policy - BitCurator Docs</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Safely Mount Devices";
-        var mkdocs_page_input_path = "All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices.md";
+        var mkdocs_page_name = "Set Mount Policy";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Imaging and Recovery Guides/Set Mount Policy.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -121,7 +121,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Safely Mount Devices</li>
+      <li class="breadcrumb-item active">Set Mount Policy</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -130,45 +130,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="safely-mount-devices">Safely Mount Devices</h1>
+                <h1 id="set-mount-policy">Set Mount Policy</h1>
 <h3 id="overview">Overview</h3>
-<p>BitCurator's Safe Mount script allows you to view the content of a disk by mounting it with read-only access, thereby preventing any data from being inadvertently written to disk. Examples of disks might include USB thumb drives, a hard drive, or a USB-connected floppy disk drive.</p>
-<p>The safe mount script currently supports the following file systems:</p>
-<ul>
-<li>NTFS</li>
-<li>Fat32</li>
-<li>HFS and HFS+</li>
-<li>ext2/3/4</li>
-</ul>
-<p><strong><em>Note:</em></strong>If multiple volumes are stored on a disk, the safe mount script will mount the first user volume only.</p>
-<p><em>Developer details:</em> This tool is a front-end for mmls and icat, two programs provided by <a href="http://www.sleuthkit.org/">The Sleuth Kit</a>, along with file system ID and FUSE mounting code.</p>
-<h3 id="step-by-step-guide"><strong>Step-by-Step Guide</strong></h3>
-<p><strong>Step 1:</strong> Attach your device to the computer (in our example, we've attached a USB thumb drive to the computer on which BitCurator is running). The attached device should appear as an icon in the lower left corner of the screen (see Figure 1). Right-click on that icon and choose "Scripts", then click on "Safe Mount" (see Figure 2).</p>
-<p><em>Figure 1</em>: Your attached device appears as an icon in the lower left of the screen.</p>
-<p><img alt="SafeMount3.png" src="../attachments/SafeMount3.png" /></p>
-<p><strong>Step 2:</strong> Right-click on that icon and choose "Scripts", then click on "Safe Mount" (see Figure 2).</p>
-<p><em>Figure 2</em><em>:</em>Navigate to the Safe Mount script.</p>
-<p><img alt="SafeMount4.png" src="../attachments/SafeMount4.png" />  </p>
-<p><strong>Step 3:</strong> The Safe Mount window will open. Choose the device you wish to mount from the drop-down menu next to "Device" and click "OK".</p>
-<p>If you are not certain which of the items in the drop-down list is your device, click on the "Device Information" button on the lower left of the window (see Figure 3).</p>
-<p><em>Figure 3</em>: Choose your device form the drop-down menu, or click on "Device Information" for help identifying your device.</p>
-<p><img alt="SafeMount5.png" src="../attachments/SafeMount5.png" />  </p>
-<p>This will open a window with more information about the devices available to you in the drop-down list, which should help you identify your device (see Figure 4).</p>
-<p>In the example shown here, I used the following to identify the correct device:</p>
-<ul>
-<li>Looking at the <em>label</em> column, I recognized the USB drive's "KINGSTON" label;</li>
-<li>Looking at the <em>fs type</em> column, I double-checked that the listed file system type (vfat; learn more about file system types <a href="http://technet.microsoft.com/en-us/library/cc750354.aspx">here</a>) matched what I knew to be the file system of the USB drive in question;</li>
-<li>Looking at the <em>mount point</em> column, I noted that the device is currently not mounted.</li>
-</ul>
-<p><em>Figure 4</em><em>:</em> Use the "Device Information" window to identify your device.</p>
-<p><img alt="SafeMount6.png" src="../attachments/SafeMount6.png" /></p>
-<p>Once the correct device has been identified, select the device from the drop-down (see Figure 5) and click the "OK" button.</p>
-<p><em>Figure 5:</em> Select your device from the drop down menu.</p>
-<p><img alt="SafeMount8.png" src="../attachments/SafeMount8.png" /></p>
-<p><strong>Step 4:</strong> A pop-up message will confirm that your device has been mounted (see Figure 7).</p>
-<p><em>Figure 7</em><em>:</em>A pop-up message confirming the device mounting.</p>
-<p><img alt="SafeMount9.png" src="../attachments/SafeMount9.png" />  </p>
-<p>If you would like to provide feedback for this page, please follow this <a href="https://docs.google.com/forms/d/e/1FAIpQLSelmRx1VmgDEg3dU5_8cXZy9MZ5v8_sAl-Ur2nPFLAi6Lvu2w/viewform?usp=sf_link">link to the BitCurator Wiki Google Form</a> for the BitCurator All Step-by-Step Guides section.</p>
+<p>BitCurator includes a convenience application indicator (small disk icon in the top right of the menu bar) that may be used to quickly set the current mount policy for USB Devices.</p>
+<p><img alt="set mount policy" src="../attachments/MountPolicy.jpeg" /></p>
+<p><strong>When the disk icon is red, the mount policy is set writeable.</strong> USB storage devices plugged into the system when this state is set can be read from, and written to.</p>
+<p><strong>When the disk icon is green, the mount policy is set read-only.</strong> USB storage devices plugged into the system when this state is set cannot be written to.</p>
+<p><strong>Important notes:</strong> Changing the mount policy state does not change the mount policy for devices currently plugged into your machine.</p>
               
             </div>
           </div><footer>

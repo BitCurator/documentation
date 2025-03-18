@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Forensics and Reporting Guides - BitCurator Docs</title>
+    <title>Working in the BitCurator Environment - BitCurator Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Forensics and Reporting Guides";
-        var mkdocs_page_input_path = "All Step-by-Step Guides/Forensics and Reporting Guides.md";
+        var mkdocs_page_name = "Working in the BitCurator Environment";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Working in the BitCurator Environment.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -64,18 +64,10 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../Step-by-Step-Guides/">Overview</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Forensics and Reporting Guides</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#submenu">Submenu</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#guides">Guides</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
                   </li>
@@ -129,8 +121,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Guides</li>
-      <li class="breadcrumb-item active">Forensics and Reporting Guides</li>
+      <li class="breadcrumb-item active">Working in the BitCurator Environment</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -139,58 +130,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="forensics-and-reporting-guides">Forensics and Reporting Guides</h1>
-<h3 id="overview">Overview</h3>
-<p>Guides for file format identification, location of deleted files and files fragments, cryptographic hashing, and reporting on potentially private and personally identifying information.</p>
-<h3 id="submenu">Submenu</h3>
-<p><img alt="Forensics and Reporting menu" src="../attachments/image12.png" /></p>
-<p>The Forensics and Reporting submenu lists forensics and forensics-adjacent tools. These include:</p>
-<ul>
-<li><strong>BitCurator Mounter</strong>: A lightweight GUI tool to assist with mounting and unmounting devices.</li>
-<li><strong>Brunnhilde</strong>: A tool to generate aggregate reports of files in a directory or disk image based on input from Richard Lehane's <a href="http://www.itforarchivists.com/siegfried">Siegfried</a>. Can optionally analyze content using bulk_extractor.</li>
-<li><strong>bulk_extractor</strong>: A tool to scan disk images and directories for PII and other features.</li>
-<li><strong>Bulk Reviewer</strong>: A tool to scan disk images and assist in the review of bulk_extractor reports.</li>
-<li><strong>Deark</strong>: A utility for file format and metadata analysis, data extraction, decompression, and image format decoding.</li>
-<li><strong>DiskType</strong>: A tool to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.</li>
-<li><strong>fiwalk</strong>: A program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format.</li>
-<li><strong>identify-filenames</strong>: A postprocessing script for bulk_extractor that reads report files and produces annotated versions with the file that contains each feature (when present) identified.</li>
-<li><strong>md5deep</strong>: a set of programs to compute <a href="https://md5deep.sourceforge.net/#md5">MD5</a>, <a href="https://md5deep.sourceforge.net/#sha1">SHA-1</a>, <a href="https://md5deep.sourceforge.net/#sha256">SHA-256</a> and other digests</li>
-<li><strong>nsrllookup</strong>: Query NSRL’s MD5 hashes of known pieces of software.</li>
-<li><strong>PhotoRec</strong>: File data recovery software designed to recover lost files including video, documents and archives from media.</li>
-<li><strong>RegRipper</strong>: Extract the contents of Windows registry backups.</li>
-<li><strong>Siegfried</strong>: Signature-based file format identification.</li>
-<li><strong>SSDeep</strong>: Fuzzy hashing tool.</li>
-<li><strong>TestDisk</strong>: Data recovery software, companion to PhotoRec.</li>
-</ul>
-<h3 id="guides">Guides</h3>
-<ul>
-<li><a href="Analyzing a Disk Image with Brunnhilde">Analyzing a Disk Image with Brunnhilde</a>  </li>
-<li><a href="Fiwalk">Fiwalk</a></li>
-<li><a href="pyExifToolGUI">pyExifToolGUI</a></li>
-<li><a href="HFS Explorer">HFS Explorer</a></li>
-<li><a href="Bulk Extractor Viewer">Bulk Extractor Viewer</a></li>
-<li><a href="Regular Expressions in Bulk Extractor">Regular Expressions in Bulk Extractor</a></li>
-<li><a href="Understanding Bulk Extractor Scanners">Understanding Bulk Extractor Scanners</a></li>
-<li><a href="Scanning Disk Images and Directories with Bulk Reviewer">Scanning Disk Images and Directories with Bulk Reviewer</a></li>
-<li><a href="Creating Disk Image Reports using the BitCurator Reporting Tool">Disk Image Reports</a></li>
-<li><a href="Annotated Features Report">Annotated Features Report</a></li>
-<li><a href="Forensic Reports">Forensic Reports</a></li>
-<li><a href="FSlint">FSlint</a></li>
-<li><a href="Access and Export Files from Disk Images">Access and Export Files from Disk Images</a></li>
-<li>[Data Triage (Nautilus)](Data Triage (Nautilus)</li>
-<li><a href="Create MD5 Sums (Nautilus)">Create MD5 Sums (Nautilus)</a></li>
-<li><a href="Display a file in Hex editor (Nautilus)">Display a file in Hex editor (Nautilus)</a></li>
-<li><a href="Disk Image Metadata (Nautilus)">Disk Image Metadata (Nautilus)</a></li>
-<li><a href="Extract Compressed Files (Nautilus)">Extract Compressed Files (Nautilus)</a></li>
-<li><a href="Live Search for Files (Nautilus)">Live Search for Files (Nautilus)</a></li>
-</ul>
+                <h1 id="working-in-the-bitcurator-environment">Working in the BitCurator Environment</h1>
+<p>The BitCurator Environment includes various customizations and tools to assist in mounting and analyzing digital media and their contents. When you log in, you should see a desktop similar to the one shown below:</p>
+<p><img alt="working1" src="attachments/working1.jpg" /></p>
+<p>In previous releases, tools to support a variety of workflows were organized into folders on the desktop. In BitCurator 5.x, these tools are organized in submenus under the Applications menu in the top left (to the right of the Activities menu).</p>
+<p>Imaging and Recovery submenu:
+<img alt="submenu1" src="attachments/submenu1.jpg" /></p>
+<p>Forensics and Reporting submenu:
+<img alt="submenu2" src="attachments/submenu2.jpg" /></p>
+<p>Packaging and Transfer submenu:
+<img alt="submenu3" src="attachments/submenu3.jpg" /></p>
+<p>Additional Tools submenu:
+<img alt="submenu4" src="attachments/submenu4.jpg" /></p>
+<p>To read more about any of these tools, navigate to the Step by Step Guides for each category.</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Step-by-Step-Guides/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Imaging%20and%20Recovery%20Guides/" class="btn btn-neutral float-right" title="Imaging and Recovery Guides">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -212,10 +167,6 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Step-by-Step-Guides/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../Imaging%20and%20Recovery%20Guides/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
