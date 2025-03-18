@@ -32,7 +32,7 @@ The Forensics and Reporting submenu lists forensics and forensics-adjacent tools
 ### Guides
 
 * [Analyzing a Disk Image with Brunnhilde](Analyzing a Disk Image with Brunnhilde)  
-* [Fiwalk](Fiwalk)
+* [Fiwalk](Running fiwalk with the ClamAV Plugin to Scan Disk Images for Viruses and Malware)
 * [pyExifToolGUI](pyExifToolGUI)
 * [HFS Explorer](HFS Explorer)
 * [Bulk Extractor Viewer](Bulk Extractor Viewer)
@@ -44,7 +44,7 @@ The Forensics and Reporting submenu lists forensics and forensics-adjacent tools
 * [Forensic Reports](Forensic Reports)
 * [FSlint](FSlint)
 * [Access and Export Files from Disk Images](Access and Export Files from Disk Images)
-* [Data Triage (Nautilus)](Data Triage (Nautilus)
+* [Data Triage (Nautilus)](Data Triage (Nautilus))
 * [Create MD5 Sums (Nautilus)](Create MD5 Sums (Nautilus))
 * [Display a file in Hex editor (Nautilus)](Display a file in Hex editor (Nautilus))
 * [Disk Image Metadata (Nautilus)](Disk Image Metadata (Nautilus))
