@@ -26,7 +26,6 @@ The [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Rel
 The[ Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide) provides in instructions on installation and an initial walkthrough of the BitCurator Environment. Recommended if you have not used BitCurator before! 
 
 
-## Installation Instructions
 ### Install Option 1: Deploy on a Clean Ubuntu Host or VM
 
 Installation via **Live ISO**

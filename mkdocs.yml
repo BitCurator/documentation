@@ -6,10 +6,9 @@ nav:
     - 'Resources.md'
     - 'Troubleshooting and FAQ.md'
   - Installation:
-    - 'Installing BitCurator/Configuring BitCurator to enable users to authenticate with Active Directory accounts.md'
-    - 'Installing BitCurator/Installation via Live ISO.md'
+    - Overview : 'Installing BitCurator/Installing BitCurator.md'
+    - Using Active Directory : 'Installing BitCurator/Configuring BitCurator to enable users to authenticate with Active Directory accounts.md'
     - 'Installing BitCurator/Installation via Virtual Machine.md'
-    - 'Installing BitCurator/Installing BitCurator.md'
     - 'Installing BitCurator/Internationalization and Ubuntu.md'
     - 'Installing BitCurator/Migrating BitCurator VirtualBox VM to Hyper-V.md'
   - Guides: 
