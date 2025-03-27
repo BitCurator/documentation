@@ -5,9 +5,15 @@ Imaging and Recovery Guides
 
 
 
-### Overviews
+### Overview
+Guides for creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files.
 
-Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools.
+
+### Submenu
+
+![Imaging and Recovery menu](attachments/imagingsubmenu.png)
+
+BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools:
 
 * **Brasero**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
 * **cdrdao**: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents ( [toc-file](https://cdrdao.sourceforge.net/example.html#toc-file-example) )
@@ -17,10 +23,9 @@ Whether you are creating forensic disk images, mounting physical media to inspec
 * **ewfacquire**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
 * **Guymager**: A GUI tool to create raw and EWF-packaged images from devices.
 
-
 ### Guides
 
-* [Safely Mount Devices](Safely Mount Devices)
+* [Set Mount Policy](Set Mount Policy)
 * [Imaging with Guymager](Imaging with Guymager)
 
   
