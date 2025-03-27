@@ -5,7 +5,7 @@ Imaging and Recovery Guides
 
 
 
-### Overviews
+### Overview
 
 Whether you are creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files, BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools.
 
@@ -17,6 +17,9 @@ Whether you are creating forensic disk images, mounting physical media to inspec
 * **ewfacquire**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
 * **Guymager**: A GUI tool to create raw and EWF-packaged images from devices.
 
+### Submenu
+
+![Imaging and Recovery menu](attachments/imagingsubmenu.png)
 
 ### Guides
 
