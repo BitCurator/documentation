@@ -25,7 +25,9 @@ There are a variety of tasks essential to the development and maintenance of BCC
   
 
 
-**Testing software**, documenting bugs:
+### Testing 
+
+Finding and documenting bugs:
 
 + [Top 7 Major Goals of A Good Software Tester](https://www.softwaretestinghelp.com/goals-of-a-software-tester/)
 + [How to Write A Good Bug Report? Tips and Tricks](https://www.softwaretestinghelp.com/how-to-write-good-bug-report/)
@@ -34,12 +36,14 @@ There are a variety of tasks essential to the development and maintenance of BCC
   
 
 
-Check and Confirm bugs that been submitted as issues
+Check and Confirm bugs that been submitted as GitHub issues:
 
-Issue Pages for BitCurator Projects* <https://github.com/BitCurator/bitcurator-distro/issues>
-* <https://github.com/BitCurator/bitcurator-distro-installer/issues>
-* <https://github.com/BitCurator/bitcurator-distro-tools/issues>
-* <https://github.com/BitCurator/bitcurator-distro-metadata/issues>
+*Issue Pages for BitCurator Projects*  
+
+* <https://github.com/BitCurator/bitcurator-distro/issues>  
+* <https://github.com/BitCurator/bitcurator-distro-installer/issues>  
+* <https://github.com/BitCurator/bitcurator-distro-tools/issues>  
+* <https://github.com/BitCurator/bitcurator-distro-metadata/issues>  
 * <https://github.com/BitCurator/bitcurator-access-webtools/issues>
 * <https://github.com/BitCurator/bitcurator-access-redaction/issues>
 * <https://github.com/BitCurator/bitcurator-redact-pdf/issues>
@@ -48,13 +52,16 @@ Issue Pages for BitCurator Projects* <https://github.com/BitCurator/bitcurator-d
   
 
 
-**Documentation** - Take part in keeping project user and development documentation up-to-date.  
+### Documentation
+Take part in keeping project user and development documentation up-to-date.  
 
 * <https://confluence.educopia.org/display/BC/Development>
 * <https://github.com/BitCurator/bitcurator-distro/wiki>
 * <https://github.com/BitCurator/bitcurator-access/wiki>.
 
-README Pages for BitCurator Projects - install and development info* <https://github.com/BitCurator/bitcurator-distro/blob/master/README.md>
+README Pages for BitCurator Projects - install and development info  
+
+* <https://github.com/BitCurator/bitcurator-distro/blob/master/README.md>
 * <https://github.com/BitCurator/bitcurator-distro-salt/blob/master/README.md>
 * <https://github.com/BitCurator/bitcurator-distro-tools/blob/master/README.md>
 * <https://github.com/BitCurator/bitcurator-distro-metadata/blob/master/README.md>
@@ -92,24 +99,19 @@ Optional functionality and scripts:
 
 **Technology Stack:**
 
-* Ubuntu - Base operating system, user interface, tools
-+ [help.ubuntu.com](https://help.ubuntu.com/lts/ubuntu-help/index.html)
-
+* Ubuntu - Base operating system, user interface, tools  
+    + [help.ubuntu.com](https://help.ubuntu.com/lts/ubuntu-help/index.html)  
 * Salt Stack -
-+ [SaltStack Documentation](https://docs.saltstack.com)
-
+    + [SaltStack Documentation](https://docs.saltstack.com)
 * Shell Scripting -
-+ [BASH Programming - Introduction HOW-TO](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
-+ [Bash Scripting Tutorial for Beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
-
+    + [BASH Programming - Introduction HOW-TO](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
+    + [Bash Scripting Tutorial for Beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
 * Python -
-+ [Our Documentation - python.org](https://www.python.org/doc/)
-
+    + [Our Documentation - python.org](https://www.python.org/doc/)
 * Related components -
-+ [reingart/pyfpdf: Simple PDF generation for Python (FPDF PHP port)](https://github.com/reingart/pyfpdf)
-
+    + [reingart/pyfpdf: Simple PDF generation for Python (FPDF PHP port)](https://github.com/reingart/pyfpdf)
 * XSLT -
-+ [Introduction to XSLT](https://www.ibm.com/developerworks/xml/tutorials/x-introxslt/x-introxslt.html)
+    + [Introduction to XSLT](https://www.ibm.com/developerworks/xml/tutorials/x-introxslt/x-introxslt.html)
 
 ### **BitCurator Access Webtools**
 
@@ -122,16 +124,13 @@ The BitCurator Access Webtools project is comprised of a single  repository. Th
 **Technology Stack:**
 
 * The Sleuth Kit -
-+ <http://www.sleuthkit.org/sleuthkit/>
-
+    + <http://www.sleuthkit.org/sleuthkit/>
 * PyTSK -
-+ <https://github.com/py4n6/pytsk>
-
+    + <https://github.com/py4n6/pytsk>
 * Flask -
-+ <https://flask.pocoo.org/>
-
+    + <https://flask.pocoo.org/>
 * Postgres -
-+ <https://www.postgresql.org/docs/current/>
+    + <https://www.postgresql.org/docs/current/>
 
 ### **BitCurator Access Redaction Tools**
 
