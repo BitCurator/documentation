@@ -20,7 +20,7 @@ Whether you are creating forensic disk images, mounting physical media to inspec
 
 ### Guides
 
-* [Safely Mount Devices](Safely Mount Devices)
+* [Set Mount Policy](Set Mount Policy)
 * [Imaging with Guymager](Imaging with Guymager)
 
   
