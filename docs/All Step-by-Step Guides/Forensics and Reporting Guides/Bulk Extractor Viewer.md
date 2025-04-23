@@ -1,9 +1,7 @@
 Bulk Extractor Viewer
 =====================
 
-
-
-
+*Note: The 2.x releases of bulk_extractor do not include the BEViewer GUI front end.*
 
 ### Overview
 
