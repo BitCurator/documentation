@@ -1,9 +1,7 @@
 Understanding Bulk Extractor Scanners
 =====================================
 
-
-
-
+*Note: The 2.x releases of bulk_extractor do not include the BEViewer GUI front end.*
 
 For help using the Bulk Extractor Viewer, please see the [Bulk Extractor Viewer tutorial](/documentation/BitCurator Environment/All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer).### Overview
 
