@@ -36,6 +36,6 @@ Next, run the following command:
 In order, the parts of this command tell the tool to process all feature files, use the image filename `SampleData.E01`, use the output from fiwalk, the location of the `bulk_extractor` output, and where to put our new output (a new directory named `mappedfeatures`).
 Click on the Files icon in the dock, navigate to the `mappedfeatures` directory, and examine one of the files (in this example, we’re looking at `annotated_telephone.txt`). 
 
-[[/images/quickstart/image34.png|Example of annotated bulk extractor output]]
+![image34.png](attachments/image34.png)
 
 Compare this to the equivalent report in beout, and you will see there are now two new columns: the full file path of the file from which the feature originated, and the MD5 of that file.
