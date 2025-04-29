@@ -12,15 +12,16 @@ In the BitCurator Environment you can: 
 * **Locate and remove duplicate files:** Know what files to keep and what can be discarded.   
 
 
+![](attachments/github-svgrepo-com.svg)  [Current Release](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#current-release)
+-------------------------------------------------------------------------------------------------------------------------
+View the latest release of the BitCurator Environment.
+
 ![](attachments/pdf-svgrepo-com.svg)  [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide)
 --------------------------------------------------------------------------------------------------------------
-
-The Quick Start Guide provides instructions on installation and an initial walkthrough of the BitCurator Environment. 
-
+Download the Quick Start Guide which provides instructions on installation and an initial walkthrough of the BitCurator Environment. 
 
 ![](attachments/teamwork-svgrepo-com.svg)  [BitCurator Google Group](https://groups.google.com/forum/#!forum/bitcurator-users)
 ------------------------------------------------------------------------------------------------------------------------------------------------
-
 The BitCurator Google Group is the place to post questions, discuss issues with the project and development staff, and request features and updates.
 
 ![](attachments/instruction-support-information-svgrepo-com.svg)  [Documentation](https://github.com/BitCurator/documentation)
