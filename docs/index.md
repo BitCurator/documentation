@@ -12,13 +12,13 @@ In the BitCurator Environment you can: 
 * **Locate and remove duplicate files:** Know what files to keep and what can be discarded.
 
 
-![](attachments/GitHub-Mark-120px-plus.png) [BitCurator on GitHub](https://bitcurator.github.io/)
+![](attachments/github-svgrepo-com.svg)  [BitCurator on GitHub](https://bitcurator.github.io/)
 --------------------------------------------------------------------------------
 
 The BitCurator group on GitHub provides all source code and development documentation for the BitCurator NLP (2016-2018), BitCurator Access (2014-2016), and BitCurator (2011-2014) projects.    
 
 
-![](attachments/PDF_32.png) [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide)
+![](attachments/pdf-svgrepo-com.svg)  [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide)
 --------------------------------------------------------------------------------------------------------------
 
 The Quick Start Guide provides instructions on installation and an initial walkthrough of the BitCurator Environment. 
