@@ -9,13 +9,7 @@ In the BitCurator Environment you can: 
 * **Analyze files and file systems:** View details on file system contents from a wide variety of file systems.
 * **Extract file system metadata:** File system metadata is a critical link in the chain of custody and in records of provenance.
 * **Identify sensitive information:** Locate private and sensitive information on digital media and prepare materials for access.
-* **Locate and remove duplicate files:** Know what files to keep and what can be discarded.
-
-
-![](attachments/github-svgrepo-com.svg)  [BitCurator on GitHub](https://bitcurator.github.io/)
---------------------------------------------------------------------------------
-
-The BitCurator group on GitHub provides all source code and development documentation for the BitCurator NLP (2016-2018), BitCurator Access (2014-2016), and BitCurator (2011-2014) projects.    
+* **Locate and remove duplicate files:** Know what files to keep and what can be discarded.   
 
 
 ![](attachments/pdf-svgrepo-com.svg)  [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide)
@@ -29,13 +23,13 @@ The Quick Start Guide provides instructions on installation and an initial wal
 
 The BitCurator Google Group is the place to post questions, discuss issues with the project and development staff, and request features and updates.
 
-![](attachments/instruction-support-information-svgrepo-com.svg)  Documentation Updates or Issues
+![](attachments/instruction-support-information-svgrepo-com.svg)  [Documentation](https://github.com/BitCurator/documentation)
 ----------------------------------------------------------------------
-The Bitcurator Documentation is hosted on [GitHub](https://github.com/BitCurator/documentation) and maintained by the BCC Documentation and Training Committee.
+This wiki is hosted on GitHub and maintained by the BCC Documentation and Training Committee.
 
-For documentation requests, issues, or suggestions:
-  * If you have a GitHub account please submit an issue [here](https://github.com/BitCurator/documentation/issues)
-  * Otherwise, contact bcc_docs@bitcuratorconsortium.org
+For documentation issues, requests, or suggestions:
+  * GitHub users can [submit an issue](https://github.com/BitCurator/documentation/issues) on the documentation repository page.
+  * Otherwise, contact bcc_docs@bitcuratorconsortium.org with information about the issue, request, or suggestion.
 
 
 Licenses
