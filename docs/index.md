@@ -24,7 +24,7 @@ The BitCurator group on GitHub provides all source code and development documen
 The Quick Start Guide provides instructions on installation and an initial walkthrough of the BitCurator Environment. 
 
 
-![](attachments/group-svgrepo-com.svg) [BitCurator Google Group](https://groups.google.com/forum/#!forum/bitcurator-users)
+![](attachments/teamwork-svgrepo-com.svg)  [BitCurator Google Group](https://groups.google.com/forum/#!forum/bitcurator-users)
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 The BitCurator Google Group is the place to post questions, discuss issues with the project and development staff, and request features and updates.
