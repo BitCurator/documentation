@@ -29,6 +29,14 @@ The Quick Start Guide provides instructions on installation and an initial wal
 
 The BitCurator Google Group is the place to post questions, discuss issues with the project and development staff, and request features and updates.
 
+![](attachments/instruction-support-information-svgrepo-com.svg)  Documentation Updates or Issues
+----------------------------------------------------------------------
+The Bitcurator Documentation is hosted on [GitHub](https://github.com/BitCurator/documentation) and maintained by the BCC Documentation and Training Committee.
+
+For documentation requests, issues, or suggestions:
+  * If you have a GitHub account please submit an issue [here](https://github.com/BitCurator/documentation/issues)
+  * Otherwise, contact bcc_docs@bitcuratorconsortium.org
+
 
 Licenses
 --------
