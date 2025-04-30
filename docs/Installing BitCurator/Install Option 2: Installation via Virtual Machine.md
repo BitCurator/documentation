@@ -1,10 +1,6 @@
 Installation via Virtual Machine
 ================================
 
-
-
-
-
 ### Overview
 
 Using the BitCurator Environment through a virtual machine allows you to install the software as another program on an existing computer. This can be very useful for both testing the software and instruction. It is also helpful if you do not have access or the ability to install directly on a drive. However, if you anticipate using the software regularly or routinely, it is best to arrange for a dedicated install. 
