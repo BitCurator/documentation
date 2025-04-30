@@ -1,8 +1,18 @@
-# Install Option 1: Deploy on a Clean Ubuntu Host or VM
+Installation via Virtual Machine
+================================
+
+### Overview
+
+Using the BitCurator Environment through a virtual machine allows you to install the software as another program on an existing computer. This can be very useful for both testing the software and instruction. It is also helpful if you do not have access or the ability to install directly on a drive. However, if you anticipate using the software regularly or routinely, it is best to arrange for a dedicated install. 
+
+Hardware Requirements
+
+* Desktop or laptop with an Intel Core i7 (or similar) processor running 64-bit Windows 7/8/8.1/10, macOS 10.10 (or newer), or a 64-bit Linux variant
+* 8 GB RAM or more
+* 12 GB free hard disk space minimum. The virtual machine is approximately 9 GB. It will expand to 256 GB as needed
+
 ## Install Ubuntu 22.04LTS
 Download the latest 64-bit Ubuntu 22.04 desktop image from [https://releases.ubuntu.com/22.04/](https://releases.ubuntu.com/22.04/).
-
-**If you are installing Ubuntu 22.04LTS as the host operating system on a dedicated machine**, you will need to write the downloaded ISO image to a bootable USB drive. Instructions for doing this on various platforms can be found at [https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu). During installation, you may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and follow the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
 **If you are installing Ubuntu 22.04LTS in new VirtualBox VM**, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
@@ -160,3 +170,4 @@ After the reboot, you will be automatically logged in if you selected “Automat
 3. Select the user account that you want to set the log in behavior for at startup.
 4. Press **Unlock** in the top right corner and type in your password when prompted.
 5. Switch the **Automatic Login** switch to on or off, depending on the desired behavior.
+

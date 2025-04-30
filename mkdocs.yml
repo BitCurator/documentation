@@ -5,8 +5,9 @@ nav:
     - Home : 'index.md'
   - Installation:
     - Overview : 'Installing BitCurator/Installing BitCurator.md'
+    - 'Installing BitCurator/Install Option 1: Installation via Dedicated Machine.md'
+    - 'Installing BitCurator/Install Option 2: Installation via Virtual Machine.md'
     - Using Active Directory : 'Installing BitCurator/Configuring BitCurator to enable users to authenticate with Active Directory accounts.md'
-    - 'Installing BitCurator/Installation via Virtual Machine.md'
     - 'Installing BitCurator/Internationalization and Ubuntu.md'
     - 'Installing BitCurator/Migrating BitCurator VirtualBox VM to Hyper-V.md'
   - Guides: 

@@ -1,4 +1,5 @@
-# Install Option 2: Import a BitCurator Virtual Appliance in VirtualBox
+Import a BitCurator Virtual Appliance in VirtualBox
+---------------------------------------------------------------
 
 ## Importing the BitCurator Virtual Appliance
 For some releases of BitCurator, a preconfigured Virtual Appliance (`.ova`) file may be available. Virtual Appliance files can be quickly imported into VirtualBox with minimal additional configuration. Visit [https://github.com/BitCurator/bitcurator-distro/wiki/Releases](https://github.com/BitCurator/bitcurator-distro/wiki/Releases) to see if a Virtual Appliance is available for one or more recent releases. To import, start VirtualBox on your host and select **Import Appliance** in the File menu.
