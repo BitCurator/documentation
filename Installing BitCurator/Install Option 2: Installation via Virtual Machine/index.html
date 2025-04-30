@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Installation via Virtual Machine - BitCurator Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation via Virtual Machine";
+        var mkdocs_page_input_path = "Installing BitCurator/Install Option 2: Installation via Virtual Machine.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> BitCurator Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">BitCurator Documentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Installing%20BitCurator/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%201%3A%20Installation%20via%20Dedicated%20Machine/">Install Option 1: Installation via Dedicated Machine</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation via Virtual Machine</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-ubuntu-2204lts">Install Ubuntu 22.04LTS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-notes-for-virtualbox-vm-installations">Important Notes For VirtualBox VM Installations</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Using Active Directory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Migrating%20BitCurator%20VirtualBox%20VM%20to%20Hyper-V/">Migrating BitCurator VirtualBox VM to Hyper-V</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Working%20in%20the%20BitCurator%20Environment/">Working in the BitCurator Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Walkthrough</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BitCurator Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Installation</li>
+      <li class="breadcrumb-item active">Installation via Virtual Machine</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation-via-virtual-machine">Installation via Virtual Machine</h1>
+<h3 id="overview">Overview</h3>
+<p>Using the BitCurator Environment through a virtual machine allows you to install the software as another program on an existing computer. This can be very useful for both testing the software and instruction. It is also helpful if you do not have access or the ability to install directly on a drive. However, if you anticipate using the software regularly or routinely, it is best to arrange for a dedicated install. </p>
+<p>Hardware Requirements</p>
+<ul>
+<li>Desktop or laptop with an Intel Core i7 (or similar) processor running 64-bit Windows 7/8/8.1/10, macOS 10.10 (or newer), or a 64-bit Linux variant</li>
+<li>8 GB RAM or more</li>
+<li>12 GB free hard disk space minimum. The virtual machine is approximately 9 GB. It will expand to 256 GB as needed</li>
+</ul>
+<h2 id="install-ubuntu-2204lts">Install Ubuntu 22.04LTS</h2>
+<p>Download the latest 64-bit Ubuntu 22.04 desktop image from <a href="https://releases.ubuntu.com/22.04/">https://releases.ubuntu.com/22.04/</a>.</p>
+<p><strong>If you are installing Ubuntu 22.04LTS in new VirtualBox VM</strong>, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use <code>BitCurator</code> for <strong>Your name</strong>, <code>bitcurator</code> for <strong>Your computer’s name</strong>, and <code>bcadmin</code> for <strong>Pick a username</strong>. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
+<h2 id="important-notes-for-virtualbox-vm-installations">Important Notes For VirtualBox VM Installations</h2>
+<p>Visit the <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> website to download and install the latest version of VirtualBox for your machine. You must also install the <strong>VirtualBox Extension Pack</strong> on your host machine in order for USB 3.0 support to work. Note that installation options have changed in VirtualBox 7.x and later. In the VirtualBox VM Manager, after clicking New to create a new VM, you must specify the name for your VM, the location of the Ubuntu ISO you downloaded earlier, and check the box for <strong>Skip Unattended Installation</strong>.</p>
+<p><img alt="VM_Install_1.png" src="../attachments/VM_Install_1.png" /></p>
+<p>Click <strong>Next</strong>, and on the following screen select <strong>at least 8GB RAM and 2 processor cores</strong>:</p>
+<p><img alt="VM_Install_2.png" src="../attachments/VM_Install_2.png" /></p>
+<p>Click <strong>Next</strong> and set the size of the virtual disk. <strong>We recommend at least 128GB</strong>:</p>
+<p><img alt="VM_Install_3.png" src="../attachments/VM_Install_3.png" /></p>
+<p>Click <strong>Next</strong>, and review the details:</p>
+<p><img alt="VM_Install_4.png" src="../attachments/VM_Install_4.png" /></p>
+<p>Now, click <strong>Finish</strong>, and you will be returned to the main management interface. With your new image selected, click Settings:</p>
+<p><img alt="VM_Install_5.png" src="../attachments/VM_Install_5.png" /></p>
+<p>In Settings, you will need to make several modifications:</p>
+<ul>
+<li>In the <strong>General -&gt; Advanced</strong> tab, change <strong>Shared Clipboard</strong> to <strong>Bidirectional</strong> and <strong>Drag ‘n Drop</strong> to <strong>Host to Guest</strong>.</li>
+<li>In the <strong>Display -&gt; Screen</strong> tab, <strong>increase the Video Memory to 128MB</strong>.</li>
+<li>In USB, ensure that <strong>Enable USB Controller</strong> is checked, select the <strong>USB 3.0 (xHCI) Controller</strong>, and <strong>click the small blue USB plug icon</strong> on the right hand side of the dialog to create a new USB filter. Click <strong>OK</strong>.</li>
+</ul>
+<p>With the machine selected, click <strong>Start</strong>, and proceed with the Ubuntu installation as normal.</p>
+<p>Once you have completed installing Ubuntu in a VirtualBox virtual machine, it’s a good time to <strong>install the VirtualBox guest additions</strong>, since both media automounts and software autorun will be disabled after deploying the BitCurator install script in the next section. First, you must install some package so that the guest additions can be built as a kernel module. Open a terminal and run the following commands:</p>
+<p><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+sudo apt-get install build-essential gcc make perl dkms
+sudo reboot</code></p>
+<p>Once the machine has rebooted, log in and select <strong>Insert Guest Additions CD Image</strong> from the <strong>Devices</strong> menu:</p>
+<p><img alt="VM_Install_6.png" src="../attachments/VM_Install_6.png" /></p>
+<p>Now, <strong>click the Files icon in the dock</strong>, and you should see the Guest Additions CD listed on the left of the new window. Click it, and in the new dialog select <strong>Run Software</strong>.</p>
+<p><strong>Important</strong>: If you have trouble getting the VirtualBox guest additions automatic installer to run, you can also execute the following command from a terminal with the guest additions ISO mounted (replacing X.X.X with the current release number of the guest additions you are using; this number will match the release number of VirtualBox itself):</p>
+<p><code>sudo /media/bcadmin/VBox_GAs_X.X.X/VBoxLinuxAdditions.run</code></p>
+<p>(<strong>Note</strong>: as you are typing, you can hit the Tab key on your keyboard to autocomplete each part of the command after typing a few letters) If you plan to use Shared Folders, you should also add the bcadmin user to the vboxsf group in Ubuntu (after the guest additions have been installed). To do this:</p>
+<p>Install the gnome-system-tools package in order to access the Users and Groups GUI. In a terminal, run the following command:</p>
+<p><code>sudo apt-get install gnome-system-tools</code></p>
+<p>Click on the Show Applications icon (grid icon) at the bottom left of the screen. then type “Users and Groups”. Click on the icon that appears in the search results.</p>
+<p>Click <strong>Manage Groups</strong> for the <strong>bcadmin</strong> user</p>
+<p>Scroll down the groups list until you see <strong>vboxsf</strong>. Select it and click <strong>Properties</strong>.</p>
+<p><strong>Enable the checkbox</strong>.</p>
+<p>Click <strong>Ok</strong>. You will be prompted for the password for the <code>bcadmin</code> user. Once you’ve completed this step, you can close the Users and Groups window.</p>
+<p>Continue by following the instructions in the section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
+<h1 id="install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</h1>
+<p><strong>1. Prepare your environment</strong></p>
+<p>To ensure you have all of the tools, and updates necessary for the BitCurator environment to succeed, you should update the local apt repository and install the necessary tools. Open a terminal and use the following commands:</p>
+<p><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+sudo apt-get install gnupg curl git -y</code></p>
+<p><code>gnupg</code> is required for the BitCurator installer to validate the signature of the BitCurrator configuration files during install. <code>curl</code> can be used when developing or testing state files. <code>git</code> is used to clone local GitHub repos, and can be used when testing state files from the <a href="https://github.com/bitcurator/bitcurator-salt">BitCurator SaltStack Repo</a>.</p>
+<p><strong>2. Download the BitCurator CLI installer</strong></p>
+<p>BitCurator uses a standalone command-line tool for installation and upgrade. First, open a terminal and download the latest release of the tool with the following command:</p>
+<p><code>wget https://github.com/BitCurator/bitcurator-cli/releases/download/v1.0.0/bitcurator-cli-linux</code></p>
+<p>Verify that the SHA-256 has of the downloaded file matches the value below:</p>
+<p><code>5acab7abcafa24864d49e4872f8e2b562c16bf4842256ad3f994aae8d0df77c1</code></p>
+<p>You can generate the hash of your downloaded file with:</p>
+<p><code>sha256sum bitcurator-cli-linux</code></p>
+<p>Next, adjust some permissions and move the BitCurator installer to the correct location:</p>
+<p><code>sudo mv bitcurator-cli-linux /usr/local/bin/bitcurator
+sudo chmod +x /usr/local/bin/bitcurator</code></p>
+<p><strong>3. Run the BitCurator CLI Installer</strong></p>
+<p><strong>Simple install</strong>: Run the BitCurator installer. This may up to an hour to complete, depending on your system and network speeds:</p>
+<p><code>sudo bitcurator install</code></p>
+<p>The command will install BitCurator for the user that is currently logged in. For other installation options, read the section below.</p>
+<p><strong>Optional install modes</strong>:</p>
+<p>The BitCurator installer provides several additional installation modes. To see the options provided by the command, run the following:</p>
+<p><code>bitcurator --help</code></p>
+<p>You will be presented with the usage information:</p>
+<p><code>Usage:
+  bitcurator [options] list-upgrades [--pre-release]
+  bitcurator [options] install [--pre-release] [--version=&lt;version&gt;] [--mode=&lt;mode&gt;] [--user=&lt;user&gt;]
+  bitcurator [options] update
+  bitcurator [options] upgrade [--pre-release] [--mode=&lt;mode&gt;] [--user=&lt;user&gt;]
+  bitcurator [options] version
+  bitcurator [options] debug
+  bitcurator -h | --help | -v
+Options:
+  --dev                 Developer Mode (do not use, dangerous, bypasses checks)
+  --version=&lt;version&gt;   Specific version install [default: latest]
+  --mode=&lt;mode&gt;         bitcurator installation mode (dedicated or addon, default: dedicated)
+  --user=&lt;user&gt;         User used for bitcurator configuration [default: bcadmin]
+  --no-cache            Ignore the cache, always download the release files
+  --verbose             Display verbose logging</code></p>
+<p>If you wish to install BitCurator for a different user, you may use the following command:</p>
+<p><code>sudo bitcurator install --user=&lt;user&gt;</code></p>
+<p>Where <code>&lt;user&gt;</code> is a username other than the one you are currently logged in as.</p>
+<p>If you wish to install BitCurator in addon mode (installing the tools, but leaving the default Ubuntu theme intact), use the following command:</p>
+<p><code>sudo bitcurator install --addon</code></p>
+<p><strong>3.1 What to do if something goes wrong</strong></p>
+<p>If you encounter an error, you may be able to identify the issue by reviewing the <code>saltstack.log</code> file under <code>/var/cache/bitcurator/cli</code> in the subdirectory that matches the BitCurator state-files version you're installing. Search for the log file for “<code>result: false</code>” messages and look at the surrounding 5 lines or the 8 lines above each message to see the state file that caused the issue. You can do this with:</p>
+<p><code>grep -i -C 5 'result: false' or grep -i -B 8 'result: false'</code></p>
+<p><strong>4. Reboot</strong></p>
+<p>When the installation is complete, reboot your system from the terminal:</p>
+<p><code>sudo reboot</code></p>
+<p>After the reboot, you will be automatically logged in if you selected “Automatic Login” during the Ubuntu install. Otherwise, you can log in to BitCurator with the username and password used during the install. To change this behavior:</p>
+<ol>
+<li>Open the <strong>Activities</strong> overview and start typing Users.</li>
+<li>Click <strong>Users</strong> to open the panel.</li>
+<li>Select the user account that you want to set the log in behavior for at startup.</li>
+<li>Press <strong>Unlock</strong> in the top right corner and type in your password when prompted.</li>
+<li>Switch the <strong>Automatic Login</strong> switch to on or off, depending on the desired behavior.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Install%20Option%201%3A%20Installation%20via%20Dedicated%20Machine/" class="btn btn-neutral float-left" title="Install Option 1: Installation via Dedicated Machine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/" class="btn btn-neutral float-right" title="Using Active Directory">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Install%20Option%201%3A%20Installation%20via%20Dedicated%20Machine/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

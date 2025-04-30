@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Install Option 1: Deploy on a Clean Ubuntu Host or VM - BitCurator Docs</title>
+    <title>Install Option 1: Installation via Dedicated Machine - BitCurator Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Install Option 1: Deploy on a Clean Ubuntu Host or VM";
-        var mkdocs_page_input_path = "Installing BitCurator/Install Option 1: Deploy on a Clean Ubuntu Host or VM.md";
+        var mkdocs_page_name = "Install Option 1: Installation via Dedicated Machine";
+        var mkdocs_page_input_path = "Installing BitCurator/Install Option 1: Installation via Dedicated Machine.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,12 +45,18 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../Installing%20BitCurator/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Using Active Directory</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install Option 1: Installation via Dedicated Machine</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-ubuntu-2204lts">Install Ubuntu 22.04LTS</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Using Active Directory</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
                   </li>
@@ -115,7 +121,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Install Option 1: Deploy on a Clean Ubuntu Host or VM</li>
+          <li class="breadcrumb-item">Installation</li>
+      <li class="breadcrumb-item active">Install Option 1: Installation via Dedicated Machine</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -124,47 +131,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="install-option-1-deploy-on-a-clean-ubuntu-host-or-vm">Install Option 1: Deploy on a Clean Ubuntu Host or VM</h1>
+                <h1 id="install-option-1-installation-via-dedicated-machine">Install Option 1: Installation via Dedicated Machine</h1>
 <h2 id="install-ubuntu-2204lts">Install Ubuntu 22.04LTS</h2>
 <p>Download the latest 64-bit Ubuntu 22.04 desktop image from <a href="https://releases.ubuntu.com/22.04/">https://releases.ubuntu.com/22.04/</a>.</p>
 <p><strong>If you are installing Ubuntu 22.04LTS as the host operating system on a dedicated machine</strong>, you will need to write the downloaded ISO image to a bootable USB drive. Instructions for doing this on various platforms can be found at <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu">https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu</a>. During installation, you may (optionally) replicate the default user and machine name for BitCurator: when prompted use <code>BitCurator</code> for <strong>Your name</strong>, <code>bitcurator</code> for <strong>Your computer’s name</strong>, and <code>bcadmin</code> for <strong>Pick a username</strong>. Enter a strong password of your choice. When the installation is complete, reboot, log in, and follow the instructions in section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
-<p><strong>If you are installing Ubuntu 22.04LTS in new VirtualBox VM</strong>, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use <code>BitCurator</code> for <strong>Your name</strong>, <code>bitcurator</code> for <strong>Your computer’s name</strong>, and <code>bcadmin</code> for <strong>Pick a username</strong>. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
-<h2 id="important-notes-for-virtualbox-vm-installations">Important Notes For VirtualBox VM Installations</h2>
-<p>Visit the <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> website to download and install the latest version of VirtualBox for your machine. You must also install the <strong>VirtualBox Extension Pack</strong> on your host machine in order for USB 3.0 support to work. Note that installation options have changed in VirtualBox 7.x and later. In the VirtualBox VM Manager, after clicking New to create a new VM, you must specify the name for your VM, the location of the Ubuntu ISO you downloaded earlier, and check the box for <strong>Skip Unattended Installation</strong>.</p>
-<p><img alt="VM_Install_1.png" src="../attachments/VM_Install_1.png" /></p>
-<p>Click <strong>Next</strong>, and on the following screen select <strong>at least 8GB RAM and 2 processor cores</strong>:</p>
-<p><img alt="VM_Install_2.png" src="../attachments/VM_Install_2.png" /></p>
-<p>Click <strong>Next</strong> and set the size of the virtual disk. <strong>We recommend at least 128GB</strong>:</p>
-<p><img alt="VM_Install_3.png" src="../attachments/VM_Install_3.png" /></p>
-<p>Click <strong>Next</strong>, and review the details:</p>
-<p><img alt="VM_Install_4.png" src="../attachments/VM_Install_4.png" /></p>
-<p>Now, click <strong>Finish</strong>, and you will be returned to the main management interface. With your new image selected, click Settings:</p>
-<p><img alt="VM_Install_5.png" src="../attachments/VM_Install_5.png" /></p>
-<p>In Settings, you will need to make several modifications:</p>
-<ul>
-<li>In the <strong>General -&gt; Advanced</strong> tab, change <strong>Shared Clipboard</strong> to <strong>Bidirectional</strong> and <strong>Drag ‘n Drop</strong> to <strong>Host to Guest</strong>.</li>
-<li>In the <strong>Display -&gt; Screen</strong> tab, <strong>increase the Video Memory to 128MB</strong>.</li>
-<li>In USB, ensure that <strong>Enable USB Controller</strong> is checked, select the <strong>USB 3.0 (xHCI) Controller</strong>, and <strong>click the small blue USB plug icon</strong> on the right hand side of the dialog to create a new USB filter. Click <strong>OK</strong>.</li>
-</ul>
-<p>With the machine selected, click <strong>Start</strong>, and proceed with the Ubuntu installation as normal.</p>
-<p>Once you have completed installing Ubuntu in a VirtualBox virtual machine, it’s a good time to <strong>install the VirtualBox guest additions</strong>, since both media automounts and software autorun will be disabled after deploying the BitCurator install script in the next section. First, you must install some package so that the guest additions can be built as a kernel module. Open a terminal and run the following commands:</p>
-<p><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
-sudo apt-get install build-essential gcc make perl dkms
-sudo reboot</code></p>
-<p>Once the machine has rebooted, log in and select <strong>Insert Guest Additions CD Image</strong> from the <strong>Devices</strong> menu:</p>
-<p><img alt="VM_Install_6.png" src="../attachments/VM_Install_6.png" /></p>
-<p>Now, <strong>click the Files icon in the dock</strong>, and you should see the Guest Additions CD listed on the left of the new window. Click it, and in the new dialog select <strong>Run Software</strong>.</p>
-<p><strong>Important</strong>: If you have trouble getting the VirtualBox guest additions automatic installer to run, you can also execute the following command from a terminal with the guest additions ISO mounted (replacing X.X.X with the current release number of the guest additions you are using; this number will match the release number of VirtualBox itself):</p>
-<p><code>sudo /media/bcadmin/VBox_GAs_X.X.X/VBoxLinuxAdditions.run</code></p>
-<p>(<strong>Note</strong>: as you are typing, you can hit the Tab key on your keyboard to autocomplete each part of the command after typing a few letters) If you plan to use Shared Folders, you should also add the bcadmin user to the vboxsf group in Ubuntu (after the guest additions have been installed). To do this:</p>
-<p>Install the gnome-system-tools package in order to access the Users and Groups GUI. In a terminal, run the following command:</p>
-<p><code>sudo apt-get install gnome-system-tools</code></p>
-<p>Click on the Show Applications icon (grid icon) at the bottom left of the screen. then type “Users and Groups”. Click on the icon that appears in the search results.</p>
-<p>Click <strong>Manage Groups</strong> for the <strong>bcadmin</strong> user</p>
-<p>Scroll down the groups list until you see <strong>vboxsf</strong>. Select it and click <strong>Properties</strong>.</p>
-<p><strong>Enable the checkbox</strong>.</p>
-<p>Click <strong>Ok</strong>. You will be prompted for the password for the <code>bcadmin</code> user. Once you’ve completed this step, you can close the Users and Groups window.</p>
-<p>Continue by following the instructions in the section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
 <h1 id="install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</h1>
 <p><strong>1. Prepare your environment</strong></p>
 <p>To ensure you have all of the tools, and updates necessary for the BitCurator environment to succeed, you should update the local apt repository and install the necessary tools. Open a terminal and use the following commands:</p>
@@ -226,6 +196,10 @@ Options:
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Installing%20BitCurator/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/" class="btn btn-neutral float-right" title="Installation via Virtual Machine">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -247,6 +221,10 @@ Options:
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../Installing%20BitCurator/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
