@@ -39,13 +39,9 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Home</span></p>
+              <p class="caption"><span class="caption-text">BitCurator Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
@@ -72,6 +68,15 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Forensics%20and%20Reporting%20Guides/">Forensics and Reporting Guides</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Resources/">Resources</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Walkthrough</span></p>
@@ -123,17 +128,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Development/">Overview</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Onboarding/">Onboarding</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Development/Roadmap/">Roadmap</a>
-                  </li>
-              </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
@@ -169,7 +163,7 @@
 <p>See below for a high-level workflow users can follow when in the BitCurator Environment. </p>
 <ul>
 <li>1 <a href="#BitCuratorWalkthrough-ImagingandRecovery">Imaging and Recovery</a><ul>
-<li>1.1 <a href="#BitCuratorWalkthrough-SafelyMountDevices">Safely Mount Devices</a></li>
+<li>1.1 <a href="#BitCuratorWalkthrough-setmountpolicy">Set Mount Policy</a></li>
 <li>1.2 <a href="#BitCuratorWalkthrough-CreateDiskImages">Create Disk Images</a></li>
 </ul>
 </li>
@@ -192,9 +186,9 @@
 <p><strong>BitCurator supports multiple acquisition scenarios: attaching physical media to inspect and analyze digital materials, creating forensic disk images, or transferring files into the environment.</strong></p>
 <h3 id="safely-mount-devices">Safely Mount Devices</h3>
 <p>If you have devices (e.g. USB drives, CD-ROMs) that you'd like to image or explore with BitCurator, you can connect them so that BitCurator can see them, but safely: no worries about writing any data back to the device. For example, last modified dates assigned by the target media's file system won't be overwritten with the current date.</p>
-<p>The <strong>safe mount script</strong> provides write-blocked access to removable media. <strong>Mounting</strong> is a technical term for registering a storage device with the host system so it can be browsed or used, and you will need to mount any external device attached to the BitCurator system, whether that occurs automatically or by invoking the safe mount script. Images of devices, (e.g. forensic images of floppies, CDs or drives) need to be mounted as well for most uses.</p>
+<p>The <strong>mount policy</strong> provides write-blocked access to removable media. <strong>Mounting</strong> is a technical term for registering a storage device with the host system so it can be browsed or used, and you will need to mount any external device attached to the BitCurator system, whether that occurs automatically or by invoking the safe mount script. Images of devices, (e.g. forensic images of floppies, CDs or drives) need to be mounted as well for most uses.</p>
 <ul>
-<li><strong><a href="/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices">Safely Mount Devices</a> (Step-by-Step Guide)</strong></li>
+<li><strong><a href="/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Set Mount Policy">Set Mount Policy</a></strong></li>
 </ul>
 <h3 id="create-disk-images">Create Disk Images</h3>
 <p>BitCurator uses open source disk imaging tools, such as <a href="/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">Guymager</a> and <a href="https://forensicswiki.xyz/wiki/index.php?title=Dcfldd">dcfldd</a>, to capture bit-identical images from magnetic, optical, solid-state, and hybrid media. Disk images can be captured in various formats, including raw (just the bitstream), E01 (Expert Witness Format, which we support using the open source <a href="https://forensicswiki.xyz/wiki/index.php?title=Libewf">libewf</a> library), and AFF (Advanced Forensic Format).</p>
@@ -267,7 +261,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/" class="btn btn-neutral float-left" title="Packaging and Transfer Guides"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Resources/" class="btn btn-neutral float-left" title="Resources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../BitCurator%20Workflow%20Diagrams/" class="btn btn-neutral float-right" title="BitCurator Workflow Diagrams">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -291,7 +285,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../All%20Step-by-Step%20Guides/Packaging%20and%20Transfer%20Guides/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../Resources/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../BitCurator%20Workflow%20Diagrams/" style="color: #fcfcfc">Next &raquo;</a></span>

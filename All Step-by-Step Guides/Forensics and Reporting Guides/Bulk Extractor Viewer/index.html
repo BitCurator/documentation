@@ -39,13 +39,9 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Home</span></p>
+              <p class="caption"><span class="caption-text">BitCurator Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Tools/">Tools</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Resources/">Resources</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
@@ -74,6 +70,15 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../Packaging%20and%20Transfer%20Guides/">Packaging and Transfer Guides</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Tools/">Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Troubleshooting%20and%20FAQ/">Troubleshooting and FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../Resources/">Resources</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Walkthrough</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
@@ -87,17 +92,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Development/">Overview</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Onboarding/">Onboarding</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Release%20Process%20and%20Schedule/">Release Process and Schedule</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../../Development/Roadmap/">Roadmap</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
@@ -131,6 +125,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="bulk-extractor-viewer">Bulk Extractor Viewer</h1>
+<p><em>Note: The 2.x releases of bulk_extractor do not include the BEViewer GUI front end.</em></p>
 <h3 id="overview">Overview</h3>
 <p>The Bulk Extractor Viewer (BEviewer) is a graphical interface for <a href="https://forensics.wiki/bulk_extractor/">bulk_extractor</a>, "a C++ program that scans a disk image, a file, or a directory of files and extracts useful information without parsing the file system or file system structures. The results can be easily inspected, parsed, or processed with automated tools. bulk_extractor also creates a histogram of features that it finds, as features that are more common tend to be more important."</p>
 <p>While originally intended for law enforcement, bulk_extractor can be used by digital archivists to quickly and thoroughly examine a disk image for a wide variety of information. The most common use for such analysis is locating personally identifiable information (PII) that a donor may want redacted before his or her materials are made publicly available, but bulk_extractor can locate other types of potentially sensitive information as well.</p>

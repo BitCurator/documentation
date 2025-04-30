@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>HFS Explorer - BitCurator Docs</title>
+    <title>Scanning Disk Images, Files, and Directories with bulk_extractor - BitCurator Docs</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "HFS Explorer";
-        var mkdocs_page_input_path = "All Step-by-Step Guides/Forensics and Reporting Guides/HFS Explorer.md";
+        var mkdocs_page_name = "Scanning Disk Images, Files, and Directories with bulk_extractor";
+        var mkdocs_page_input_path = "All Step-by-Step Guides/Forensics and Reporting Guides/Scanning Disk Images, Files, and Directories with bulk_extractor.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -115,7 +115,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">HFS Explorer</li>
+      <li class="breadcrumb-item active">Scanning Disk Images, Files, and Directories with bulk_extractor</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -124,46 +124,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="hfs-explorer">HFS Explorer</h1>
-<h3 id="overview">Overview</h3>
-<p>This utility allows you to view the contents of and detailed information on HFS-formatted disk image files, as well as extract files from those images to the BitCurator environment. HFS is a proprietary file system developed by Apple Inc. for use in computer systems running Mac OS. The HFS Explorer is included in the BitCurator environment because many of BitCurator's features (such as Sleuth Kit tools like <a href="https://forensicswiki.xyz/wiki/index.php?title=Fiwalk">fiwalk</a>, which is used to generate DFXML output) cannot currently read HFS-formatted disks.<br />
-To use HFS Explorer, first <a href="/documentation/BitCurator Environment/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager">image the disk using Guymager</a>.</p>
-<h3 id="step-by-step-guide">Step-by-Step Guide</h3>
-<ol>
-<li>Open the tool by double clicking on the "Additional Tools" folder on the BitCurator desktop and then double clicking on the "HFS Explorer" icon (see Figure 1).</li>
-</ol>
-<p><strong>Figure 1</strong>: Opening HFS Explorer.</p>
-<p><img alt="HFS1.png" src="../attachments/HFS1.png" />
-2. The HFS Explorer window will open. Click on the "File" menu item in the top left corner of the window, and then select "Load file system from file" (see Figure 2).  </p>
-<p><strong>Figure 2</strong>: Navigating to the HFS-formatted file.<br />
-<img alt="HFS2.png" src="../attachments/HFS2.png" />
-3. Choose the file you wish to explore, and click "OK" (see Figure 3).  </p>
-<p><em>Note:</em> If the file you chose isn't one of the supported file types (HFS, HFS+, HFSX), you'll receive an error message (see Figure 4).</p>
-<p><img alt="HFS3.png" src="../attachments/HFS3.png" /></p>
-<p><strong>Figure 4</strong>: This error message occurs if your file is not HFS-formatted.</p>
-<p><img alt="HFS4.png" src="../attachments/HFS4.png" />
-4. Select a file from the list and click the "Info" button for more information on a file (see Figure 5).  </p>
-<p><strong>Figure 5</strong>: Files are viewable.</p>
-<p><img alt="HFS5.png" src="../attachments/HFS5.png" />
-5. You can now view a summary of basic information about the file, such as when the file was last modified (see Figure 6). To view more detailed information about the file, choose the "Detailed" tab from the top of the window (see Figure 7).</p>
-<p><strong>Figure 6</strong>: View basic information about your file.<br />
-<img alt="HFS6.png" src="../attachments/HFS6.png" /></p>
-<p><strong>Figure 7</strong>: View advanced information about your file.</p>
-<p><img alt="HFS7.png" src="../attachments/HFS7.png" />
-6. To extract files from the HFS-formatted disk to the BitCurator environment, from the main HFS Explorer screen, select the files you wish to extract and then click the "Extract" button from the top left of the window (see Figure 8).</p>
-<p><strong>Figure 8</strong>: Extracting files from the HFS-formatted disk.</p>
-<p><img alt="HFS8.png" src="../attachments/HFS8.png" />
-7. Navigate to the directory to which you wish to extract the file(s) and click on the "Extract here" button on the lower left (see Figure 9).</p>
-<p><strong>Figure 9</strong>: Navigating to the folder to which to export the file(s).</p>
-<p><img alt="HFS9.png" src="../attachments/HFS9.png" />
-8. A pop-up will appear asking whether you wish to follow symbolic links when extracting; click the "Yes" button (see Figure 10).</p>
-<p><strong>Figure 10</strong>: Tell HFS Explorer you wish to follow symbolic links.</p>
-<p><img alt="HFS10.png" src="../attachments/HFS10.png" />
-9. A pop-up will inform you when the extraction is finished (see Figure 11). You can navigate to the extraction directory you specified in Step 7 to view your extracted files (in this example, we extracted a number of files to our desktop; see Figure 12).</p>
-<p><strong>Figure 11</strong>: The extraction is complete.</p>
-<p><img alt="HFS11.png" src="../attachments/HFS11.png" />  </p>
-<p><strong>Figure 12</strong>: Viewing the extracted files on the desktop.</p>
-<p><img alt="HFS12.png" src="../attachments/HFS12.png" /></p>
+                <h1 id="scanning-disk-images-files-and-directories-with-bulk_extractor">Scanning Disk Images, Files, and Directories with bulk_extractor</h1>
+<p>BitCurator 5.x.x releases include bulk_extractor (version 2). The bulk_extractor tool “scans any kind of input (disk images, files, directories of files, etc) and extracts structured information such as email addresses, credit card numbers, JPEGs and JSON snippets without parsing the file system or file system structures. The results are stored in text files that are easily inspected, searched, or used as inputs for other forensic processing” (https://github.com/simsong/bulk_extractor/blob/main/README.md).</p>
+<p><em>Note: The 2.x releases of bulk_extractor do not include the BEViewer GUI front end.</em></p>
+<p>In this example, we will use the bulk_extractor CLI to analyze the EWF disk image (SampleData.E01) we created in an earlier step. Click on the Applications menu in the top left, navigate to the Forensics and Reporting submenu, and click bulk_extractor.</p>
+<p><img alt="image31.png" src="../attachments/image31.png" /></p>
+<p>This runs the command <code>bulk_extractor –help</code>, displaying all the options available for the command. A full description of these options can be found in the <code>bulk_extractor</code> manual. For this simple test, we will <strong>leave all of the default scanners on</strong>, and specify only the required output directory, and the source material we wish to scan (our disk image). Enter the following command:</p>
+<p><code>bulk_extractor -o beout /home/bcadmin/SampleData.E01</code></p>
+<p>This tells <code>bulk_extractor</code> to write its output to a new directory beout in our current working directory (<code>/home/bcadmin</code>), and to scan the disk image found at <code>/home/bcadmin/SampleData.E01</code>. Once <code>bulk_extractor</code> begins running, the terminal will redraw to display a dynamically updated progress page:</p>
+<p><img alt="image32.png" src="../attachments/image32.png" /></p>
+<p>Once the scan is complete, you will see a confirmation printed in the terminal with some statistics on the run. Click on the Files icon in the dock, and navigate to the beout directory in <code>/home/bcadmin</code>. </p>
+<p>This directory contains a range of items, including folders for JPEG images that have been carved out of the disk image, files that were extracted from zipped materials, and text file reports for each scanner that was run:</p>
+<p><img alt="image33.png" src="../attachments/image33.png" /></p>
+<p>Note: The bulk_extractor tool does not parse the filesystem(s) contained within the disk image, so all features identified are referenced only by their byte offset into the source. If you wish to link specific features to the files they originated from within the filesystem(s), you will need to run the fiwalk tool to create a report of the filesystems, and the <code>identify_filenames</code> tool to map features in the bulk_extractor output to those filenames.</p>
+<p>To run <code>fiwalk</code>, in the same terminal type:</p>
+<p><code>fiwalk -f -X /home/bcadmin/SampleData.xml /home/bcadmin/SampleData.E01</code></p>
+<p>This will create a new file, <code>SampleData.xml</code>, that contains a DFXML map of the filesystem(s) within the disk image.
+Next, run the following command:</p>
+<p><code>identify_filenames.py --all --image_filename /home/bcadmin/SampleData.E01 --xmlfile /home/bcadmin/SampleData.xml /home/bcadmin/beout /home/bcadmin/mappedfeatures</code></p>
+<p>In order, the parts of this command tell the tool to process all feature files, use the image filename <code>SampleData.E01</code>, use the output from fiwalk, the location of the <code>bulk_extractor</code> output, and where to put our new output (a new directory named <code>mappedfeatures</code>).
+Click on the Files icon in the dock, navigate to the <code>mappedfeatures</code> directory, and examine one of the files (in this example, we’re looking at <code>annotated_telephone.txt</code>). </p>
+<p><img alt="image34.png" src="../attachments/image34.png" /></p>
+<p>Compare this to the equivalent report in beout, and you will see there are now two new columns: the full file path of the file from which the feature originated, and the MD5 of that file.</p>
               
             </div>
           </div><footer>
