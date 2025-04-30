@@ -1,10 +1,8 @@
 site_name: BitCurator Docs
 site_url: 
 nav:
-  - Home:
-    - 'Tools.md'
-    - 'Resources.md'
-    - 'Troubleshooting and FAQ.md'
+  - BitCurator Documentation:
+    - Home : 'index.md'
   - Installation:
     - Overview : 'Installing BitCurator/Installing BitCurator.md'
     - Using Active Directory : 'Installing BitCurator/Configuring BitCurator to enable users to authenticate with Active Directory accounts.md'
@@ -17,6 +15,10 @@ nav:
     - 'All Step-by-Step Guides/Imaging and Recovery Guides.md'
     - 'All Step-by-Step Guides/Forensics and Reporting Guides.md'
     - 'All Step-by-Step Guides/Packaging and Transfer Guides.md'
+  - Additional Resources:
+    - 'Tools.md'
+    - 'Troubleshooting and FAQ.md'
+    - 'Resources.md'
   - Walkthrough: 
     - Overview: 'BitCurator Walkthrough/BitCurator Walkthrough.md'
     - 'BitCurator Walkthrough/BitCurator Workflow Diagrams.md'
@@ -24,11 +26,6 @@ nav:
     - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Forensic Disk Imaging.md'
     - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Forensic Processing and Identification of Potentially Sensitive Information.md'
     - 'BitCurator Walkthrough/BitCurator Workflow Diagrams/Metadata Export.md'
-  - Development:
-    - Overview: 'Development/Development.md'
-    - 'Development/Onboarding.md'
-    - 'Development/Release Process and Schedule.md'
-    - 'Development/Roadmap.md'
   - About:    
     - 'About/Original Project Diagrams.md'
     - 'About/Support and Past Funding.md'

@@ -9,7 +9,7 @@ See below for a high-level workflow users can follow when in the BitCurator Envi
 
 
 * 1 [Imaging and Recovery](#BitCuratorWalkthrough-ImagingandRecovery)
-	+ 1.1 [Safely Mount Devices](#BitCuratorWalkthrough-SafelyMountDevices)
+	+ 1.1 [Set Mount Policy](#BitCuratorWalkthrough-setmountpolicy)
 	+ 1.2 [Create Disk Images](#BitCuratorWalkthrough-CreateDiskImages)
 * 2 [Forensics and Reporting](#BitCuratorWalkthrough-ForensicsandReporting)
 	+ 2.1 [Extract metadata from disk images and files](#BitCuratorWalkthrough-Extractmetadatafromdiskimagesandfiles)
@@ -34,9 +34,9 @@ Imaging and Recovery
 
 If you have devices (e.g. USB drives, CD-ROMs) that you'd like to image or explore with BitCurator, you can connect them so that BitCurator can see them, but safely: no worries about writing any data back to the device. For example, last modified dates assigned by the target media's file system won't be overwritten with the current date.
 
-The **safe mount script** provides write-blocked access to removable media. **Mounting** is a technical term for registering a storage device with the host system so it can be browsed or used, and you will need to mount any external device attached to the BitCurator system, whether that occurs automatically or by invoking the safe mount script. Images of devices, (e.g. forensic images of floppies, CDs or drives) need to be mounted as well for most uses.
+The **mount policy** provides write-blocked access to removable media. **Mounting** is a technical term for registering a storage device with the host system so it can be browsed or used, and you will need to mount any external device attached to the BitCurator system, whether that occurs automatically or by invoking the safe mount script. Images of devices, (e.g. forensic images of floppies, CDs or drives) need to be mounted as well for most uses.
 
-* **[Safely Mount Devices](/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices) (Step-by-Step Guide)**
+* **[Set Mount Policy](/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Set Mount Policy)**
 
 ### Create Disk Images
 
