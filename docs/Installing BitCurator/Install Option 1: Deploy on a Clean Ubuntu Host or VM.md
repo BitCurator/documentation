@@ -1,73 +1,8 @@
-# Install Option 1: Deploy on a Clean Ubuntu Host or VM
+# Install Option 1: Installation via Dedicated Machine
 ## Install Ubuntu 22.04LTS
 Download the latest 64-bit Ubuntu 22.04 desktop image from [https://releases.ubuntu.com/22.04/](https://releases.ubuntu.com/22.04/).
 
 **If you are installing Ubuntu 22.04LTS as the host operating system on a dedicated machine**, you will need to write the downloaded ISO image to a bootable USB drive. Instructions for doing this on various platforms can be found at [https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu). During installation, you may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and follow the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
-
-**If you are installing Ubuntu 22.04LTS in new VirtualBox VM**, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
-
-## Important Notes For VirtualBox VM Installations
-Visit the [VirtualBox](https://www.virtualbox.org/wiki/Downloads) website to download and install the latest version of VirtualBox for your machine. You must also install the **VirtualBox Extension Pack** on your host machine in order for USB 3.0 support to work. Note that installation options have changed in VirtualBox 7.x and later. In the VirtualBox VM Manager, after clicking New to create a new VM, you must specify the name for your VM, the location of the Ubuntu ISO you downloaded earlier, and check the box for **Skip Unattended Installation**.
-
-![VM_Install_1.png](attachments/VM_Install_1.png)
-
-Click **Next**, and on the following screen select **at least 8GB RAM and 2 processor cores**:
-
-![VM_Install_2.png](attachments/VM_Install_2.png)
-
-Click **Next** and set the size of the virtual disk. **We recommend at least 128GB**:
-
-![VM_Install_3.png](attachments/VM_Install_3.png)
-
-Click **Next**, and review the details:
-
-![VM_Install_4.png](attachments/VM_Install_4.png)
-
-Now, click **Finish**, and you will be returned to the main management interface. With your new image selected, click Settings:
-
-![VM_Install_5.png](attachments/VM_Install_5.png)
-
-In Settings, you will need to make several modifications:
-
-- In the **General -> Advanced** tab, change **Shared Clipboard** to **Bidirectional** and **Drag ‘n Drop** to **Host to Guest**.
-- In the **Display -> Screen** tab, **increase the Video Memory to 128MB**.
-- In USB, ensure that **Enable USB Controller** is checked, select the **USB 3.0 (xHCI) Controller**, and **click the small blue USB plug icon** on the right hand side of the dialog to create a new USB filter. Click **OK**.
-
-With the machine selected, click **Start**, and proceed with the Ubuntu installation as normal.
-
-Once you have completed installing Ubuntu in a VirtualBox virtual machine, it’s a good time to **install the VirtualBox guest additions**, since both media automounts and software autorun will be disabled after deploying the BitCurator install script in the next section. First, you must install some package so that the guest additions can be built as a kernel module. Open a terminal and run the following commands:
-
-`sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install build-essential gcc make perl dkms
-sudo reboot`
-
-Once the machine has rebooted, log in and select **Insert Guest Additions CD Image** from the **Devices** menu:
-
-![VM_Install_6.png](attachments/VM_Install_6.png)
-
-Now, **click the Files icon in the dock**, and you should see the Guest Additions CD listed on the left of the new window. Click it, and in the new dialog select **Run Software**.
-
-**Important**: If you have trouble getting the VirtualBox guest additions automatic installer to run, you can also execute the following command from a terminal with the guest additions ISO mounted (replacing X.X.X with the current release number of the guest additions you are using; this number will match the release number of VirtualBox itself):
-
-`sudo /media/bcadmin/VBox_GAs_X.X.X/VBoxLinuxAdditions.run`
-
-(**Note**: as you are typing, you can hit the Tab key on your keyboard to autocomplete each part of the command after typing a few letters) If you plan to use Shared Folders, you should also add the bcadmin user to the vboxsf group in Ubuntu (after the guest additions have been installed). To do this:
-
-Install the gnome-system-tools package in order to access the Users and Groups GUI. In a terminal, run the following command:
-
-`sudo apt-get install gnome-system-tools`
-
-Click on the Show Applications icon (grid icon) at the bottom left of the screen. then type “Users and Groups”. Click on the icon that appears in the search results.
-
-Click **Manage Groups** for the **bcadmin** user
-
-Scroll down the groups list until you see **vboxsf**. Select it and click **Properties**.
-
-**Enable the checkbox**.
-
-Click **Ok**. You will be prompted for the password for the `bcadmin` user. Once you’ve completed this step, you can close the Users and Groups window.
-
-Continue by following the instructions in the section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
 # Install BitCurator in Ubuntu 22.04LTS
 
