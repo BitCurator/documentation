@@ -2,10 +2,13 @@
 Use the links to the relevant sections below to begin installing BitCurator on a fresh host, or import a prebuilt Virtual Appliance. If you wish to see a list of the most recent releases (along with release notes), you can also visit [https://github.com/BitCurator/bitcurator-distro/wiki/Releases](https://github.com/BitCurator/bitcurator-distro/wiki/Releases).
 
 There are two options for installing the BitCurator Environment:
- - Installation Option 1: Deploy on a Clean Ubuntu Host. (_This is the preferred method for running the BitCurator Environment._)
- - Installation Option 2: Installation via Virtual Machine
+ - [Installation Option 1: Deploy on a Clean Ubuntu Host](/documentation/BitCurator Environment/Installing BitCurator/Install Option 1). (_This is the preferred method for running the BitCurator Environment._)
+ - [Installation Option 2: Installation via Virtual Machine](/documentation/BitCurator Environment/Installing BitCurator/Install Option 2: Installation via Virtual Machine)
 
-After identifying your installation option, install Ubuntu 24.04LTS
+_Note: An internet connection is required during all stages of the installation._
+
+_Note: BitCurator must be deployed on an x86/amd64 version of Ubuntu. Currently, it is not possible to use the Virtual Appliance or deploy it on systems with ARM processors (including Apple M1)._
+
 
 ### Quick Start Guide
 The [Quick Start Guide](https://github.com/BitCurator/bitcurator-distro/wiki/Releases#quickstart-guide) provides in instructions on installation and an initial walkthrough of the BitCurator Environment. Recommended if you have not used BitCurator before!
