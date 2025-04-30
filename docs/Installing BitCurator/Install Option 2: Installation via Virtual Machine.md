@@ -11,130 +11,163 @@ Hardware Requirements
 * 8 GB RAM or more
 * 12 GB free hard disk space minimum. The virtual machine is approximately 9 GB. It will expand to 256 GB as needed
 
-### Installation Instructions
+## Install Ubuntu 22.04LTS
+Download the latest 64-bit Ubuntu 22.04 desktop image from [https://releases.ubuntu.com/22.04/](https://releases.ubuntu.com/22.04/).
 
-#### Step 1: Download Software
+**If you are installing Ubuntu 22.04LTS in new VirtualBox VM**, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
-* BitCurator Virtual Machine or Live CD: <https://github.com/BitCurator/bitcurator-distro/wiki/Releases>
-* Current release of VirtualBox: <https://www.virtualbox.org/wiki/Downloads>
-* The VirtualBox Extension Pack **must** be installed on the host for shared folder support, USB 2.0/3.0 support, and support for some NVMe SSDs. Once you’ve installed VirtualBox, use the link below the main download on VirtualBox download site to install the Extension Pack on your host.
+## Important Notes For VirtualBox VM Installations
+Visit the [VirtualBox](https://www.virtualbox.org/wiki/Downloads) website to download and install the latest version of VirtualBox for your machine. You must also install the **VirtualBox Extension Pack** on your host machine in order for USB 3.0 support to work. Note that installation options have changed in VirtualBox 7.x and later. In the VirtualBox VM Manager, after clicking New to create a new VM, you must specify the name for your VM, the location of the Ubuntu ISO you downloaded earlier, and check the box for **Skip Unattended Installation**.
 
-#### Step 2: Unpack the BitCurator Virtual Machine
+![VM_Install_1.png](attachments/VM_Install_1.png)
 
-The BitCurator Virtual Machine is packaged as a tar archive and compressed with gzip. The file will look something like: **“BitCurator-X.X.X.tar.gz”**
+Click **Next**, and on the following screen select **at least 8GB RAM and 2 processor cores**:
 
-On a Mac (OS X 10.10 or later) or Linux host machine, you can simply double-click on the file to unpack the contents.
+![VM_Install_2.png](attachments/VM_Install_2.png)
 
-On a Windows machine, you may need a 3rd party utility such as 7-zip: <https://www.7-zip.org/download.html>
+Click **Next** and set the size of the virtual disk. **We recommend at least 128GB**:
 
-When using 7-zip, you’ll need to unpack the .tar.gz file. Right click on the .tar.gz file and select “Extract here…” to extract the .tar file. Then right click on the .tar file and select “Extract here…” again. This will extract a directory containing the BitCurator virtual machine disk image (.vbox) and configuration (.vdi) files.
+![VM_Install_3.png](attachments/VM_Install_3.png)
 
-Once you’ve unpacked the archive, you’ll find a directory containing two files (where X.X.X is your downloaded version):
+Click **Next**, and review the details:
 
-* BitCurator-X.X.X.vbox (the VirtualBox configuration file)
-* BitCurator-X.X.X.vdi (the VirtualBox disk image)
+![VM_Install_4.png](attachments/VM_Install_4.png)
 
-Copy this directory to a location of your choosing (inside the “VirtualBox VMs” directory in your home directory is a good place), and start up VirtualBox.
+Now, click **Finish**, and you will be returned to the main management interface. With your new image selected, click Settings:
 
-If you’ve never created or used a VM in VirtualBox before, you won’t have a “VirtualBox VMs” directory. Don’t worry – just remember where you extracted the BitCurator directory.
+![VM_Install_5.png](attachments/VM_Install_5.png)
 
-#### Step 3: Open Oracle VM VirtualBox Manager
+In Settings, you will need to make several modifications:
 
-Once you’ve installed VirtualBox and the VirtualBox extension pack, start up VirtualBox. If you’ve never used VirtualBox before, your list of machines (on the left) will be blank.
+- In the **General -> Advanced** tab, change **Shared Clipboard** to **Bidirectional** and **Drag ‘n Drop** to **Host to Guest**.
+- In the **Display -> Screen** tab, **increase the Video Memory to 128MB**.
+- In USB, ensure that **Enable USB Controller** is checked, select the **USB 3.0 (xHCI) Controller**, and **click the small blue USB plug icon** on the right hand side of the dialog to create a new USB filter. Click **OK**.
 
-You may need to right-click on the VirtualBox icon and select “Run as Administrator”. Windows machines with certain administrative controls may prevent you from accessing USB devices (or lock out control of the mouse and keyboard) otherwise.
+With the machine selected, click **Start**, and proceed with the Ubuntu installation as normal.
 
-*VirtualBox Manager in Windows:*
+Once you have completed installing Ubuntu in a VirtualBox virtual machine, it’s a good time to **install the VirtualBox guest additions**, since both media automounts and software autorun will be disabled after deploying the BitCurator install script in the next section. First, you must install some package so that the guest additions can be built as a kernel module. Open a terminal and run the following commands:
 
-*VirtualBox Manager in macOS:*
+`sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install build-essential gcc make perl dkms
+sudo reboot`
 
-#### Step 4: Add a Virtual Machine
+Once the machine has rebooted, log in and select **Insert Guest Additions CD Image** from the **Devices** menu:
 
-From the menu bar, select the menu item “Machine -> Add…”
+![VM_Install_6.png](attachments/VM_Install_6.png)
 
-Navigate to the folder containing .vbox file that you extracted.
+Now, **click the Files icon in the dock**, and you should see the Guest Additions CD listed on the left of the new window. Click it, and in the new dialog select **Run Software**.
 
-Choose that file, and the Virtual Machine should appear in the list within the manager.
+**Important**: If you have trouble getting the VirtualBox guest additions automatic installer to run, you can also execute the following command from a terminal with the guest additions ISO mounted (replacing X.X.X with the current release number of the guest additions you are using; this number will match the release number of VirtualBox itself):
 
-*Adding a machine (VirtualBox in Windows):*
+`sudo /media/bcadmin/VBox_GAs_X.X.X/VBoxLinuxAdditions.run`
 
-*Adding a machine (VirtualBox in macOS):*
+(**Note**: as you are typing, you can hit the Tab key on your keyboard to autocomplete each part of the command after typing a few letters) If you plan to use Shared Folders, you should also add the bcadmin user to the vboxsf group in Ubuntu (after the guest additions have been installed). To do this:
 
-#### Step 5: Configure RAM and Processors
+Install the gnome-system-tools package in order to access the Users and Groups GUI. In a terminal, run the following command:
 
-Click on the Settings icon, and select the system tab.
+`sudo apt-get install gnome-system-tools`
 
-**We recommend a minimum of 4096 MB RAM and 2 processors assigned to the VM.**
+Click on the Show Applications icon (grid icon) at the bottom left of the screen. then type “Users and Groups”. Click on the icon that appears in the search results.
 
-You may wish to change the RAM and number of processors depending on the hardware that you’re running on. For best results, select the largest number in the “green” areas for each.
+Click **Manage Groups** for the **bcadmin** user
 
-Two or more processors assigned for VirtualBox are need to support drag-and-drop functionality.
+Scroll down the groups list until you see **vboxsf**. Select it and click **Properties**.
 
-*Configuring the VM (VirtualBox in Windows):*
+**Enable the checkbox**.
 
-*Configuring the VM (VirtualBox in macOS):*
+Click **Ok**. You will be prompted for the password for the `bcadmin` user. Once you’ve completed this step, you can close the Users and Groups window.
 
-#### Step 6: Enable USB Device Capture
+Continue by following the instructions in the section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
-BitCurator depends on a VirtualBox device filter to capture USB devices. In macOS, you’ll find this filter under the USB tab of the “Ports” icon under “Settings”.
+# Install BitCurator in Ubuntu 22.04LTS
 
-In Windows, you’ll find it in the “USB” tab in settings. You don’t need to do anything here, unless you don’t see an entry under “USB Device Filters”.
+**1. Prepare your environment**
 
-**If you don’t see an entry, select the USB 3.0 radio button, and then create a new filter by clicking on the blue icon to the right of the list.**
+To ensure you have all of the tools, and updates necessary for the BitCurator environment to succeed, you should update the local apt repository and install the necessary tools. Open a terminal and use the following commands:
 
-If you don’t need access to USB devices (for example, if you plan to do analysis of existing born-digital data but no disk imaging), you can delete this filter.
+`sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install gnupg curl git -y`
 
-*USB Filters (VirtualBox in Windows):*
+`gnupg` is required for the BitCurator installer to validate the signature of the BitCurrator configuration files during install. `curl` can be used when developing or testing state files. `git` is used to clone local GitHub repos, and can be used when testing state files from the [BitCurator SaltStack Repo](https://github.com/bitcurator/bitcurator-salt).
 
-*USB Filters (VirtualBox in macOS):*
+**2. Download the BitCurator CLI installer**
 
-#### Step 7: Setup Shared Folders
+BitCurator uses a standalone command-line tool for installation and upgrade. First, open a terminal and download the latest release of the tool with the following command:
 
-If you wish to move processed materials **back to your host machine** from the BitCurator VM, you can set up a shared folder that both the host and the VM can write to.
+`wget https://github.com/BitCurator/bitcurator-cli/releases/download/v1.0.0/bitcurator-cli-linux`
 
-In the Shared Folders tab, click the folder with the green “plus” on it to choose a folder on your host machine to share.
+Verify that the SHA-256 has of the downloaded file matches the value below:
 
-Select “Automount” but not “Read Only”. When the machine is booted, the folder will appear in the “Shared Folders and Media” folder on the desktop in the VM.
+`5acab7abcafa24864d49e4872f8e2b562c16bf4842256ad3f994aae8d0df77c1`
 
-*Shared Folders (VirtualBox in Windows):*
+You can generate the hash of your downloaded file with:
 
-*Shared Folders (VirtualBox in macOS):*
+`sha256sum bitcurator-cli-linux`
 
-#### Step 8: Starting the BitCurator Environment (VM)
+Next, adjust some permissions and move the BitCurator installer to the correct location:
 
-Click on the green “Start” arrow in the Oracle VM VirtualBox Manager screen to start the BitCurator environment.
+`sudo mv bitcurator-cli-linux /usr/local/bin/bitcurator
+sudo chmod +x /usr/local/bin/bitcurator`
 
-You will see a startup screen, and then the BitCurator environment will boot and automatically log in.
+**3. Run the BitCurator CLI Installer**
 
-If you encounter a menu screen on boot, simply hit the Return key to continue.
+**Simple install**: Run the BitCurator installer. This may up to an hour to complete, depending on your system and network speeds:
 
-If you see an error message mentioning virtualization extensions, or “Intel VT-x”, your host machine’s BIOS does not have the VT-x extensions enabled. You’ll need to reboot your computer, holding down “Del” (or “Esc”, or the “ThinkPad” button, depending on your machine). Once you’re in the BIOS, locate the correct menu entry and enable the “Intel Virtualization Extensions”.
+`sudo bitcurator install`
 
-If BitCurator fails to boot for other reasons, it may be due to a “non-optimal setting” detected for your particular hardware. Try powering off the virtual machine, checking your settings, and starting again. If you’re still having a problem, let us know on the [BitCurator users group](https://groups.google.com/forum/#!forum/bitcurator-users).
+The command will install BitCurator for the user that is currently logged in. For other installation options, read the section below.
 
-The BitCurator virtual machine should log in automatically.
+**Optional install modes**:
 
-If you log out or the machine goes to sleep, the password to log back in is “**bcadmin**”.
+The BitCurator installer provides several additional installation modes. To see the options provided by the command, run the following:
 
-You can also use this password to update installed software, if prompted.
+`bitcurator --help`
 
-### Virtual Machine Login
+You will be presented with the usage information:
 
-BitCurator includes a default user. You are strongly encouraged to change the default password following the first login.
-
-username: **bcadmin**
-
-password: **bcadmin**
-
+`Usage:
+  bitcurator [options] list-upgrades [--pre-release]
+  bitcurator [options] install [--pre-release] [--version=<version>] [--mode=<mode>] [--user=<user>]
+  bitcurator [options] update
+  bitcurator [options] upgrade [--pre-release] [--mode=<mode>] [--user=<user>]
+  bitcurator [options] version
+  bitcurator [options] debug
+  bitcurator -h | --help | -v
+Options:
+  --dev                 Developer Mode (do not use, dangerous, bypasses checks)
+  --version=<version>   Specific version install [default: latest]
+  --mode=<mode>         bitcurator installation mode (dedicated or addon, default: dedicated)
+  --user=<user>         User used for bitcurator configuration [default: bcadmin]
+  --no-cache            Ignore the cache, always download the release files
+  --verbose             Display verbose logging`
   
+If you wish to install BitCurator for a different user, you may use the following command:
 
+`sudo bitcurator install --user=<user>`
 
+Where `<user>` is a username other than the one you are currently logged in as.
 
+If you wish to install BitCurator in addon mode (installing the tools, but leaving the default Ubuntu theme intact), use the following command:
 
+`sudo bitcurator install --addon`
 
+**3.1 What to do if something goes wrong**
 
+If you encounter an error, you may be able to identify the issue by reviewing the `saltstack.log` file under `/var/cache/bitcurator/cli` in the subdirectory that matches the BitCurator state-files version you're installing. Search for the log file for “`result: false`” messages and look at the surrounding 5 lines or the 8 lines above each message to see the state file that caused the issue. You can do this with:
 
+`grep -i -C 5 'result: false' or grep -i -B 8 'result: false'`
 
+**4. Reboot**
 
+When the installation is complete, reboot your system from the terminal:
 
+`sudo reboot`
+
+After the reboot, you will be automatically logged in if you selected “Automatic Login” during the Ubuntu install. Otherwise, you can log in to BitCurator with the username and password used during the install. To change this behavior:
+
+1. Open the **Activities** overview and start typing Users.
+2. Click **Users** to open the panel.
+3. Select the user account that you want to set the log in behavior for at startup.
+4. Press **Unlock** in the top right corner and type in your password when prompted.
+5. Switch the **Automatic Login** switch to on or off, depending on the desired behavior.
 
