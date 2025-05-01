@@ -1,8 +1,6 @@
 Forensics and Reporting Guides
 ==============================
 
-### Overview
-
 Guides for file format identification, location of deleted files and files fragments, cryptographic hashing, and reporting on potentially private and personally identifying information.
 
 ### Tools
