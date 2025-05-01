@@ -7,7 +7,7 @@ Tools
 
 ## Overview
 
-The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator **Step-by-Step Guides**are listed as well.
+The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator **Step-by-Step Guides** are listed as well.
 
 Because BitCurator is an Ubuntu environment, users are able to download and install tools as in any other Ubuntu distribution or Linux OS.
 
