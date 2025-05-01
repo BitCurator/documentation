@@ -1,4 +1,4 @@
-Installation via Virtual Machine
+Install Option 2: Installation via Virtual Machine
 ================================
 
 ### Overview
@@ -16,7 +16,7 @@ Download the latest 64-bit Ubuntu 22.04 desktop image from [https://releases.ubu
 
 **If you are installing Ubuntu 22.04LTS in new VirtualBox VM**, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
-## Important Notes For VirtualBox VM Installations
+### VirtualBox VM Installations
 Visit the [VirtualBox](https://www.virtualbox.org/wiki/Downloads) website to download and install the latest version of VirtualBox for your machine. You must also install the **VirtualBox Extension Pack** on your host machine in order for USB 3.0 support to work. Note that installation options have changed in VirtualBox 7.x and later. In the VirtualBox VM Manager, after clicking New to create a new VM, you must specify the name for your VM, the location of the Ubuntu ISO you downloaded earlier, and check the box for **Skip Unattended Installation**.
 
 ![VM_Install_1.png](attachments/VM_Install_1.png)
@@ -79,7 +79,7 @@ Click **Ok**. You will be prompted for the password for the `bcadmin` user. Once
 
 Continue by following the instructions in the section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
-# Install BitCurator in Ubuntu 22.04LTS
+### Install BitCurator in Ubuntu 22.04LTS
 
 **1. Prepare your environment**
 
