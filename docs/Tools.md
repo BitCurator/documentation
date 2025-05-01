@@ -7,7 +7,7 @@ Tools
 
 ## Overview
 
-The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator **Step-by-Step Guides**are listed as well.
+The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator **Step-by-Step Guides** are listed as well.
 
 Because BitCurator is an Ubuntu environment, users are able to download and install tools as in any other Ubuntu distribution or Linux OS.
 
@@ -25,7 +25,7 @@ In addition, much functionality is found in the file navigation system, Nautilus
 * [Disk Image Metadata](../All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus))
 * [Extract Compressed Files](../All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus))
 * [Live Search for Files](../All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus))
-* [Safely Mount Device](../All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices)
+* [Safely Mount Device](../All Step-by-Step Guides/Imaging and Recovery Guides/Set Mount Policy)
 
 
 
@@ -51,8 +51,6 @@ In addition, much functionality is found in the file navigation system, Nautilus
 **[dumpfloppy](https://offog.org/code/dumpfloppy/)**: Suite of tools for reading floppy disks in arbitrary formats supported by the PC floppy controller, and for working with the resulting image files 
 
 [**ewfacquire**](https://linux.die.net/man/1/ewfacquire): Acquire Expert Witness packaged disk images from devices on the command line. Part of the [libewf](https://github.com/libyal/libewf) library of Expert Witness tools. 
-
-* More documentation at the [Forensics wiki](https://forensicswiki.xyz/wiki/index.php?title=Libewf).
 
   
 
@@ -80,7 +78,7 @@ In addition, much functionality is found in the file navigation system, Nautilus
 
 **[Fiwalk](https://forensicswiki.xyz/wiki/index.php?title=Fiwalk)**: Fiwalk is part of [The Sleuth Kit's](https://www.sleuthkit.org/sleuthkit/) collection of digital forensics tools and is used to produce a DFXML (Digital Forensics XML) report on the contents of a disk image within the **BitCurator Reporting Tool**.
 
-* See the [fiwalk](../All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk/) **Step-by-Step Guide**.
+* See the [fiwalk](../All Step-by-Step Guides/Forensics and Reporting Guides/Scanning Disk Images, Files, and Directories with bulk_extractor/) section in the **Step-by-Step Guide**.
 
 **[md5deep](http://md5deep.sourceforge.net)**: Set of programs to compute MD5, SHA-1, SHA-256, Tiger, or Whirlpool message digests on an arbitrary number of files
 
@@ -88,7 +86,7 @@ In addition, much functionality is found in the file navigation system, Nautilus
 
 **[PhotoRec](https://www.cgsecurity.org/wiki/PhotoRec)**: File data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures from digital camera memory
 
-**[RegRipper](https://github.com/keydet89/RegRipper2.8)**: Tool for extracting and parsing information (keys, values, data) from the Windows Registry
+**[RegRipper](https://github.com/keydet89/RegRipper3.0)**: Tool for extracting and parsing information (keys, values, data) from the Windows Registry
 
 [**SDHash**](http://roussev.net/sdhash/sdhash.html): File similarity tool using similarity digests
 
@@ -107,7 +105,7 @@ In addition, much functionality is found in the file navigation system, Nautilus
 
 ### Additional tools
 
-**[Antiword](http://www.winfield.demon.nl)**: Converts the Microsoft Word 2, 6, 7, 97, 2000, 2002 and 2003 formats to plain text and PostScript
+**[Antiword](https://github.com/grobian/antiword)**: Converts the Microsoft Word 2, 6, 7, 97, 2000, 2002 and 2003 formats to plain text and PostScript
 
 **BitCurator Reports** (command line): Command line implementation of the **BitCurator Reporting Tool**, see GUI entry under the *Forensic analysis tools* section
 
@@ -121,7 +119,7 @@ In addition, much functionality is found in the file navigation system, Nautilus
 
 * See the [fiwalk](https://confluence.educopia.org/display/~aberish/Fiwalk) **Step-by-Step Guide**.
 
-[**GHex**](https://developer.gnome.org/ghex/): A hex viewer/editor
+[**GHex**](https://wiki.gnome.org/Apps/Ghex): A hex viewer/editor
 
 [**GtkHash**](http://gtkhash.sourceforge.net/): A cryptographic hashing tool
 
