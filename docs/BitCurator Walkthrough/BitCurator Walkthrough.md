@@ -1,9 +1,23 @@
 BitCurator Walkthrough
 ======================
 
+In previous releases, tools to support a variety of workflows were organized into folders on the desktop. In BitCurator 5.x, these tools are organized in submenus under the Applications menu in the top left (to the right of the Activities menu). The submenus include Imaging and Recovery, Forensics and Reporting, Package and Export, and Additional Tools.
+
 # Imaging and Recovery
 
 **BitCurator supports multiple acquisition scenarios: attaching physical media to inspect and analyze digital materials, creating forensic disk images, or transferring files into the environment.**
+
+The Imaging and Recovery submenu lists tools to assist in device imaging and recovery. These include:
+
+* **Brasero**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
+* **cdrdao**: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents (toc-file).
+* **Clonezilla**: A partition and disk imaging/cloning program.
+* **dcfldd**: An enhanced version of GNU dd with features useful for forensics and security, including hashing on-the-fly and split outputs.
+* **dd**: dd copies input to output with a changeable I/O block size, while optionally performing conversions on the data. Can be used to create raw images of devices.
+*  **ddrescue**: A data recovery tool with advanced features to assist in rescue of good data from devices with read errors.
+*  **dumpfloppy**: A tool to read floppy disks in arbitrary formats supported by the PC floppy controller, and work with the resulting image files.
+*  **ewfacquire**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
+*  **Guymager**: A GUI tool to create raw and EWF-packaged images from devices.
 
 ### Safely Mount Devices
 
@@ -15,7 +29,7 @@ The **mount policy** provides write-blocked access to removable media. **Mountin
 
 ### Create Disk Images
 
-BitCurator uses open source disk imaging tools, such as [Guymager](/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager) and [dcfldd](https://forensicswiki.xyz/wiki/index.php?title=Dcfldd), to capture bit-identical images from magnetic, optical, solid-state, and hybrid media. Disk images can be captured in various formats, including raw (just the bitstream), E01 (Expert Witness Format, which we support using the open source [libewf](https://forensicswiki.xyz/wiki/index.php?title=Libewf) library), and AFF (Advanced Forensic Format).
+BitCurator uses open source disk imaging tools, such as [Guymager](/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager) and dcfldd, to capture bit-identical images from magnetic, optical, solid-state, and hybrid media. Disk images can be captured in various formats, including raw (just the bitstream), E01 (Expert Witness Format, which we support using the open source libewf library, and AFF (Advanced Forensic Format).
 
 Capturing disk images in forensic formats such as E01 and AFF provides many advantages. The images can be stored compressed or uncompressed, can be split into multiple storage containers, can be parsed at the file system level without explicitly extracting the raw image, and can be embedded with provenance and capture metadata. **Forensic images ensure that no inadvertent changes are made during pre-ingest chain-of-custody**, and provide a consistent baseline for generating different types of access materials.
 
@@ -23,23 +37,39 @@ In the BitCurator Environment, forensically-packaged disk images can be mounted 
 
 * Image with **Guymager:** Create a perfect capture of your device's file structure and all contents (including hidden files and fragments) PLUS package this image with information about the disk imaging process. When anyone accesses the disk image later on, they'll have information about who imaged the device, when the device was imaged, etc. as well as be able to explore the exact state of the device as it was when you imaged it.
 + **[Imaging with Guymager](/documentation/All Step-by-Step Guides/Imaging and Recovery Guides/Imaging with Guymager) (Step-by-Step Guide)**
-* Image with **dcfldd:** This command line program is an enhance version of the **dd** program. If you are having trouble with Guymager, or if you are comfortable with command line use, **dcfldd** can be very useful and scriptable. Please see the [dcfldd entry on the Forensics Wiki](https://forensicswiki.xyz/wiki/index.php?title=Dcfldd) for general use.
-
-Along with **dcfldd**, there are a host of command line tools in the *Imaging and Recovery* folder on the BitCurator Environment desktop, all listed on the **[Tools](/documentation/Tools)** page.
+* Image with **dcfldd:** This command line program is an enhance version of the **dd** program. If you are having trouble with Guymager, or if you are comfortable with command line use, **dcfldd** can be very useful and scriptable.
 
 # Forensics and Reporting
 
 **BitCurator includes multiple software tools that assist users with identifying and prioritizing important information in raw and forensically packaged disk images. This includes files format identification, location of deleted files and files fragments, cryptographic hashing, and reporting on potentially private and personally identifying information.**
 
-BitCurator generates technical metadata in the form of Digital Forensics XML (DFXML). DFXML has been developed around a set of digital forensics tools that can both consume and produce a common set of tags; DFXML has an evolving schema and tag library, and is [well documented](https://forensicswiki.xyz/wiki/index.php?title=Category:Digital_Forensics_XML). BitCurator also generates PREMIS metadata for each data forensics tool that is applied to a disk image, providing an accurate record of provenance for each stage of processing.
+The Forensics and Reporting submenu lists forensics and forensics-adjacent tools. These include:
+
+*  **BitCurator Mounter**: A lightweight GUI tool to assist with mounting and unmounting devices.
+*  **Brunnhilde**: A tool to generate aggregate reports of files in a directory or disk image based on input from Richard Lehane's Siegfried. Can optionally analyze content using bulk_extractor.
+*  **bulk_extractor**: A tool to scan disk images and directories for PII and other features.
+*  **Bulk Reviewer**: A tool to scan disk images and assist in the review of bulk_extractor reports.
+*  **Deark**: A utility for file format and metadata analysis, data extraction, decompression, and image format decoding.
+*  **DiskType**: A tool to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.
+*  **fiwalk**: A program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format.
+identify-filenames: A postprocessing script for bulk_extractor that reads report files and produces annotated versions with the file that contains each feature (when present) identified.
+*  **md5deep**: a set of programs to compute MD5, SHA-1, SHA-256 and other digests
+*  **nsrllookup**: Query NSRL’s MD5 hashes of known pieces of software.
+*  **PhotoRec**: File data recovery software designed to recover lost files including video, documents and archives from media.
+*  **RegRipper**: Extract the contents of Windows registry backups.
+*  **Siegfried**: Signature-based file format identification.
+*  **SSDeep**: Fuzzy hashing tool.
+*  **TestDisk**: Data recovery software, companion to PhotoRec.
+
+BitCurator generates technical metadata in the form of Digital Forensics XML (DFXML). DFXML has been developed around a set of digital forensics tools that can both consume and produce a common set of tags. BitCurator also generates PREMIS metadata for each data forensics tool that is applied to a disk image, providing an accurate record of provenance for each stage of processing.
 
 ### Extract metadata from disk images and files
 
-BitCurator incorporates file system analytics and stream-based forensics technologies to identify and assist with redaction of potentially private and sensitive information (including personally identifiable information). In particular, BitCurator incorporates [fiwalk](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk), a tool originally developed by Simson Garfinkel (and later incorporated into [The Sleuth Kit](https://www.sleuthkit.org/)), to export an XML file detailing file system hierarchy within a disk image, including files and folders, deleted materials, and information in slack space.
+BitCurator incorporates file system analytics and stream-based forensics technologies to identify and assist with redaction of potentially private and sensitive information (including personally identifiable information). In particular, BitCurator incorporates [fiwalk](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Scanning Disk Images, Files, and Directories with bulk_extractor), a tool originally developed by Simson Garfinkel to export an XML file detailing file system hierarchy within a disk image, including files and folders, deleted materials, and information in slack space.
 
 Please see the following **Step-by-Step Guides**: 
 
-* Generate file system metadata as DFXML: [**Fiwalk**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk)
+* Generate file system metadata as DFXML: [**Fiwalk**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Scanning Disk Images, Files, and Directories with bulk_extractor)
 * View, edit, and export metadata from image files: [**pyExifToolGUI**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/pyExifToolGUI)
 * View and export information from HFS-formatted disk images: [**HFS Explorer**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/HFS Explorer)
 
@@ -62,7 +92,7 @@ There are two ways to generate BitCurator Forensic Reports, please reference the
 ***Option A:*** Use "Run All" feature to generate all reports in one step: [**Creating Disk Image Reports using the BitCurator Reporting Tool**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Creating Disk Image Reports using the BitCurator Reporting Tool)***Option B:*** Run each step individually for additional control and customization:
 
 1. Find potentially sensitive information: [**Bulk Extractor Viewer**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Bulk Extractor Viewer)
-2. Generate filesystem metadata as DFXML: [**Fiwalk**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk)
+2. Generate filesystem metadata as DFXML: [**Fiwalk**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Scanning Disk Images, Files, and Directories with bulk_extractor)
 3. Generate Annotated Features Reports: [**Annotated Features Report**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Annotated Features Report)
 4. Generate Forensic Reports: **[**Forensic Reports**](/documentation/All Step-by-Step Guides/Forensics and Reporting Guides/Forensic Reports)**
 
@@ -91,7 +121,12 @@ BitCurator includes a number of other tools to assist users with data triage; id
 
 # Package and Export
 
-**The BitCurator environment also includes tools to assist in preparing and packaging born-digital materials for transfer to preservation storage and access platforms.**
+**The Packaging and Transfer submenu lists some tools to assist with safe packaging and network transfer of materials.** 
+
+These include:
+
+* **Bagit-Python**: A Python library and command line utility for working with BagIt style packages.
+* **Grsync**: A GUI front-end for rsync.
 
 ### **Package files and metadata with BagIt Python**
 
@@ -105,7 +140,20 @@ An example use would be to create a bag of the data that you have processed in B
 
 Grsync is a rsync GUI (Graphical User Interface). Rsync is a well-known and powerful command line directory and file synchronization tool that can be used to synchronize files, folders, and make backups. Documentation and more information on Grsync [here](http://www.opbyte.it/grsync/).
 
-  
+# Additional Tools
+
+**The Additional Tools submenu includes a selection of extra tools that may be useful in various workflows. Full documentation for these can be found elsewhere online.**
+
+*  **Antiword**: Extract the contents of legacy Word (binary) documents.
+*  **Bless Hex Editor and GHex**: Hex editors to inspect and edit hexadecimal representations of files and devices.
+*  **ClamTK**: Frontend for the included clamav.
+*  **FIDO Format Identification**: The FIDO (Format Identification of Digital Objects) command line tool. Uses the PRONOM file format and container descriptions.
+*  **GHex**: Hex editor.
+*  **GTKHash**: GUI hashing tool.
+*  **Hashrat**: Command-line hashing tool.
+*  **HFSExplorer**: A tool to read and export files from Apple HFS file systems.
+*  **nwipe**: Securely zero out (wipe) devices.
+*  **readpst**: Tool for processing the contents of PST files.
 
 
 
