@@ -2,6 +2,7 @@ Imaging and Recovery Guides
 ===========================
 Guides for creating forensic disk images, mounting physical media to inspect and analyze digital materials, or transferring files.
 
+### Tools
 BitCurator supports multiple acquisition scenarios through seven open-source disk imaging tools:
 
 * **[Brasero](https://wiki.gnome.org/Apps/Brasero)**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
