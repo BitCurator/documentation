@@ -1,32 +1,7 @@
 BitCurator Walkthrough
 ======================
 
-
-
-
-
-See below for a high-level workflow users can follow when in the BitCurator Environment. 
-
-
-* 1 [Imaging and Recovery](#BitCuratorWalkthrough-ImagingandRecovery)
-	+ 1.1 [Set Mount Policy](#BitCuratorWalkthrough-setmountpolicy)
-	+ 1.2 [Create Disk Images](#BitCuratorWalkthrough-CreateDiskImages)
-* 2 [Forensics and Reporting](#BitCuratorWalkthrough-ForensicsandReporting)
-	+ 2.1 [Extract metadata from disk images and files](#BitCuratorWalkthrough-Extractmetadatafromdiskimagesandfiles)
-	+ 2.2 [Identify potentially private and sensitive information](#BitCuratorWalkthrough-Identifypotentiallyprivateandsensitiveinformation)
-	+ 2.3 [Generate Forensic Reports](#BitCuratorWalkthrough-GenerateForensicReports)
-	+ 2.4 [Deduplicate Files](#BitCuratorWalkthrough-DeduplicateFiles)
-	+ 2.5 [File Export](#BitCuratorWalkthrough-FileExport)
-	+ 2.6 [Forensics and Reporting Nautilus Scripts](#BitCuratorWalkthrough-ForensicsandReportingNautilusScripts)
-* 3 [Package and Export](#BitCuratorWalkthrough-PackageandExport)
-	+ 3.1 [Package files and metadata with BagIt Python](#BitCuratorWalkthrough-PackagefilesandmetadatawithBagItPython)
-	+ 3.2 [Transfer files and metadata with grsync](#BitCuratorWalkthrough-Transferfilesandmetadatawithgrsync)
-
-
-
-
-Imaging and Recovery
---------------------
+# Imaging and Recovery
 
 **BitCurator supports multiple acquisition scenarios: attaching physical media to inspect and analyze digital materials, creating forensic disk images, or transferring files into the environment.**
 
@@ -52,8 +27,7 @@ In the BitCurator Environment, forensically-packaged disk images can be mounted 
 
 Along with **dcfldd**, there are a host of command line tools in the *Imaging and Recovery* folder on the BitCurator Environment desktop, all listed on the **[Tools](/documentation/Tools)** page.
 
-Forensics and Reporting
------------------------
+# Forensics and Reporting
 
 **BitCurator includes multiple software tools that assist users with identifying and prioritizing important information in raw and forensically packaged disk images. This includes files format identification, location of deleted files and files fragments, cryptographic hashing, and reporting on potentially private and personally identifying information.**
 
@@ -115,8 +89,7 @@ See below for **Step-by-Step Guides** on how to use Nautilus to perform a number
 
 BitCurator includes a number of other tools to assist users with data triage; identifying and prioritizing important information in raw and forensically packaged disk images. This includes files format identification, location of deleted files and file fragments, cryptographic hashing, and reporting on potentially private and personally identifying information. BitCurator includes Vassil Roussev's **sdhash** to report on file similarity, **regripper** for Windows registry analysis, and **ClamAV** for virus and malware detection. These are listed on the [Tools](/documentation/Tools) page.
 
-Package and Export
-------------------
+# Package and Export
 
 **The BitCurator environment also includes tools to assist in preparing and packaging born-digital materials for transfer to preservation storage and access platforms.**
 
