@@ -9,15 +9,14 @@ In previous releases, tools to support a variety of workflows were organized int
 
 The Imaging and Recovery submenu lists tools to assist in device imaging and recovery. These include:
 
-* **Brasero**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
-* **cdrdao**: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents (toc-file).
-* **Clonezilla**: A partition and disk imaging/cloning program.
-* **dcfldd**: An enhanced version of GNU dd with features useful for forensics and security, including hashing on-the-fly and split outputs.
-* **dd**: dd copies input to output with a changeable I/O block size, while optionally performing conversions on the data. Can be used to create raw images of devices.
-*  **ddrescue**: A data recovery tool with advanced features to assist in rescue of good data from devices with read errors.
-*  **dumpfloppy**: A tool to read floppy disks in arbitrary formats supported by the PC floppy controller, and work with the resulting image files.
-*  **ewfacquire**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
-*  **Guymager**: A GUI tool to create raw and EWF-packaged images from devices.
+* **[Brasero](https://wiki.gnome.org/Apps/Brasero)**: A GNOME application to burn CDs and DVDs, and create 1:1 copies of CDs and DVDs.
+* **[cdrdao](https://cdrdao.sourceforge.net/)**: An application to record audio or data CD-Rs in disk-at-once (DAO) mode based on a textual description of the CD contents ( [toc-file](https://cdrdao.sourceforge.net/example.html#toc-file-example) )
+* **[dcfldd](https://github.com/resurrecting-open-source-projects/dcfldd)**: An enhanced version of GNU dd with features useful for forensics and security, including hashing on-the-fly and split outputs.
+* **[ddrescue](https://www.gnu.org/software/ddrescue/)**: A data recovery tool with advanced features to assist in rescue of good data from devices with read errors.
+* **[dumpfloppy](https://github.com/johnkw/dumpfloppy)**: A tool to read floppy disks in arbitrary formats supported by the PC floppy controller, and work with the resulting image files.
+* **[ewfacquire](https://linux.die.net/man/1/ewfacquire)**: A utility to acquire media data from a source and store it in EWF format (Expert Witness Compression Format).
+* **[Guymager](https://guymager.sourceforge.io/)**: A GUI tool to create raw and EWF-packaged images from devices.
+
 
 ### Safely Mount Devices
 
@@ -45,22 +44,22 @@ In the BitCurator Environment, forensically-packaged disk images can be mounted 
 
 The Forensics and Reporting submenu lists forensics and forensics-adjacent tools. These include:
 
-*  **BitCurator Mounter**: A lightweight GUI tool to assist with mounting and unmounting devices.
-*  **Brunnhilde**: A tool to generate aggregate reports of files in a directory or disk image based on input from Richard Lehane's Siegfried. Can optionally analyze content using bulk_extractor.
-*  **bulk_extractor**: A tool to scan disk images and directories for PII and other features.
-*  **Bulk Reviewer**: A tool to scan disk images and assist in the review of bulk_extractor reports.
-*  **Deark**: A utility for file format and metadata analysis, data extraction, decompression, and image format decoding.
-*  **DiskType**: A tool to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.
-*  **fiwalk**: A program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format.
-identify-filenames: A postprocessing script for bulk_extractor that reads report files and produces annotated versions with the file that contains each feature (when present) identified.
-*  **md5deep**: a set of programs to compute MD5, SHA-1, SHA-256 and other digests
-*  **nsrllookup**: Query NSRL’s MD5 hashes of known pieces of software.
-*  **PhotoRec**: File data recovery software designed to recover lost files including video, documents and archives from media.
-*  **RegRipper**: Extract the contents of Windows registry backups.
-*  **Siegfried**: Signature-based file format identification.
-*  **SSDeep**: Fuzzy hashing tool.
-*  **TestDisk**: Data recovery software, companion to PhotoRec.
-
+* **BitCurator Mounter**: A lightweight GUI tool to assist with mounting and unmounting devices.
+* **[Brunnhilde](https://github.com/tw4l/brunnhilde)**: A tool to generate aggregate reports of files in a directory or disk image based on input from Richard Lehane's [Siegfried](http://www.itforarchivists.com/siegfried). Can optionally analyze content using bulk_extractor.
+* **[bulk_extractor](https://github.com/simsong/bulk_extractor)**: A tool to scan disk images and directories for PII and other features.
+* **[Bulk Reviewer](https://github.com/bulk-reviewer/bulk-reviewer)**: A tool to scan disk images and assist in the review of bulk_extractor reports.
+* **[Deark](https://entropymine.com/deark/)**: A utility for file format and metadata analysis, data extraction, decompression, and image format decoding.
+* **[DiskType](https://disktype.sourceforge.net/)**: A tool to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.
+* **[fiwalk](https://forensics.wiki/fiwalk/)**: A program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format.
+* **identify-filenames**: A postprocessing script for bulk_extractor that reads report files and produces annotated versions with the file that contains each feature (when present) identified.
+* **[md5deep](https://forensics.wiki/md5deep/)**: a set of programs to compute MD5, SHA-1, SHA-256 and other digests.
+* **[nsrllookup](https://rjhansen.github.io/nsrllookup/)**: Query NSRL’s MD5 hashes of known pieces of software.
+* **[PhotoRec](https://www.cgsecurity.org/wiki/photoRec)**: File data recovery software designed to recover lost files including video, documents and archives from media.
+* **[RegRipper](https://github.com/keydet89/RegRipper3.0)**: Extract the contents of Windows registry backups.
+* **[Siegfried](https://github.com/richardlehane/siegfried)**: Signature-based file format identification.
+* **[SSDeep](https://ssdeep-project.github.io/ssdeep/index.html)**: Fuzzy hashing tool.
+* **[TestDisk](https://www.cgsecurity.org/wiki/TestDisk)**: Data recovery software, companion to PhotoRec.
+  
 BitCurator generates technical metadata in the form of Digital Forensics XML (DFXML). DFXML has been developed around a set of digital forensics tools that can both consume and produce a common set of tags. BitCurator also generates PREMIS metadata for each data forensics tool that is applied to a disk image, providing an accurate record of provenance for each stage of processing.
 
 ### Extract metadata from disk images and files
@@ -130,7 +129,8 @@ These include:
 
 ### **Package files and metadata with BagIt Python**
 
-[Bagit Python](https://github.com/LibraryOfCongress/bagit-python) is a library and command line utility for working with [BagIt](http://purl.org/net/bagit) style packages. Documentation on using Bagit Python utility can be found [here](https://github.com/LibraryOfCongress/bagit-python).
+* **[Bagit-Python](https://libraryofcongress.github.io/bagit-python/)**: A Python library and command line utility for working with [BagIt](http://purl.org/net/bagit) style packages.
+* **[Grsync](https://www.opbyte.it/grsync/)**: A GUI front-end for rsync.
 
 Bags are useful for transferring packages of data from one location to another location across a network. This might be a local area network or somewhere across the internet. You can then verify the receipt of the bags and ensure that the data has not changed during transfer. 
 
