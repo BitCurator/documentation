@@ -1,25 +1,8 @@
 Configuring BitCurator to enable users to authenticate with Active Directory accounts
 =====================================================================================
 
-
-
-
-
-**Overview:**
-
 Active Directory is a service used by many institutions to provide authentication and authorization of users in a Windows Domain type network.  The below instructions describe how to configure BitCurator installations to enable multiple user accounts and to enable users to authenticate with accounts that are managed by Active Directory.  The result will allow users to login to the BitCurator environment using their centrally managed password.
 
-  
-
-
-
-
-
-
-
-
-Step-by-step guide
-------------------
 
 **Step 1**:  Active Directory services are an implementation of the open source Kerberos 5 protocol. Installation of Kerberos client software enables the use of Active Directory for BitCurator. 
 
