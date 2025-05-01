@@ -2,8 +2,8 @@
 Use the links to the relevant sections below to begin installing BitCurator on a fresh host, or import a prebuilt Virtual Appliance. If you wish to see a list of the most recent releases (along with release notes), you can also visit [https://github.com/BitCurator/bitcurator-distro/wiki/Releases](https://github.com/BitCurator/bitcurator-distro/wiki/Releases).
 
 There are two options for installing the BitCurator Environment:
- - [Installation Option 1: Deploy on a Clean Ubuntu Host](/documentation/BitCurator Environment/Installing BitCurator/Install Option 1: Installation via Dedicated Machine). (_This is the preferred method for running the BitCurator Environment._)
- - [Installation Option 2: Installation via Virtual Machine](/documentation/BitCurator Environment/Installing BitCurator/Install Option 2: Installation via Virtual Machine)
+ * [Installation Option 1: Deploy on a Clean Ubuntu Host](/documentation/BitCurator Environment/Installing BitCurator/Install Option 1: Installation via Dedicated Machine). (_This is the preferred method for running the BitCurator Environment._)
+ * [Installation Option 2: Installation via Virtual Machine](/documentation/BitCurator Environment/Installing BitCurator/Install Option 2: Installation via Virtual Machine)
 
 _Note: An internet connection is required during all stages of the installation._
 
