@@ -3,7 +3,7 @@ Use the links to the relevant sections below to begin installing BitCurator on a
 
 There are two options for installing the BitCurator Environment:
  
- * [Option 1: Installation via Dedicated Machine](/documentation/Installing BitCurator/Install Option 1: Installation via Dedicated Machine) _This is the preferred method for running the BitCurator Environment._
+ * [Option 1: Installation via Dedicated Machine](/documentation/Installing BitCurator/Install Option 1: Installation via Dedicated Machine): _This is the preferred method for running the BitCurator Environment._
  * [Option 2: Installation via Virtual Machine](/documentation/Installing BitCurator/Install Option 2: Installation via Virtual Machine)
 
 _Note: An internet connection is required during all stages of the installation._
