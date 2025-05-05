@@ -99,16 +99,6 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Walkthrough/BitCurator%20Walkthrough/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/">BitCurator Workflow Diagrams</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Data%20Triage/">Data Triage</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Disk%20Imaging/">Forensic Disk Imaging</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Forensic%20Processing%20and%20Identification%20of%20Potentially%20Sensitive%20Information/">Forensic Processing and Identification of Potentially Sensitive Information</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../BitCurator%20Walkthrough/BitCurator%20Workflow%20Diagrams/Metadata%20Export/">Metadata Export</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul>
@@ -143,7 +133,7 @@
               
                 <h1 id="tools">Tools</h1>
 <h2 id="overview">Overview</h2>
-<p>The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator <strong>Step-by-Step Guides</strong>are listed as well.</p>
+<p>The BitCurator Environment includes many individual tools to perform specific curation tasks. Listed here are all tools packaged by default in the environment, organized by the folder found on the BitCurator desktop. Links will take users to the corresponding external site or documentation. Where applicable, relevant BitCurator <strong>Step-by-Step Guides</strong> are listed as well.</p>
 <p>Because BitCurator is an Ubuntu environment, users are able to download and install tools as in any other Ubuntu distribution or Linux OS.</p>
 <p>In addition, much functionality is found in the file navigation system, Nautilus, through contextual menus. Listed are guides for many of these scripts.</p>
 <ul>
@@ -153,7 +143,7 @@
 <li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Disk Image Metadata (Nautilus)">Disk Image Metadata</a></li>
 <li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Extract Compressed Files (Nautilus)">Extract Compressed Files</a></li>
 <li><a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Live Search for Files (Nautilus)">Live Search for Files</a></li>
-<li><a href="../All Step-by-Step Guides/Imaging and Recovery Guides/Safely Mount Devices">Safely Mount Device</a></li>
+<li><a href="../All Step-by-Step Guides/Imaging and Recovery Guides/Set Mount Policy">Safely Mount Device</a></li>
 </ul>
 <h3 id="imaging-and-recovery">Imaging and Recovery</h3>
 <p><strong><a href="https://wiki.gnome.org/Apps/Brasero">Brasero</a></strong>: GUI application to copy data and audio CD and DVDs</p>
@@ -168,9 +158,6 @@
 <p><strong><a href="https://www.gnu.org/software/ddrescue/">ddrescue</a></strong>: A version of <strong>dd</strong> with additional options for data recovery</p>
 <p><strong><a href="https://offog.org/code/dumpfloppy/">dumpfloppy</a></strong>: Suite of tools for reading floppy disks in arbitrary formats supported by the PC floppy controller, and for working with the resulting image files </p>
 <p><a href="https://linux.die.net/man/1/ewfacquire"><strong>ewfacquire</strong></a>: Acquire Expert Witness packaged disk images from devices on the command line. Part of the <a href="https://github.com/libyal/libewf">libewf</a> library of Expert Witness tools. </p>
-<ul>
-<li>More documentation at the <a href="https://forensicswiki.xyz/wiki/index.php?title=Libewf">Forensics wiki</a>.</li>
-</ul>
 <h3 id="forensic-analysis-tools">Forensic analysis tools</h3>
 <p><strong>BitCurator Disk Image Access:</strong> A GUI interface to browse raw and forensically-packaged disk images, export files and deleted items, and view disk image metadata.</p>
 <p><strong>BitCurator Mounter</strong>: A GUI application to list currently attached devices along with technical details. Allows users to mount fixed and removable media according to the current mount policy.</p>
@@ -189,12 +176,12 @@
 <p><strong><a href="http://disktype.sourceforge.net">Disktype</a>:</strong> Detects the content format of a disk or disk image</p>
 <p><strong><a href="https://forensicswiki.xyz/wiki/index.php?title=Fiwalk">Fiwalk</a></strong>: Fiwalk is part of <a href="https://www.sleuthkit.org/sleuthkit/">The Sleuth Kit's</a> collection of digital forensics tools and is used to produce a DFXML (Digital Forensics XML) report on the contents of a disk image within the <strong>BitCurator Reporting Tool</strong>.</p>
 <ul>
-<li>See the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Fiwalk/">fiwalk</a> <strong>Step-by-Step Guide</strong>.</li>
+<li>See the <a href="../All Step-by-Step Guides/Forensics and Reporting Guides/Scanning Disk Images, Files, and Directories with bulk_extractor/">fiwalk</a> section in the <strong>Step-by-Step Guide</strong>.</li>
 </ul>
 <p><strong><a href="http://md5deep.sourceforge.net">md5deep</a></strong>: Set of programs to compute MD5, SHA-1, SHA-256, Tiger, or Whirlpool message digests on an arbitrary number of files</p>
 <p><strong><a href="http://rjhansen.github.io/nsrllookup/">nsrllookup</a></strong>: Query tool to check for a matching MD5 hash in the National Software Reference Library Reference Data Set</p>
 <p><strong><a href="https://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a></strong>: File data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures from digital camera memory</p>
-<p><strong><a href="https://github.com/keydet89/RegRipper2.8">RegRipper</a></strong>: Tool for extracting and parsing information (keys, values, data) from the Windows Registry</p>
+<p><strong><a href="https://github.com/keydet89/RegRipper3.0">RegRipper</a></strong>: Tool for extracting and parsing information (keys, values, data) from the Windows Registry</p>
 <p><a href="http://roussev.net/sdhash/sdhash.html"><strong>SDHash</strong></a>: File similarity tool using similarity digests</p>
 <p><a href="https://ssdeep-project.github.io/ssdeep/index.html"><strong>ssdeep</strong></a>: Fast hash generation</p>
 <p><strong><a href="https://www.cgsecurity.org/wiki/TestDisk">TestDisk</a></strong>: Data recovery software with focus on recovering lost partitions, making non-booting disks bootable again/partition table recovery</p>
@@ -202,7 +189,7 @@
 <p><strong><a href="https://github.com/LibraryOfCongress/bagit-python">BagIt Python Library</a></strong>: Command line implementation of the BagIt specification</p>
 <p><strong><a href="https://sourceforge.net/projects/grsync/">Grsync</a></strong>: GUI fronted for the rysnc command line tool to synchronize or transfer data between locations</p>
 <h3 id="additional-tools">Additional tools</h3>
-<p><strong><a href="http://www.winfield.demon.nl">Antiword</a></strong>: Converts the Microsoft Word 2, 6, 7, 97, 2000, 2002 and 2003 formats to plain text and PostScript</p>
+<p><strong><a href="https://github.com/grobian/antiword">Antiword</a></strong>: Converts the Microsoft Word 2, 6, 7, 97, 2000, 2002 and 2003 formats to plain text and PostScript</p>
 <p><strong>BitCurator Reports</strong> (command line): Command line implementation of the <strong>BitCurator Reporting Tool</strong>, see GUI entry under the <em>Forensic analysis tools</em> section</p>
 <p><strong><a href="https://github.com/bwrsandman/Bless">Bless Hex Editor</a></strong>: Hex editor to edit and view files as a sequence of bytes</p>
 <p><a href="https://dave-theunsub.github.io/clamtk/"><strong>ClamTK</strong></a>: Virus scanning</p>
@@ -211,7 +198,7 @@
 <ul>
 <li>See the <a href="https://confluence.educopia.org/display/~aberish/Fiwalk">fiwalk</a> <strong>Step-by-Step Guide</strong>.</li>
 </ul>
-<p><a href="https://developer.gnome.org/ghex/"><strong>GHex</strong></a>: A hex viewer/editor</p>
+<p><a href="https://wiki.gnome.org/Apps/Ghex"><strong>GHex</strong></a>: A hex viewer/editor</p>
 <p><a href="http://gtkhash.sourceforge.net/"><strong>GtkHash</strong></a>: A cryptographic hashing tool</p>
 <p><strong><a href="https://github.com/ColumPaget/Hashrat">Hashrat</a></strong>: Hashing tool supporting MD5, SHA1, SAH256, SHA512, Whirlpool, JH and HMAC versions of these. Includes recursive file hashing and other features.</p>
 <p><strong><a href="https://www.mars.org/home/rob/proj/hfs/">H</a><a href="http://www.catacombae.org/hfsexplorer/">FS Explorer</a></strong>: Provides access to the legacy HFS file systems</p>
