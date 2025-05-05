@@ -3,6 +3,8 @@ site_url:
 nav:
   - BitCurator Documentation:
     - Home : 'index.md'
+    - 'About/Original Project Diagrams.md'
+    - 'About/Support and Past Funding.md'
   - Installation:
     - Overview : 'Installing BitCurator/Installing BitCurator.md'
     - 'Installing BitCurator/Install Option 1: Installation via Dedicated Machine.md'
@@ -11,7 +13,6 @@ nav:
     - 'Installing BitCurator/Internationalization and Ubuntu.md'
     - 'Installing BitCurator/Migrating BitCurator VirtualBox VM to Hyper-V.md'
   - Guides: 
-    - Overview : 'All Step-by-Step Guides/Step-by-Step-Guides.md'
     - 'All Step-by-Step Guides/Working in the BitCurator Environment.md'
     - 'All Step-by-Step Guides/Imaging and Recovery Guides.md'
     - 'All Step-by-Step Guides/Forensics and Reporting Guides.md'

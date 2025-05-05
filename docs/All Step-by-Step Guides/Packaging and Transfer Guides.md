@@ -1,20 +1,14 @@
 Packaging and Transfer Guides
 =============================
 
-
-
-
-
-### Overview
-
 Guides for preparing and packaging born-digital materials for transfer to preservation storage and access platforms.  
 
-![Packaging and Transfer submenu ](attachments/image13.png)
+### Tools
 
 The Packaging and Transfer submenu lists some tools to assist with safe packaging and network transfer of materials. These include:
 
-* **Bagit-Python**: A Python library and command line utility for working with [BagIt](http://purl.org/net/bagit) style packages.
-* **Grsync**: A GUI front-end for rsync.
+* **[Bagit-Python](https://libraryofcongress.github.io/bagit-python/)**: A Python library and command line utility for working with [BagIt](http://purl.org/net/bagit) style packages.
+* **[Grsync](https://www.opbyte.it/grsync/)**: A GUI front-end for rsync.
 
 
 ### Guides

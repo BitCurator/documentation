@@ -1,10 +1,10 @@
 # Install Option 1: Installation via Dedicated Machine
-## Install Ubuntu 22.04LTS
+### Install Ubuntu 22.04LTS
 Download the latest 64-bit Ubuntu 22.04 desktop image from [https://releases.ubuntu.com/22.04/](https://releases.ubuntu.com/22.04/).
 
 **If you are installing Ubuntu 22.04LTS as the host operating system on a dedicated machine**, you will need to write the downloaded ISO image to a bootable USB drive. Instructions for doing this on various platforms can be found at [https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu). During installation, you may (optionally) replicate the default user and machine name for BitCurator: when prompted use `BitCurator` for **Your name**, `bitcurator` for **Your computer’s name**, and `bcadmin` for **Pick a username**. Enter a strong password of your choice. When the installation is complete, reboot, log in, and follow the instructions in section [Install BitCurator in Ubuntu 22.04LTS](#install-bitcurator-in-ubuntu-2204lts).
 
-# Install BitCurator in Ubuntu 22.04LTS
+### Install BitCurator in Ubuntu 22.04LTS
 
 **1. Prepare your environment**
 
