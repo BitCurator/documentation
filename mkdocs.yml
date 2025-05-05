@@ -14,6 +14,7 @@ nav:
     - 'Installing BitCurator/Migrating BitCurator VirtualBox VM to Hyper-V.md'
   - Guides: 
     - 'All Step-by-Step Guides/Working in the BitCurator Environment.md'
+    - Overview: 'BitCurator Walkthrough/BitCurator Walkthrough.md'
     - 'All Step-by-Step Guides/Imaging and Recovery Guides.md'
     - 'All Step-by-Step Guides/Forensics and Reporting Guides.md'
     - 'All Step-by-Step Guides/Packaging and Transfer Guides.md'
@@ -21,11 +22,6 @@ nav:
     - 'Tools.md'
     - 'Troubleshooting and FAQ.md'
     - 'Resources.md'
-  - Walkthrough: 
-    - Overview: 'BitCurator Walkthrough/BitCurator Walkthrough.md'
-  - About:    
-    - 'About/Original Project Diagrams.md'
-    - 'About/Support and Past Funding.md'
 
 
 theme: readthedocs
