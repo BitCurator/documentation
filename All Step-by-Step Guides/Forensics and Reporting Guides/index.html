@@ -43,6 +43,10 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
               <ul>
@@ -50,7 +54,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Install%20Option%201%3A%20Installation%20via%20Dedicated%20Machine/">Install Option 1: Installation via Dedicated Machine</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Install Option 2: Installation via Virtual Machine</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../Installing%20BitCurator/Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Using Active Directory</a>
                   </li>
@@ -61,17 +65,13 @@
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Step-by-Step-Guides/">Overview</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Working%20in%20the%20BitCurator%20Environment/">Working in the BitCurator Environment</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Forensics and Reporting Guides</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#submenu">Submenu</a>
+    <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#guides">Guides</a>
     </li>
@@ -126,27 +126,25 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="forensics-and-reporting-guides">Forensics and Reporting Guides</h1>
-<h3 id="overview">Overview</h3>
 <p>Guides for file format identification, location of deleted files and files fragments, cryptographic hashing, and reporting on potentially private and personally identifying information.</p>
-<h3 id="submenu">Submenu</h3>
-<p><img alt="Forensics and Reporting menu" src="../attachments/image12.png" /></p>
+<h3 id="tools">Tools</h3>
 <p>The Forensics and Reporting submenu lists forensics and forensics-adjacent tools. These include:</p>
 <ul>
 <li><strong>BitCurator Mounter</strong>: A lightweight GUI tool to assist with mounting and unmounting devices.</li>
-<li><strong>Brunnhilde</strong>: A tool to generate aggregate reports of files in a directory or disk image based on input from Richard Lehane's <a href="http://www.itforarchivists.com/siegfried">Siegfried</a>. Can optionally analyze content using bulk_extractor.</li>
-<li><strong>bulk_extractor</strong>: A tool to scan disk images and directories for PII and other features.</li>
-<li><strong>Bulk Reviewer</strong>: A tool to scan disk images and assist in the review of bulk_extractor reports.</li>
-<li><strong>Deark</strong>: A utility for file format and metadata analysis, data extraction, decompression, and image format decoding.</li>
-<li><strong>DiskType</strong>: A tool to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.</li>
-<li><strong>fiwalk</strong>: A program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format.</li>
+<li><strong><a href="https://github.com/tw4l/brunnhilde">Brunnhilde</a></strong>: A tool to generate aggregate reports of files in a directory or disk image based on input from Richard Lehane's <a href="http://www.itforarchivists.com/siegfried">Siegfried</a>. Can optionally analyze content using bulk_extractor.</li>
+<li><strong><a href="https://github.com/simsong/bulk_extractor">bulk_extractor</a></strong>: A tool to scan disk images and directories for PII and other features.</li>
+<li><strong><a href="https://github.com/bulk-reviewer/bulk-reviewer">Bulk Reviewer</a></strong>: A tool to scan disk images and assist in the review of bulk_extractor reports.</li>
+<li><strong><a href="https://entropymine.com/deark/">Deark</a></strong>: A utility for file format and metadata analysis, data extraction, decompression, and image format decoding.</li>
+<li><strong><a href="https://disktype.sourceforge.net/">DiskType</a></strong>: A tool to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.</li>
+<li><strong><a href="https://forensics.wiki/fiwalk/">fiwalk</a></strong>: A program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format.</li>
 <li><strong>identify-filenames</strong>: A postprocessing script for bulk_extractor that reads report files and produces annotated versions with the file that contains each feature (when present) identified.</li>
-<li><strong>md5deep</strong>: a set of programs to compute <a href="https://md5deep.sourceforge.net/#md5">MD5</a>, <a href="https://md5deep.sourceforge.net/#sha1">SHA-1</a>, <a href="https://md5deep.sourceforge.net/#sha256">SHA-256</a> and other digests</li>
-<li><strong>nsrllookup</strong>: Query NSRL’s MD5 hashes of known pieces of software.</li>
-<li><strong>PhotoRec</strong>: File data recovery software designed to recover lost files including video, documents and archives from media.</li>
-<li><strong>RegRipper</strong>: Extract the contents of Windows registry backups.</li>
-<li><strong>Siegfried</strong>: Signature-based file format identification.</li>
-<li><strong>SSDeep</strong>: Fuzzy hashing tool.</li>
-<li><strong>TestDisk</strong>: Data recovery software, companion to PhotoRec.</li>
+<li><strong><a href="https://forensics.wiki/md5deep/">md5deep</a></strong>: a set of programs to compute MD5, SHA-1, SHA-256 and other digests.</li>
+<li><strong><a href="https://rjhansen.github.io/nsrllookup/">nsrllookup</a></strong>: Query NSRL’s MD5 hashes of known pieces of software.</li>
+<li><strong><a href="https://www.cgsecurity.org/wiki/photoRec">PhotoRec</a></strong>: File data recovery software designed to recover lost files including video, documents and archives from media.</li>
+<li><strong><a href="https://github.com/keydet89/RegRipper3.0">RegRipper</a></strong>: Extract the contents of Windows registry backups.</li>
+<li><strong><a href="https://github.com/richardlehane/siegfried">Siegfried</a></strong>: Signature-based file format identification.</li>
+<li><strong><a href="https://ssdeep-project.github.io/ssdeep/index.html">SSDeep</a></strong>: Fuzzy hashing tool.</li>
+<li><strong><a href="https://www.cgsecurity.org/wiki/TestDisk">TestDisk</a></strong>: Data recovery software, companion to PhotoRec.</li>
 </ul>
 <h3 id="guides">Guides</h3>
 <ul>

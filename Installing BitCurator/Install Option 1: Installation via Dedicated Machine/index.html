@@ -43,6 +43,10 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
               <ul class="current">
@@ -52,9 +56,11 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#install-ubuntu-2204lts">Install Ubuntu 22.04LTS</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>
+    </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Install Option 2: Installation via Virtual Machine</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Configuring%20BitCurator%20to%20enable%20users%20to%20authenticate%20with%20Active%20Directory%20accounts/">Using Active Directory</a>
                   </li>
@@ -65,8 +71,6 @@
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Working%20in%20the%20BitCurator%20Environment/">Working in the BitCurator Environment</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
@@ -122,10 +126,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="install-option-1-installation-via-dedicated-machine">Install Option 1: Installation via Dedicated Machine</h1>
-<h2 id="install-ubuntu-2204lts">Install Ubuntu 22.04LTS</h2>
+<h3 id="install-ubuntu-2204lts">Install Ubuntu 22.04LTS</h3>
 <p>Download the latest 64-bit Ubuntu 22.04 desktop image from <a href="https://releases.ubuntu.com/22.04/">https://releases.ubuntu.com/22.04/</a>.</p>
 <p><strong>If you are installing Ubuntu 22.04LTS as the host operating system on a dedicated machine</strong>, you will need to write the downloaded ISO image to a bootable USB drive. Instructions for doing this on various platforms can be found at <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu">https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu</a>. During installation, you may (optionally) replicate the default user and machine name for BitCurator: when prompted use <code>BitCurator</code> for <strong>Your name</strong>, <code>bitcurator</code> for <strong>Your computer’s name</strong>, and <code>bcadmin</code> for <strong>Pick a username</strong>. Enter a strong password of your choice. When the installation is complete, reboot, log in, and follow the instructions in section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
-<h1 id="install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</h1>
+<h3 id="install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</h3>
 <p><strong>1. Prepare your environment</strong></p>
 <p>To ensure you have all of the tools, and updates necessary for the BitCurator environment to succeed, you should update the local apt repository and install the necessary tools. Open a terminal and use the following commands:</p>
 <p><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
@@ -188,7 +192,7 @@ Options:
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../Installing%20BitCurator/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/" class="btn btn-neutral float-right" title="Installation via Virtual Machine">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/" class="btn btn-neutral float-right" title="Install Option 2: Installation via Virtual Machine">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

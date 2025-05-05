@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Installation via Virtual Machine - BitCurator Docs</title>
+    <title>Install Option 2: Installation via Virtual Machine - BitCurator Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Installation via Virtual Machine";
+        var mkdocs_page_name = "Install Option 2: Installation via Virtual Machine";
         var mkdocs_page_input_path = "Installing BitCurator/Install Option 2: Installation via Virtual Machine.md";
         var mkdocs_page_url = null;
       </script>
@@ -43,6 +43,10 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
               <ul class="current">
@@ -50,13 +54,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%201%3A%20Installation%20via%20Dedicated%20Machine/">Install Option 1: Installation via Dedicated Machine</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation via Virtual Machine</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Install Option 2: Installation via Virtual Machine</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#install-ubuntu-2204lts">Install Ubuntu 22.04LTS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#virtualbox-vm-installations">VirtualBox VM Installations</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#important-notes-for-virtualbox-vm-installations">Important Notes For VirtualBox VM Installations</a>
+    <li class="toctree-l3"><a class="reference internal" href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -69,8 +77,6 @@
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Working%20in%20the%20BitCurator%20Environment/">Working in the BitCurator Environment</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
@@ -116,7 +122,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Installation</li>
-      <li class="breadcrumb-item active">Installation via Virtual Machine</li>
+      <li class="breadcrumb-item active">Install Option 2: Installation via Virtual Machine</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -125,7 +131,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="installation-via-virtual-machine">Installation via Virtual Machine</h1>
+                <h1 id="install-option-2-installation-via-virtual-machine">Install Option 2: Installation via Virtual Machine</h1>
 <h3 id="overview">Overview</h3>
 <p>Using the BitCurator Environment through a virtual machine allows you to install the software as another program on an existing computer. This can be very useful for both testing the software and instruction. It is also helpful if you do not have access or the ability to install directly on a drive. However, if you anticipate using the software regularly or routinely, it is best to arrange for a dedicated install. </p>
 <p>Hardware Requirements</p>
@@ -137,7 +143,7 @@
 <h2 id="install-ubuntu-2204lts">Install Ubuntu 22.04LTS</h2>
 <p>Download the latest 64-bit Ubuntu 22.04 desktop image from <a href="https://releases.ubuntu.com/22.04/">https://releases.ubuntu.com/22.04/</a>.</p>
 <p><strong>If you are installing Ubuntu 22.04LTS in new VirtualBox VM</strong>, review the instructions in section Important Notes for VirtualBox VM Installations. You may (optionally) replicate the default user and machine name for BitCurator: when prompted use <code>BitCurator</code> for <strong>Your name</strong>, <code>bitcurator</code> for <strong>Your computer’s name</strong>, and <code>bcadmin</code> for <strong>Pick a username</strong>. Enter a strong password of your choice. When the installation is complete, reboot, log in, and continue with the instructions in section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
-<h2 id="important-notes-for-virtualbox-vm-installations">Important Notes For VirtualBox VM Installations</h2>
+<h3 id="virtualbox-vm-installations">VirtualBox VM Installations</h3>
 <p>Visit the <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> website to download and install the latest version of VirtualBox for your machine. You must also install the <strong>VirtualBox Extension Pack</strong> on your host machine in order for USB 3.0 support to work. Note that installation options have changed in VirtualBox 7.x and later. In the VirtualBox VM Manager, after clicking New to create a new VM, you must specify the name for your VM, the location of the Ubuntu ISO you downloaded earlier, and check the box for <strong>Skip Unattended Installation</strong>.</p>
 <p><img alt="VM_Install_1.png" src="../attachments/VM_Install_1.png" /></p>
 <p>Click <strong>Next</strong>, and on the following screen select <strong>at least 8GB RAM and 2 processor cores</strong>:</p>
@@ -173,7 +179,7 @@ sudo reboot</code></p>
 <p><strong>Enable the checkbox</strong>.</p>
 <p>Click <strong>Ok</strong>. You will be prompted for the password for the <code>bcadmin</code> user. Once you’ve completed this step, you can close the Users and Groups window.</p>
 <p>Continue by following the instructions in the section <a href="#install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</a>.</p>
-<h1 id="install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</h1>
+<h3 id="install-bitcurator-in-ubuntu-2204lts">Install BitCurator in Ubuntu 22.04LTS</h3>
 <p><strong>1. Prepare your environment</strong></p>
 <p>To ensure you have all of the tools, and updates necessary for the BitCurator environment to succeed, you should update the local apt repository and install the necessary tools. Open a terminal and use the following commands:</p>
 <p><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade -y

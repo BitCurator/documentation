@@ -43,6 +43,10 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Original%20Project%20Diagrams/">Original Project Diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../About/Support%20and%20Past%20Funding/">Support and Past Funding</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Installation</span></p>
               <ul class="current">
@@ -50,12 +54,10 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%201%3A%20Installation%20via%20Dedicated%20Machine/">Install Option 1: Installation via Dedicated Machine</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Installation via Virtual Machine</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/">Install Option 2: Installation via Virtual Machine</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Using Active Directory</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#step-by-step-guide">Step-by-step guide</a>
-    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Internationalization%20and%20Ubuntu/">Internationalization and Ubuntu</a>
@@ -65,8 +67,6 @@
               </ul>
               <p class="caption"><span class="caption-text">Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Step-by-Step-Guides/">Overview</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Working%20in%20the%20BitCurator%20Environment/">Working in the BitCurator Environment</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../All%20Step-by-Step%20Guides/Imaging%20and%20Recovery%20Guides/">Imaging and Recovery Guides</a>
@@ -122,9 +122,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="configuring-bitcurator-to-enable-users-to-authenticate-with-active-directory-accounts">Configuring BitCurator to enable users to authenticate with Active Directory accounts</h1>
-<p><strong>Overview:</strong></p>
 <p>Active Directory is a service used by many institutions to provide authentication and authorization of users in a Windows Domain type network.  The below instructions describe how to configure BitCurator installations to enable multiple user accounts and to enable users to authenticate with accounts that are managed by Active Directory.  The result will allow users to login to the BitCurator environment using their centrally managed password.</p>
-<h2 id="step-by-step-guide">Step-by-step guide</h2>
 <p><strong>Step 1</strong>:  Active Directory services are an implementation of the open source Kerberos 5 protocol. Installation of Kerberos client software enables the use of Active Directory for BitCurator. </p>
 <p>From within BitCurator open the terminal by pressing <code>CTRL + ALT + t</code> and enter the following command to install the needed software:</p>
 <p><code>sudo apt-get install krb5-user libpam-krb5 libpam-ccreds auth-client-config</code></p>
@@ -161,7 +159,7 @@
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/" class="btn btn-neutral float-left" title="Installation via Virtual Machine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Install%20Option%202%3A%20Installation%20via%20Virtual%20Machine/" class="btn btn-neutral float-left" title="Install Option 2: Installation via Virtual Machine"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../Internationalization%20and%20Ubuntu/" class="btn btn-neutral float-right" title="Internationalization and Ubuntu">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
